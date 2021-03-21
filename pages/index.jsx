@@ -24,9 +24,9 @@ export default function Home() {
           </div>
           <div className="text">
             <div className="t1">
-              🙎🏻‍♂️ I’m a software engineer from the 🇵🇭 Philippines who’s been in 
-              the industry for over 8 years, and has spent majority of my time working with, 
-              and managing, remote teams across different timezones.
+              🙎🏻‍♂️ I’m a software developer currently in Tacloban city, 🇵🇭 Philippines. 
+               Specializing in building websites and applications. My current toolset includes 
+               Vue, React, Redux, Node, Laravel, and other various frameworks, libraries, and technologies related to them.
             </div>
             <div className="t1">
               As an engineer, my core competency is in full-stack web development 

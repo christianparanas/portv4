@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Archivo', sans-serif;
+}
+
+.main {
+
+
+	.nav {
+		color: #fff;
+		background: #00224f;
+
+		.ham {
+			background: #00224f;
+			padding: 10px 20px;
+			display: flex;
+			z-index: 6;
+			justify-content: space-between;
+			position: relative;
+
+			.name {
+				margin: auto 0;
+			}
+
+		}
+
+		.nav_overlay {
+			width: 100%;
+			position: fixed;
+			transition: all .3s;
+			background: #00224f;
+			z-index: 5;
+			top: 0; 
+			left: 0;
+			padding: 0 20px;
+			height: 0;
+		}
+
+		.items {
+
+			.item {
+				padding: 10px 0;
+			}
+		}
+
+		.open_overlay {
+			padding: 100px 20px 20px;
+			height: 100vh;
+		}
+	}
+}

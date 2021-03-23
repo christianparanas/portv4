@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { useState } from 'react'
+import Image from 'next/image'
 
 // components
 import Nav from '../components/Nav'
@@ -20,7 +21,13 @@ export default function Home() {
         <div className="content">
           <h1 className="title">About Me</h1>
           <div className="img">
-            <img src="/me.png" alt="me" />
+            <Image
+              src="/me.png"
+              alt="Picture of the author"
+              width={225}
+              height={225}
+              quality={90}
+            />
           </div>
           <div className="text">
             <div className="t1">

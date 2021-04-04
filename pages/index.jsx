@@ -35,11 +35,6 @@ export default function Home() {
                Specializing in building websites and applications. My current toolset includes 
                Vue, React, Redux, Node, Laravel, and other various frameworks, libraries, and technologies related to them.
             </div>
-            <div className="t1">
-              As an engineer, my core competency is in full-stack web development 
-              with Python, Golang, and Javascript, devops 
-              and observability, and Amazon Web Services.
-            </div>
           </div>
         </div>
         <div className="footer">&#169; 2021 Christian Paranas</div>

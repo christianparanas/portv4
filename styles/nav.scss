@@ -1,0 +1,45 @@
+.nav {
+		color: #fff;
+		background: #00224f;
+		position: fixed;
+		width: 100%;
+		z-index: 100;
+
+		.ham {
+			background: #00224f;
+			padding: 10px 30px;
+			display: flex;
+			z-index: 6;
+			justify-content: space-between;
+			position: relative;
+
+			.name {
+				margin: auto 0;
+			}
+
+		}
+
+		.nav_overlay {
+			width: 100%;
+			position: fixed;
+			transition: all .3s;
+			background: #00224f;
+			top: -100px; 
+			left: 0;
+			padding: 0 30px;
+			height: 0;
+		}
+
+		.items {
+
+			.item {
+				padding: 10px 0;
+			}
+		}
+
+		.open_overlay {
+			padding: 100px 30px 30px;
+			height: 100vh;
+			top: 0;
+		}
+	}

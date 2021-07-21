@@ -21,53 +21,9 @@ a {
 .main {
 	height: 100%;
 
-	.nav {
-		color: #fff;
-		background: #00224f;
-
-		.ham {
-			background: #00224f;
-			padding: 10px 30px;
-			display: flex;
-			z-index: 6;
-			justify-content: space-between;
-			position: relative;
-
-			.name {
-				margin: auto 0;
-			}
-
-		}
-
-		.nav_overlay {
-			width: 100%;
-			position: fixed;
-			transition: all .3s;
-			background: #00224f;
-			z-index: -1;
-			top: 0; 
-			left: 0;
-			padding: 0 30px;
-			height: 0;
-		}
-
-		.items {
-
-			.item {
-				padding: 10px 0;
-			}
-		}
-
-		.open_overlay {
-			z-index: 5;
-			padding: 100px 30px 30px;
-			height: 100vh;
-		}
-	}
-
 
 	.content {
-		padding: 30px;
+		padding: 90px 30px 30px;
 
 		.title {
 			font-size: 24px;

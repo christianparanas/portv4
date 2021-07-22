@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
 import { Squeeze  as Hamburger } from 'hamburger-react'
@@ -15,6 +16,11 @@ export default function Nav() {
 
 	}, [isOpen])
 
+	const closeNav = () => {
+		setNavOverlay('nav_overlay')
+		setOpen(false)
+	}
+
 	return (
 		<div className="nav">
 			<div className="ham">
@@ -23,9 +29,9 @@ export default function Nav() {
 			</div>
 			<div className={navOverlay}>
 				<div className="items">
-					<div className="item">About Me</div>
-					<div className="item">Blog</div>
-					<div className="item">Projects</div>
+					<Link href="/"><div className="item" onClick={closeNav}>About Me</div></Link>
+					<Link href="/blog"><div className="item" onClick={closeNav}>Blog</div></Link>
+					<Link href="/projects"><div className="item" onClick={closeNav}>Projects</div></Link>
 				</div>
 			</div>
 		</div>

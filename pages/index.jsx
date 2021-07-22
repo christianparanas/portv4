@@ -2,22 +2,17 @@ import Head from 'next/head'
 import { useState } from 'react'
 import Image from 'next/image'
 
-// components
-import Nav from '../components/Nav'
-
 
 export default function Home() {
-  
 
   return (
     <div className="container">
       <Head>
-        <title>Christian Paranas</title>
+        <title>About Me | Christian Paranas</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="main">
-        <Nav />
         <div className="content">
           <h1 className="title">About Me</h1>
           <div className="img">
@@ -37,7 +32,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="footer">&#169; 2021 Christian Paranas</div>
+        
       </main>
     </div>
   )

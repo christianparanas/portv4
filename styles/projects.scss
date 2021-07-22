@@ -7,5 +7,25 @@
 		padding: 90px 30px 30px;
 		height: fit-content;
 		min-height: 90vh;
+
+		.title {
+			font-size: 24px;
+			margin-bottom: 40px;
+		}
+
+		.head_p {
+			margin-bottom: 30px;
+		}
+
+		.diff_projs {
+
+			.head {
+				img {
+					width: 16px;
+					height: 16px;
+					margin-right: 7px;
+				}
+			}
+		}
 	}
 }

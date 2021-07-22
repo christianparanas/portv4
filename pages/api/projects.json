@@ -8,6 +8,11 @@
 			"projectName": "Tindahan",
 			"projectLink": "https://tindahan.vercel.app/",
 			"projectDescription": "an ecommerce website with basic features built with MERN (Mysql) stack."
+		},
+                {
+			"projectName": "Chatroom",
+			"projectLink": "https://chatroom-ten.vercel.app/",
+			"projectDescription": "realtime chatgroup web application built with Nextjs and Firebase."
 		}
 	]
 ]

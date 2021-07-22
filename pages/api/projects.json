@@ -6,12 +6,7 @@
 		{
 			"projectName": "Tindahan",
 			"projectLink": "https://tindahan.vercel.app/",
-			"projectDescription": "Lorem dolor"
-		},
-		{
-			"projectName": "Tindahan",
-			"projectLink": "https://tindahan.vercel.app/",
-			"projectDescription": "Lorem dolor"
+			"projectDescription": "an ecommerce website with basic features built with MERN (Mysql) stack."
 		}
 	]
 ]

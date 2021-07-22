@@ -9,6 +9,7 @@ import projects from './api/projects.json'
 
 export default function Home() {
   const [projs, setProjs] = useState(projects)
+  const [hasWorkProjs, setHasWorkProjs] = useState(false)
 
   useEffect(() => {
     console.log(projects)
@@ -16,7 +17,6 @@ export default function Home() {
   }, [])
 
   if(!process.browser) return null
-
 
   // external routing
   const externalLink = (path) => {
@@ -41,6 +41,15 @@ export default function Home() {
                 <img draggable="false" role="img" className="emoji" alt="💼" src="https://s.w.org/images/core/emoji/13.0.1/svg/1f4bc.svg" />
                 Work projects:
               </div>
+              <div className="diff_proj_content">
+                <ul>
+                  {hasWorkProjs ? 
+                    (<>Hello</>) 
+                    : 
+                    (<div className="noproj_p">No projects yet!</div>)
+                  }
+                </ul>
+              </div>
             </div>
             <div className="diff_proj">
               <div className="head">
@@ -51,16 +60,13 @@ export default function Home() {
                 <ul>
                   {projs[1].map((val, key) => {
                     return (
-                      <li key={key}><a href={val.projectLink}>{val.projectName}</a></li>
+                      <li key={key}>
+                        <strong><a href={val.projectLink}>{val.projectName}</a></strong>
+                          -  {val.projectDescription}
+                      </li>
                     )
                   })}
                 </ul>
-              </div>
-            </div>
-            <div className="diff_proj">
-              <div className="head">
-                <img draggable="false" role="img" className="emoji" alt="🕰" src="https://s.w.org/images/core/emoji/13.0.1/svg/1f570.svg" />
-                Older projects:
               </div>
             </div>
           </div>

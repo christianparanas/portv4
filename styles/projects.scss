@@ -48,5 +48,41 @@
 
 
 @media only screen and (min-width: 452px) {
-	
+	.projects {
+
+		.content {
+			width: 560px;
+			margin: 0 auto;
+
+			.title {
+				font-size: 36px;
+				margin-bottom: 40px;
+			}
+
+			.head_p {
+				margin-bottom: 30px;
+				font-size: 18px;
+			}
+
+			.diff_proj {
+				margin-bottom: 35px;
+				font-size: 18px;
+			}
+
+			.diff_proj_content {
+				ul {
+					li {
+						line-height: 23px;
+	        	margin-bottom: 10px;
+
+						a {
+							border-bottom: 1px solid black;
+	    				padding-bottom:2px;
+							margin-right: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
 }

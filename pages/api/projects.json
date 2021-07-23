@@ -22,7 +22,12 @@
                 {
 			"projectName": "Mobeapp",
 			"projectLink": "https://mobeapp.vercel.app/",
-			"projectDescription": "an IMDB clone that is a progressive web app (pwa), got the data from TMDB api with the help of vue framework (nuxtjs)."
+			"projectDescription": "an IMDB clone that is a progressive web app (PWA), got the data from TMDB API with the help of vue framework (nuxtjs)."
+		},
+                {
+			"projectName": "Segregator",
+			"projectLink": "https://github.com/christianparanas/segregator",
+			"projectDescription": "a desktop application that will help you to segregate your scattered files in just one click, built with electronjs."
 		}
 	]
 ]

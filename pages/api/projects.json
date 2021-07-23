@@ -13,6 +13,11 @@
 			"projectName": "Chatroom",
 			"projectLink": "https://chatroom-ten.vercel.app/",
 			"projectDescription": "a realtime chatroom web application built with Nextjs and Firebase."
+		},
+                {
+			"projectName": "Studportal",
+			"projectLink": "https://studportal.vercel.app/auth",
+			"projectDescription": "student portal (evsu) clone made possible by nodejs request library by scraping the content of the current system user, built with nextjs for frontend and nodejs (express, request, cheerio) for backend."
 		}
 	]
 ]

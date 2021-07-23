@@ -21,7 +21,7 @@
 		},
                 {
 			"projectName": "Mobeapp",
-			"projectLink": "https://mobeapp.vercel.app/auth",
+			"projectLink": "https://mobeapp.vercel.app/",
 			"projectDescription": "an IMDB clone that is a progressive web app (pwa), got the data from TMDB api with the help of vue framework (nuxtjs)."
 		}
 	]

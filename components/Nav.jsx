@@ -25,7 +25,7 @@ export default function Nav() {
 		<div className="nav">
 			<div className="ham">
 				<div className="leftham">
-					<div className="name">Christian Paranas</div>
+					<Link href="/"><div className="name">Christian Paranas</div></Link>
 					<div className="prof">Software Engineer</div>
 				</div>
 				<Hamburger color="#fff" toggled={isOpen} toggle={setOpen} />

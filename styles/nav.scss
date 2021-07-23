@@ -20,6 +20,16 @@
 					color: rgba( 255, 255, 255, .6 );
 					font-size: 10px;
 				}
+
+				.name {
+					margin-bottom: 3px;
+					border-bottom: 1px solid #00224f;
+					cursor: pointer;
+
+					&:hover {
+						border-bottom: 1px solid white;
+					}
+				}
 			}
 		}
 
@@ -37,7 +47,16 @@
 		.items {
 
 			.item {
-				padding: 10px 0;
+				padding: 3px 0;
+				border-bottom: 1px solid #00224f;
+				width: fit-content;
+				cursor: pointer;
+				margin-bottom: 10px;
+				transition: all .3s ease;
+
+				&:hover {
+					border-bottom: 1px solid white;
+				}
 			}
 		}
 

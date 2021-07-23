@@ -24,7 +24,10 @@ export default function Nav() {
 	return (
 		<div className="nav">
 			<div className="ham">
-				<div className="name">Christian Paranas</div>
+				<div className="leftham">
+					<div className="name">Christian Paranas</div>
+					<div className="prof">Software Engineer</div>
+				</div>
 				<Hamburger color="#fff" toggled={isOpen} toggle={setOpen} />
 			</div>
 			<div className={navOverlay}>

@@ -12,7 +12,7 @@
                 {
 			"projectName": "Chatroom",
 			"projectLink": "https://chatroom-ten.vercel.app/",
-			"projectDescription": "realtime chatgroup web application built with Nextjs and Firebase."
+			"projectDescription": "a realtime chatroom web application built with Nextjs and Firebase."
 		}
 	]
 ]

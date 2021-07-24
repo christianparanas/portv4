@@ -11,18 +11,6 @@ export default function Home() {
   const [projs, setProjs] = useState(projects)
   const [hasWorkProjs, setHasWorkProjs] = useState(false)
 
-  useEffect(() => {
-    console.log(projects)
-
-  }, [])
-
-  if(!process.browser) return null
-
-  // external routing
-  const externalLink = (path) => {
-    window.location.href = path
-  }
-
   return (
     <div className="container">
       <Head>

@@ -81,3 +81,19 @@
 		}
 	}	
 }
+
+@media only screen and (min-width: 999px) {
+	.main {
+		display: grid;
+		grid-template-columns: 380px 1fr;
+
+		.content {
+			grid-column: 2;
+			padding: 90px 0 30px;
+
+			.title {
+				margin-top: 0;
+			}
+		}
+	}
+}

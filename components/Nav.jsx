@@ -37,6 +37,18 @@ export default function Nav() {
 					<Link href="/projects"><div className="item" onClick={closeNav}>Projects</div></Link>
 				</div>
 			</div>
+
+			<div className="sidebar">
+				<div className="sideHead">
+					<div className="name">Christian Paranas</div>
+					<div className="prof">Software Engineer</div>
+				</div>
+				<div className="sideItems">
+					<Link href="/"><div className="sideItem">About Me</div></Link>
+					<Link href="/"><div className="sideItem">Blog</div></Link>
+					<Link href="/projects"><div className="sideItem">Projects</div></Link>
+				</div>
+			</div>
 		</div>
 	)
 }

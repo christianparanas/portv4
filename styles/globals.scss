@@ -20,16 +20,37 @@ a {
 
 .footer {
   margin-top: -50px;
-  border-top: 1px solid rgba( 0, 0, 4, 0.125 );
-  padding: 20px 0;
   width: calc(100% - 60px);
   margin: 0 auto; 
+
+  .ff {
+     border-top: 1px solid rgba( 0, 0, 4, 0.125 );
+      padding: 20px 0;
+  }
 }
 
 @media only screen and (min-width: 452px) {
   .footer {
     max-width: 800px;
     margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 999px) {
+  .footer {
+    max-width: 100%;
+    margin: 0 0;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 380px 1fr;
+
+    .ff {
+      grid-column: 2;
+      max-width: 800px;
+      width: 90%;
+      margin: 0 auto;
+    }
   }
 }
 

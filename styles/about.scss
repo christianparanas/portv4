@@ -40,6 +40,35 @@
 				}
 			}
 		}
+
+		.reachout {
+			position: relative;
+			margin-top: 50px;
+
+			.lbl {
+				font-size: 12px;
+				margin-bottom: 10px;
+			}
+
+			.link_cons {
+				display: flex;
+
+				
+				.link_con {
+					box-shadow: 0 1px 4px RGB(26 26 67 / 10%);
+	    		background-color: #fff;
+	    		width: fit-content;
+	    		padding: 8px 10px;
+	    		margin-right: 10px;
+	    		border-radius: 50%;
+
+					svg {
+						width: 24px;
+						height: 24px;
+					}
+				}
+			}
+		}
 	}
 }
 

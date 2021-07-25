@@ -39,8 +39,8 @@ export default function Home() {
           <div className="reachout">
             <div className="lbl">LINKS:</div>
             <div className="link_cons">
-              <a href="https://github.com/christianparanas"><div className="link_con"><Git /></div></a>
-              <a href="#"><div className="link_con"><Linkedin /></div></a>
+              <a href="https://github.com/christianparanas" target="_blank"><div className="link_con"><Git /></div></a>
+              <a href="#" target="_blank"><div className="link_con"><Linkedin /></div></a>
             </div>
           </div>
         </div>

@@ -49,7 +49,7 @@ export default function Home() {
                   {projs[1].map((val, key) => {
                     return (
                       <li key={key}>
-                        <strong><a href={val.projectLink}>{val.projectName}</a></strong>
+                        <strong><a href={val.projectLink} target="_blank">{val.projectName}</a></strong>
                           -  {val.projectDescription}
                       </li>
                     )

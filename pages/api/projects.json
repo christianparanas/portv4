@@ -7,7 +7,7 @@
 		{
 			"projectName": "Tindahan",
 			"projectLink": "https://tindahan.vercel.app/",
-			"projectDescription": "an ecommerce website with basic features built with MERN (Mysql) stack."
+			"projectDescription": "an eCommerce website with basic features built with MERN (Mysql) stack."
 		},
                 {
 			"projectName": "Chatroom",
@@ -17,7 +17,7 @@
                 {
 			"projectName": "Studportal",
 			"projectLink": "https://studportal.vercel.app/auth",
-			"projectDescription": "student portal (evsu) clone made possible by nodejs request library by scraping the content of the current system user, built with nextjs for frontend and nodejs (express, request, cheerio) for backend."
+			"projectDescription": "student portal (evsu) clone made possible by nodejs request library by scraping the content of the current system user, built with nextjs for frontend and nodejs (express, request, cheerio) for the backend."
 		},
                 {
 			"projectName": "Mobeapp",

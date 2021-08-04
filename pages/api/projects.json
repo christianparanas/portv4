@@ -20,7 +20,7 @@
 			"projectDescription": "student portal (evsu) clone made possible by nodejs request library by scraping the content of the current system user, built with nextjs for frontend and nodejs (express, request, cheerio) for the backend."
 		},
                 {
-			"projectName": "Mobeapp",
+			"projectName": "Movieapp",
 			"projectLink": "https://mobeapp.vercel.app/",
 			"projectDescription": "an IMDB clone that is a progressive web app (PWA), got the data from TMDB API with the help of vue framework (nuxtjs)."
 		},

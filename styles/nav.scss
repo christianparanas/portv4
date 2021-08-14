@@ -1,12 +1,14 @@
 .nav {
 		color: #fff;
 		background: #00224f;
+                background: #6b21a8;
 		position: fixed;
 		width: 100%;
 		z-index: 100;
 
 		.ham {
 			background: #00224f;
+                         background: #6b21a8;
 			padding: 10px 25px;
 			display: flex;
 			z-index: 6;
@@ -42,6 +44,7 @@
 			position: fixed;
 			transition: all .3s;
 			background: #00224f;
+                         background: #6b21a8;
 			top: -100px; 
 			left: 0;
 			padding: 0 30px;

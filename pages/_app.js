@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@bf7775b/css/all.css" rel="stylesheet" type="text/css" />
+        <meta name="theme-color" content="#310F74" />
       </Head>
       <Layout>
         <Component {...pageProps} />

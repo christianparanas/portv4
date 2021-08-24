@@ -42,7 +42,7 @@ export default function Home() {
               <a href="https://github.com/christianparanas" target="_blank"><div className="link_con"><Git /></div></a>
               <a href="#" target="_blank"><div className="link_con"><Linkedin /></div></a>
               <div className="resume">
-                Resume 
+                Resume <i className="fad fa-file-download"></i>
               </div>
             </div>
             
@@ -54,5 +54,3 @@ export default function Home() {
     </div>
   )
 }
-
-// <i className="fad fa-file-download"></i>

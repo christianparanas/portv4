@@ -1,12 +1,10 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
 export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          {/* code that you want to add to the header */}
-        </Head>
+        <Head>{/* code that you want to add to the header */}</Head>
         <body>
           <Main />
           <NextScript />
@@ -32,11 +30,12 @@ export default class MyDocument extends Document {
           }}
         />
 
-        <div className="fb-customerchat"
+        <div
+          className="fb-customerchat"
           attribution="page_inbox"
-          page_id="107546304300116">
-        </div>
+          page_id="107546304300116"
+        ></div>
       </Html>
-    )
+    );
   }
 }

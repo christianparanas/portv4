@@ -1,33 +1,31 @@
 [
-	[
-		
-	],
-	
-	[
-		{
-			"projectName": "Tindahan",
-			"projectLink": "https://tindahan.vercel.app/",
-			"projectDescription": "an ecommerce website with basic features built with MERN (Mysql) stack."
-		},
-                {
-			"projectName": "Chatroom",
-			"projectLink": "https://chatroom-ten.vercel.app/",
-			"projectDescription": "a realtime chatroom web application built with Nextjs and Firebase."
-		},
-                {
-			"projectName": "Studportal",
-			"projectLink": "https://studportal.vercel.app/auth",
-			"projectDescription": "student portal (evsu) clone made possible by nodejs request library by scraping the content of the current system user, built with nextjs for frontend and nodejs (express, request, cheerio) for backend."
-		},
-                {
-			"projectName": "Mobeapp",
-			"projectLink": "https://mobeapp.vercel.app/",
-			"projectDescription": "an IMDB clone that is a progressive web app (PWA), got the data from TMDB API with the help of vue framework (nuxtjs)."
-		},
-                {
-			"projectName": "Segregator",
-			"projectLink": "https://github.com/christianparanas/segregator",
-			"projectDescription": "a desktop application that will help you to segregate your scattered files in just one click, built with electronjs."
-		}
-	]
+  [],
+
+  [
+    {
+      "projectName": "Tindahan",
+      "projectLink": "https://tindahan.vercel.app/",
+      "projectDescription": "an ecommerce website with basic features built with MERN (Mysql) stack."
+    },
+    {
+      "projectName": "Chatroom",
+      "projectLink": "https://chatroom-ten.vercel.app/",
+      "projectDescription": "a realtime chatroom web application built with Nextjs and Firebase."
+    },
+    {
+      "projectName": "Studportal",
+      "projectLink": "https://studportal.vercel.app/auth",
+      "projectDescription": "student portal (evsu) clone made possible by nodejs request library by scraping the content of the current system user, built with nextjs for frontend and nodejs (express, request, cheerio) for backend."
+    },
+    {
+      "projectName": "Mobeapp",
+      "projectLink": "https://mobeapp.vercel.app/",
+      "projectDescription": "an IMDB clone that is a progressive web app (PWA), got the data from TMDB API with the help of vue framework (nuxtjs)."
+    },
+    {
+      "projectName": "Segregator",
+      "projectLink": "https://github.com/christianparanas/segregator",
+      "projectDescription": "a desktop application that will help you to segregate your scattered files in just one click, built with electronjs."
+    }
+  ]
 ]

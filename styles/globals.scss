@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo&display=swap");
 
 html,
 body {
@@ -15,17 +15,17 @@ a {
 
 * {
   box-sizing: border-box;
-  font-family: 'Archivo', sans-serif;
+  font-family: "Archivo", sans-serif;
 }
 
 .footer {
   margin-top: -50px;
   width: calc(100% - 60px);
-  margin: 0 auto; 
+  margin: 0 auto;
 
   .ff {
-     border-top: 1px solid rgba( 0, 0, 4, 0.125 );
-      padding: 20px 0;
+    border-top: 1px solid rgba(0, 0, 4, 0.125);
+    padding: 20px 0;
   }
 }
 
@@ -53,5 +53,3 @@ a {
     }
   }
 }
-
-

@@ -19,7 +19,7 @@ export default function Home() {
           <h1 className="title">About Me</h1>
           <div className="img">
             <Image
-              src="/me.jpg"
+              src="Mm.png"
               alt="Picture of the author"
               width={225}
               height={225}

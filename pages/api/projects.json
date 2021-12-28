@@ -5,22 +5,22 @@
     {
       "projectName": "Tindahan",
       "projectLink": "https://tindahan.vercel.app/",
-      "projectDescription": "an ecommerce website with basic features built with MERN (Mysql) stack."
+      "projectDescription": "an eCommerce website with basic features built using MERN (MySQL) stack."
     },
     {
       "projectName": "Chatroom",
       "projectLink": "https://chatroom-ten.vercel.app/",
-      "projectDescription": "a realtime chatroom web application built with Nextjs and Firebase."
+      "projectDescription": "a real-time web-based chat application built using Nextjs and Firebase."
     },
     {
-      "projectName": "Studportal",
+      "projectName": "StudPortal",
       "projectLink": "https://studportal.vercel.app/auth",
-      "projectDescription": "student portal (evsu) clone made possible by nodejs request library by scraping the content of the current system user, built with nextjs for frontend and nodejs (express, request, cheerio) for backend."
+      "projectDescription": "EVSU Student Portal clone, got the data by scraping the content of the current system user. Built using nextjs for frontend and nodejs (express, request, cheerio) for backend."
     },
     {
       "projectName": "Mobeapp",
       "projectLink": "https://mobeapp.vercel.app/",
-      "projectDescription": "an IMDB clone that is a progressive web app (PWA), got the data from TMDB API with the help of vue framework (nuxtjs)."
+      "projectDescription": "an IMDB clone which is a progressive web application (PWA), got the data from TMDB API with the help of vue framework (nuxtjs)."
     },
     {
       "projectName": "Segregator",

@@ -3,7 +3,22 @@
 
   [
     {
-      "projectName": "Tindahan",
+      "projectName": "Lorem",
+      "projectLink": "https://lorem-dev.vercel.app/",
+      "projectDescription": "Clonning facebook using Angular for frontend and Nest.js for backend. In dev."
+    },
+   {
+      "projectName": "Shoppiee",
+      "projectLink": "https://shoppiee.vercel.app/",
+      "projectDescription": "an eCommerce progressive web app built using these awesome technologies (Angular, Express.js, Sequelize.js, and Stripe for payment gateway)."
+    },
+    {
+      "projectName": "CiSocial",
+      "projectLink": "https://cisocial.herokuapp.com/",
+      "projectDescription": "Facebook clone with basic features, built using PHP framework (Codeigniter3). - still in development. Not yet responsive for desktop."
+    },
+    {
+      "projectName": "eComV1",
       "projectLink": "https://tindahan.vercel.app/",
       "projectDescription": "an eCommerce website with basic features built using MERN (MySQL) stack."
     },

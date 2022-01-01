@@ -23,6 +23,11 @@
       "projectDescription": "an eCommerce website with basic features built using MERN (MySQL) stack."
     },
     {
+      "projectName": "Things",
+      "projectLink": "https://things.vercel.app/",
+      "projectDescription": "Like a Social media web app built using Vue and Firebase. Not yet desktop responsive."
+    },
+    {
       "projectName": "Chatroom",
       "projectLink": "https://chatroom-ten.vercel.app/",
       "projectDescription": "a real-time web-based chat application built using Nextjs and Firebase."

@@ -19,7 +19,7 @@ export default function Home() {
           <h1 className="title">About Me</h1>
           <div className="img">
             <Image
-              src="me.jpg"
+              src="me.png"
               alt="Picture of the author"
               width={225}
               height={225}
@@ -58,7 +58,7 @@ export default function Home() {
                   <Git />
                 </div>
               </a>
-              <a href="#" target="_blank">
+              <a href="https://www.linkedin.com/in/christianparanas" target="_blank">
                 <div className="link_con">
                   <Linkedin />
                 </div>

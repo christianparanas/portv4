@@ -29,7 +29,7 @@ export default function Nav() {
               Christian Paranas
             </div>
           </Link>
-          <div className="prof">Software Engineer</div>
+          <div className="prof">Software Developer</div>
         </div>
         <Hamburger color="#fff" toggled={isOpen} toggle={setOpen} />
       </div>

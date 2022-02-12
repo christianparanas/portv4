@@ -3,7 +3,8 @@ import Image from "next/image";
 import FadeIn from "react-fade-in";
 
 // components
-import { LinkedIn, Git } from "../components/svgs";
+import LinkedIn from "../components/svgs/LinkedIn";
+import Git from "../components/svgs/Git";
 
 export default function Home() {
   return (

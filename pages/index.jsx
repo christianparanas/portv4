@@ -3,7 +3,7 @@ import Image from "next/image";
 import FadeIn from "react-fade-in";
 
 // components
-import LinkedIn from "../components/svgs/LinkedIn";
+import Linkedin from "../components/svgs/Linkedin";
 import Git from "../components/svgs/Git";
 
 export default function Home() {
@@ -64,7 +64,7 @@ export default function Home() {
                   target="_blank"
                 >
                   <div className="link_con">
-                    <LinkedIn />
+                    <Linkedin />
                   </div>
                 </a>
                 <a

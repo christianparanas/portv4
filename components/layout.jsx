@@ -1,6 +1,6 @@
-import Nav from "./Nav";
-
 import { useState, useEffect } from "react";
+
+import Nav from "./Nav";
 
 export default function Layout({ children }) {
   const [footerYear, setFooterYear] = useState(null);

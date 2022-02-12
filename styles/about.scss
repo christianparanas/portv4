@@ -19,8 +19,8 @@
       padding: 40px 0 50px;
 
       img {
-        width: 225px;
-        height: 225px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
       }
     }
@@ -71,18 +71,27 @@
             width: 24px;
             height: 24px;
           }
+
+          &:hover {
+            box-shadow: 0 4px 10px RGB(26 26 67 / 10%);
+          }
         }
 
         .resume {
           font-size: 14px;
           height: fit-content;
           padding: 8px 12px;
-          border-radius: 10px;
+          border-radius: 5px;
           background-color: #6b21a8;
           color: #fff;
           width: fit-content;
           box-shadow: 0 1px 4px RGB(26 26 67 / 10%);
           cursor: pointer;
+          transition: all .3s ease-in-out;
+
+          &:hover {
+            background-color: #47166e;
+          }
         }
       }
     }

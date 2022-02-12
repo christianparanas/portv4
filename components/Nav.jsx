@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
-
 import { Squeeze as Hamburger } from "hamburger-react";
 
 export default function Nav() {
@@ -10,9 +9,10 @@ export default function Nav() {
   useEffect(() => {
     if (isOpen) {
       setNavOverlay("nav_overlay open_overlay");
-    } else {
-      setNavOverlay("nav_overlay");
-    }
+      return
+    } 
+
+    setNavOverlay("nav_overlay");
   }, [isOpen]);
 
   const closeNav = () => {
@@ -56,7 +56,7 @@ export default function Nav() {
       <div className="sidebar">
         <div className="sideHead">
           <div className="name">Christian Paranas</div>
-          <div className="prof">Software Engineer</div>
+          <div className="prof">Software Developer</div>
         </div>
         <div className="sideItems">
           <Link href="/">

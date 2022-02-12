@@ -1,6 +1,6 @@
 import React from "react";
 
-function Linkedin() {
+function LinkedIn() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -22,4 +22,4 @@ function Linkedin() {
   );
 }
 
-export default Linkedin;
+export default LinkedIn;

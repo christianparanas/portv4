@@ -1,2 +1,7 @@
-export { default as Git } from "./Git";
-export { default as LinkedIn } from "./LinkedIn";
+import Git from "./Git";
+import LinkedIn from "./LinkedIn";
+
+module.exports = {
+  Git,
+  LinkedIn,
+};

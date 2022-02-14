@@ -72,7 +72,7 @@ export default function Home() {
                   href="/resume-christianparanas.pdf"
                   download
                 >
-                  Resume <i className="fad fa-file-download"></i>
+                  Resume
                 </a>
               </div>
             </div>

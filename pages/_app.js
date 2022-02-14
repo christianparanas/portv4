@@ -8,13 +8,6 @@ import Layout from "../components/layout";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <link
-          href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@bf7775b/css/all.css"
-          rel="stylesheet"
-          type="text/css"
-        />
-      </Head>
       <Layout>
         <Component {...pageProps} />
       </Layout>

@@ -15,7 +15,7 @@
 
     .head_p {
       margin-bottom: 30px;
-      color: #afadad;
+      color: var(--secondaryFg);
     }
 
     .diff_proj {
@@ -36,7 +36,7 @@
       width: 100%;
 
       .noproj_p {
-        color: #afadad;
+        color: var(--secondaryFg);
       }
 
       .my-masonry-grid {

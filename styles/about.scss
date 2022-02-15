@@ -61,7 +61,7 @@
 
         .link_con {
           box-shadow: 0 1px 4px RGB(26 26 67 / 10%);
-          background-color: #fff;
+          background-color: #1f2937;
           width: fit-content;
           padding: 8px 10px;
           margin-right: 10px;
@@ -105,7 +105,7 @@
     position: relative;
 
     .content {
-      width: 560px;
+      max-width: 800px;
       margin: 0 auto;
 
       .title {

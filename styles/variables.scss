@@ -1,0 +1,18 @@
+:root {
+  /* Your default theme */
+  --background: #fafafa;
+  --foreground: #365771;
+  --secondaryFg: #365771a6;
+  --secondaryBg: #fff;
+  --shadow: 0 4px 4px 0 RGB(43 80 237 / 20%);
+  --borderColor: #fafafa;
+}
+
+[data-theme='dark'] {
+  --background: #091a28;
+  --foreground: white;
+  --secondaryFg: #afadad;
+  --secondaryBg: #1f2937;
+  --shadow: 0 0px 0px 0 RGB(43 80 237 / 20%);
+  --borderColor: #1f2937;
+}

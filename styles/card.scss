@@ -1,10 +1,12 @@
 .card__container {
-  background-color: #1f2937;
+  background-color: var(--secondaryBg);
   width: 100%;
   padding: 15px 15px 30px;
   border-radius: 8px;
   position: relative;
   height: fit-content;
+  box-shadow: var(--shadow);
+  border: 3px solid var(--borderColor);
 
   .card_header {
     display: flex;
@@ -18,6 +20,7 @@
 
     .project_links {
       svg {
+        stroke: var(--secondaryFg);
         width: 28px;
         transition: all 0.3s ease-in-out;
         cursor: pointer;
@@ -37,7 +40,7 @@
   .project_description {
     width: 100%;
     margin: 10px 0 15px;
-    color: #afadad;
+    color: var(--secondaryFg);
   }
 
   .project_tools {
@@ -75,6 +78,7 @@
     .tool {
       width: fit-content;
       background-color: #6b21a8;
+      color: white;
       font-size: 14px;
       padding: 2px 4px;
       border-radius: 3px;

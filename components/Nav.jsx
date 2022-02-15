@@ -1,10 +1,14 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Squeeze as Hamburger } from "hamburger-react";
+import { useRouter } from 'next/router';
+
 
 export default function Nav() {
+  const { asPath } = useRouter();
   const [isOpen, setOpen] = useState(false);
   const [navOverlay, setNavOverlay] = useState("nav_overlay");
+
 
   useEffect(() => {
     if (isOpen) {
@@ -36,17 +40,17 @@ export default function Nav() {
       <div className={navOverlay}>
         <div className="items">
           <Link href="/">
-            <div className="item" onClick={closeNav}>
+            <div className={`item ${asPath == '/' ? 'activePage' : ''}`} onClick={closeNav}>
               About Me
             </div>
           </Link>
           <Link href="/blog">
-            <div className="item" onClick={closeNav}>
+            <div className={`item ${asPath == '/blogs' ? 'activePage' : ''}`} onClick={closeNav}>
               Blog
             </div>
           </Link>
           <Link href="/projects">
-            <div className="item" onClick={closeNav}>
+            <div className={`item ${asPath == '/projects' ? 'activePage' : ''}`} onClick={closeNav}>
               Projects
             </div>
           </Link>
@@ -60,13 +64,13 @@ export default function Nav() {
         </div>
         <div className="sideItems">
           <Link href="/">
-            <div className="sideItem">About Me</div>
+            <div className={`sideItem ${asPath == '/' ? 'activePage' : ''}`}>About Me</div>
           </Link>
           <Link href="/">
-            <div className="sideItem">Blog</div>
+            <div className={`sideItem ${asPath == '/blogs' ? 'activePage' : ''}`}>Blog</div>
           </Link>
           <Link href="/projects">
-            <div className="sideItem">Projects</div>
+            <div className={`sideItem ${asPath == '/projects' ? 'activePage' : ''}`}>Projects</div>
           </Link>
         </div>
       </div>

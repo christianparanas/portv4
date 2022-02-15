@@ -5,47 +5,56 @@
     {
       "projectName": "Lorem",
       "projectLink": "https://lorem-dev.vercel.app/",
-      "projectDescription": "Clonning facebook using Angular for frontend and Nest.js for backend. In dev."
+      "projectDescription": "Clonning facebook using Angular for frontend and Nest.js for backend. In dev.",
+      "tools": ["Angular", "NestJS", "Socket.io", "TypeORM", "MySQL"]
     },
-   {
+    {
       "projectName": "Shoppiee",
       "projectLink": "https://shoppiee.vercel.app/",
-      "projectDescription": "an eCommerce progressive web app built using these awesome technologies (Angular, Express.js, Sequelize.js, and Stripe for payment gateway)."
+      "projectDescription": "an eCommerce progressive web app built using these awesome technologies (Angular, Express.js, Sequelize.js, and Stripe for payment gateway).",
+      "tools": ["Angular", "ExpressJS", "SequelizeORM", "Stripe", "MySQL"]
     },
     {
       "projectName": "CiSocial",
       "projectLink": "https://cisocial.herokuapp.com/",
-      "projectDescription": "Facebook clone with basic features, built using PHP framework (Codeigniter3). - still in development. Not yet responsive for desktop."
+      "projectDescription": "Facebook clone with basic features, built using PHP framework (Codeigniter3). - still in development. Not yet responsive for desktop.",
+      "tools": ["PHP", "Codeigniter3", "MySQL"]
     },
     {
       "projectName": "eComV1",
       "projectLink": "https://tindahan.vercel.app/",
-      "projectDescription": "an eCommerce website with basic features built using MERN (MySQL) stack."
+      "projectDescription": "an eCommerce website with basic features built using MERN (MySQL) stack.",
+      "tools": ["React", "ExpressJS", "MySQL"]
     },
     {
       "projectName": "Things",
       "projectLink": "https://things.vercel.app/",
-      "projectDescription": "Like a Social media web app built using Vue and Firebase. Not yet desktop responsive."
+      "projectDescription": "Like a Social media web app built using Vue and Firebase. Not yet desktop responsive.",
+      "tools": ["Vue", "Firebase"]
     },
     {
       "projectName": "Chatroom",
       "projectLink": "https://chatroom-ten.vercel.app/",
-      "projectDescription": "a real-time web-based chat application built using Nextjs and Firebase."
+      "projectDescription": "a real-time web-based chat application built using Nextjs and Firebase.",
+      "tools": ["NextJS", "Firebase"]
     },
     {
       "projectName": "StudPortal",
       "projectLink": "https://studportal.vercel.app/auth",
-      "projectDescription": "EVSU Student Portal clone, got the data by scraping the content of the current system user. Built using nextjs for frontend and nodejs (express, request, cheerio) for backend."
+      "projectDescription": "EVSU Student Portal clone, got the data by scraping the content of the current system user. Built using nextjs for frontend and nodejs (express, request, cheerio) for backend.",
+      "tools": ["NextJS", "ExpressJS", "Cheerio", "Request"]
     },
     {
       "projectName": "Mobeapp",
       "projectLink": "https://mobeapp.vercel.app/",
-      "projectDescription": "an IMDB clone which is a progressive web application (PWA), got the data from TMDB API with the help of vue framework (nuxtjs)."
+      "projectDescription": "an IMDB clone which is a progressive web application (PWA), got the data from TMDB API with the help of vue framework (nuxtjs).",
+      "tools": ["Vue", "NuxtJS", "TMDB api"]
     },
     {
       "projectName": "Segregator",
       "projectLink": "https://github.com/christianparanas/segregator",
-      "projectDescription": "a desktop application that will help you to segregate your scattered files in just one click, built with electronjs."
+      "projectDescription": "a desktop application that will help you to segregate your scattered files in just one click, built with electronjs.",
+      "tools": ["ElectronJS"]
     }
   ]
 ]

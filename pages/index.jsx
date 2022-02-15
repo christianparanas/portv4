@@ -2,9 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import FadeIn from "react-fade-in";
 
-// components
-import Linkedin from "../components/svgs/Linkedin";
-import Git from "../components/svgs/Git";
+// import components
+import { Linkedin, Git } from "../components/svgs";
 
 export default function Home() {
   return (

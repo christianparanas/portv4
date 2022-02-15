@@ -1,13 +1,23 @@
 import Head from "next/head";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import FadeIn from "react-fade-in";
+import Masonry from "react-masonry-css";
 
 // data
 import projects from "./api/projects.json";
 
+// import components
+import { Card } from "../components";
+
+const breakpointColumnsObj = {
+  default: 2,
+  1100: 2,
+  700: 1,
+  500: 1,
+};
+
 export default function Home() {
   const [projs, setProjs] = useState(projects);
-  const [hasWorkProjs, setHasWorkProjs] = useState(false);
 
   return (
     <div className="container">
@@ -39,7 +49,7 @@ export default function Home() {
                 </div>
                 <div className="diff_proj_content">
                   <ul>
-                    {hasWorkProjs ? (
+                    {!projs[0] ? (
                       <>Hello</>
                     ) : (
                       <div className="noproj_p">No projects yet!</div>
@@ -59,20 +69,19 @@ export default function Home() {
                   Personal projects:
                 </div>
                 <div className="diff_proj_content">
-                  <ul>
-                    {projs[1].map((val, key) => {
+                  <Masonry
+                    breakpointCols={breakpointColumnsObj}
+                    className="my-masonry-grid"
+                    columnClassName="my-masonry-grid_column"
+                  >
+                    {projs[1].map((project, key) => {
                       return (
-                        <li key={key}>
-                          <strong>
-                            <a href={val.projectLink} target="_blank">
-                              {val.projectName}
-                            </a>
-                          </strong>
-                          - {val.projectDescription}
-                        </li>
+                        <React.Fragment key={key}>
+                          <Card props={project} />
+                        </React.Fragment>
                       );
                     })}
-                  </ul>
+                  </Masonry>
                 </div>
               </div>
             </div>

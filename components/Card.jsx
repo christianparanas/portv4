@@ -10,7 +10,7 @@ function Card({ props }) {
         <h3 className="project_title">{props.projectName}</h3>
         <div className="project_links">
           <a href={ props.links.github } target="_blank"><Repo /></a>
-          <a href={ props.links.live } target="_blank"><Live /></a>
+          {props.links.live && <a href={ props.links.live } target="_blank"><Live /></a>}
         </div>
       </div>
       <div className="project_description">{props.projectDescription}</div>

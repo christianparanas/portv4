@@ -35,7 +35,7 @@ export default function Home() {
                   alt="🙎🏻‍♂️"
                   src="https://s.w.org/images/core/emoji/13.0.1/svg/1f64e-1f3fb-200d-2642-fe0f.svg"
                 />{" "}
-                I’m a software developer currently in Tacloban city,{" "}
+                I’m a Web developer currently in Tacloban city,{" "}
                 <img
                   draggable="false"
                   role="img"
@@ -43,8 +43,8 @@ export default function Home() {
                   alt="🇵🇭"
                   src="https://s.w.org/images/core/emoji/13.0.1/svg/1f1f5-1f1ed.svg"
                 />{" "}
-                Philippines. Specializing in building websites and applications.
-                My current toolset includes Vue, React, Redux, Node, Laravel,
+                Philippines. I specialize in building websites and applications.
+                My current toolset includes React, Angular, Node, Laravel,
                 and other various frameworks, libraries, and technologies
                 related to them.
               </div>

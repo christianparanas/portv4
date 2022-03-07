@@ -18,7 +18,6 @@ export default function ThemeChanger() {
   }
 
   return (
-      <DarkModeToggle onChange={changeTheme} checked={isDarkMode} size={60} />
-    
+      <DarkModeToggle onChange={changeTheme} checked={isDarkMode} size={55} />
   );
 }

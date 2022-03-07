@@ -33,7 +33,7 @@ export default function Nav() {
               Christian Paranas
             </div>
           </Link>
-          <div className="prof">Software Developer</div>
+          <div className="prof">Web Developer</div>
         </div>
         <div className="ops">
           <ThemeChanger />
@@ -50,14 +50,6 @@ export default function Nav() {
               About Me
             </div>
           </Link>
-          <Link href="/blog">
-            <div
-              className={`item ${asPath == "/blogs" ? "activePage" : ""}`}
-              onClick={closeNav}
-            >
-              Blog
-            </div>
-          </Link>
           <Link href="/projects">
             <div
               className={`item ${asPath == "/projects" ? "activePage" : ""}`}
@@ -72,19 +64,12 @@ export default function Nav() {
       <div className="sidebar">
         <div className="sideHead">
           <div className="name">Christian Paranas</div>
-          <div className="prof">Software Developer</div>
+          <div className="prof">Web Developer</div>
         </div>
         <div className="sideItems">
           <Link href="/">
             <div className={`sideItem ${asPath == "/" ? "activePage" : ""}`}>
               About Me
-            </div>
-          </Link>
-          <Link href="/">
-            <div
-              className={`sideItem ${asPath == "/blogs" ? "activePage" : ""}`}
-            >
-              Blog
             </div>
           </Link>
           <Link href="/projects">

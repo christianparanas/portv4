@@ -9,8 +9,8 @@ function Card({ props }) {
       <div className="card_header">
         <h3 className="project_title">{props.projectName}</h3>
         <div className="project_links">
-          <Repo />
-          <Live />
+          <a href={ props.links.github } target="_blank"><Repo /></a>
+          <a href={ props.links.live } target="_blank"><Live /></a>
         </div>
       </div>
       <div className="project_description">{props.projectDescription}</div>

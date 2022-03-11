@@ -35,7 +35,7 @@ export default function Home() {
                   alt="🙎🏻‍♂️"
                   src="https://s.w.org/images/core/emoji/13.0.1/svg/1f64e-1f3fb-200d-2642-fe0f.svg"
                 />{" "}
-                I’m a Web developer currently in Tacloban city,{" "}
+                Hi, I’m Christian Paranas a web developer currently based in Tacloban city,{" "}
                 <img
                   draggable="false"
                   role="img"

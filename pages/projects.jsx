@@ -28,11 +28,15 @@ export default function Projects() {
   const [limit, setLimit] = useState(8)
   const { data, error } = useSWR([`/users/christianparanas/repos?sort=created_at&per_page=${limit}`], fetcher)
   const [projects, setProjects] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     if(data)  {
       // store the data from the api to projects variable
       setProjects(data)
+      setIsLoading(false)
+
+      console.log(data)
     }
   }, [data])
 
@@ -78,18 +82,21 @@ export default function Projects() {
                   Personal projects:
                 </div>
                 <div className="diff_proj_content">
+                  {error && (<div>Something went wrong.</div>)}
+
                   <Masonry
                     breakpointCols={breakpointColumnsObj}
                     className="my-masonry-grid"
                     columnClassName="my-masonry-grid_column"
                   >
-                    {projects && projects.map((project, key) => {
+                    {!isLoading ? (projects.map((project, key) => {
                       return (
                         <React.Fragment key={key}>
                           <Card props={project} />
                         </React.Fragment>
                       );
-                    })}
+                    })) : (<>Loading</>)
+                  }
                   </Masonry>
                 </div>
               </div>

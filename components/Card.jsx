@@ -1,4 +1,5 @@
 import React from "react";
+import * as moment from 'moment';
 
 const baseURL = "https://github.com/"
 
@@ -25,6 +26,7 @@ function Card({ props }) {
           );
         })}
       </div>
+      <span className="updated_at">Last updated: {moment(props.updated_at).fromNow()}</span>
     </div>
   );
 }

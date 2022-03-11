@@ -37,6 +37,15 @@
     }
   }
 
+  .updated_at {
+    font-size: 10px;
+    color: var(--secondaryFg);
+    position: absolute;
+    top: 0;
+    display: none;
+    transition: all .3s ease;
+  }
+
   .project_description {
     width: 100%;
     margin: 10px 0 15px;
@@ -83,6 +92,13 @@
       padding: 2px 4px;
       border-radius: 3px;
       white-space: nowrap;
+    }
+  }
+
+  &:hover {
+
+    .updated_at {
+      display: block;
     }
   }
 }

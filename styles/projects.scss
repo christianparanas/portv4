@@ -32,6 +32,22 @@
       }
     }
 
+    .loadMoreBtn {
+      width: fit-content;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background: var(--secondaryBg);
+      box-shadow: var(--shadow);
+      border: 3px solid var(--borderColor);
+      cursor: pointer;
+      margin: 0 auto;
+
+      &:hover {
+        background: var(--background);
+      }
+    }
+
+
     .diff_proj_content {
       width: 100%;
 

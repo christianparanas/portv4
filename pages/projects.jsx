@@ -102,15 +102,17 @@ export default function Projects() {
                       );
                     })) 
                     : 
-                    ([...Array(8).keys()].map((el) => (
-                        <Skeleton count={1} height={132} />
+                    ([...Array(8).keys()].map((el, key) => (
+                        <React.Fragment key={key}>
+                          <Skeleton count={1} height={132} />
+                        </React.Fragment>
                     )))
                   }
                   </Masonry>
                 </div>
               </div>
 
-              <button onClick={loadMoreProjects}>load more</button>
+              <div className="loadMoreBtn" onClick={loadMoreProjects}>load more</div>
             </div>
           </div>
         </main>

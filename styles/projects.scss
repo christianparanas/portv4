@@ -54,6 +54,18 @@
         /* change div to reference your elements you put in <Masonry> */
         margin-bottom: 15px;
       }
+
+      .react-loading-skeleton {
+        margin-bottom: 15px;
+        border-radius: 8px;
+        background: var(--secondaryBg);
+        box-shadow: var(--shadow);
+        border: 3px solid var(--borderColor);
+      }
+
+      .react-loading-skeleton:after {
+        background: var(--background);
+      }
     }
   }
 }

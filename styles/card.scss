@@ -57,7 +57,7 @@
     width: calc(100% - 30px);
     display: flex;
     overflow-x: auto;
-    gap: 5px;
+    grid-gap: 5px;
 
     // &::-webkit-scrollbar {
     //   width: 5px;

@@ -4,6 +4,8 @@ import FadeIn from "react-fade-in";
 import Masonry from "react-masonry-css";
 import useSWR from 'swr'
 import * as _ from 'lodash'
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 // import components
 import { Card } from "../components";
@@ -34,7 +36,10 @@ export default function Projects() {
     if(data)  {
       // store the data from the api to projects variable
       setProjects(data)
-      setIsLoading(false)
+      
+      setTimeout(() => {
+        setIsLoading(false)
+      }, 3000)
 
       console.log(data)
     }
@@ -95,7 +100,11 @@ export default function Projects() {
                           <Card props={project} />
                         </React.Fragment>
                       );
-                    })) : (<>Loading</>)
+                    })) 
+                    : 
+                    ([...Array(8).keys()].map((el) => (
+                        <Skeleton count={1} height={132} />
+                    )))
                   }
                   </Masonry>
                 </div>
@@ -108,16 +117,4 @@ export default function Projects() {
       </FadeIn>
     </div>
   );
-}
-
-
-export const getStaticProps = async () => {
-  const res = await fetch(`${baseURL}?sort=created_at&per_page=8`)
-  const projects = await res.json()
-
-  return {
-    props: {
-      projects,
-    },
-  }
 }

@@ -31,8 +31,9 @@ export default function Projects() {
   const { data, error } = useSWR([`/users/christianparanas/repos?sort=created_at&per_page=${limit}`], fetcher)
   const [projects, setProjects] = useState([])
   const [isLoading, setIsLoading] = useState(true)
+  const [publicRepoCount, setPublicRepoCount] = useState(null)
 
-  useEffect(() => {
+  useEffect( async () => {
     if(data)  {
       // store the data from the api to projects variable
       setProjects(data)
@@ -43,7 +44,18 @@ export default function Projects() {
 
       console.log(data)
     }
+
+    fetchUserGithubData()
   }, [data])
+
+
+  const fetchUserGithubData = async () => {
+    const res = await fetch("https://api.github.com/users/christianparanas")
+    const datas = await res.json()
+
+    // store the public repo count for later use - load more
+    setPublicRepoCount(datas.public_repos)
+  }
 
 
   const loadMoreProjects = () => {
@@ -113,7 +125,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              {!error && <div className="loadMoreBtn" onClick={loadMoreProjects}>load more</div>}
+              {(!error && !(projects.length >= publicRepoCount)) && <div className="loadMoreBtn" onClick={loadMoreProjects}>load more</div>}
             </div>
           </div>
         </main>

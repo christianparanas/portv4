@@ -58,7 +58,6 @@
     width: calc(100% - 30px);
     display: flex;
     overflow-x: auto;
-    grid-gap: 5px;
 
     // &::-webkit-scrollbar {
     //   width: 5px;
@@ -93,6 +92,7 @@
       padding: 2px 4px;
       border-radius: 3px;
       white-space: nowrap;
+      margin-right: 5px;
     }
   }
 

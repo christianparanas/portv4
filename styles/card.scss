@@ -1,7 +1,7 @@
 .card__container {
   background-color: var(--secondaryBg);
   width: 100%;
-  padding: 15px 15px 30px;
+  padding: 10px 10px 10px;
   border-radius: 8px;
   position: relative;
   height: fit-content;
@@ -54,6 +54,7 @@
 
   .project_tools {
     position: absolute;
+    bottom: -8px;
     width: calc(100% - 30px);
     display: flex;
     overflow-x: auto;

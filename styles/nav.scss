@@ -5,6 +5,30 @@
   width: 100%;
   z-index: 100;
 
+  .toogle {
+    display: none;
+    background: var(--background);
+    border-radius: 8px;
+    shadow: var(--shadow);
+    padding: 5px 12px;
+    align-items: center;
+
+
+    span {
+      margin-right: 10px;
+      color: var(--foreground);
+    }
+
+    .tog-con {
+      border: 1px solid var(--secondaryBg);
+      display: flex;
+      align-items: center;
+      padding: 3px;
+      height: fit-content;
+      border-radius: 8px;
+    }
+  }
+
   .ham {
     background: #6b21a8;
     padding: 10px 25px;
@@ -37,6 +61,8 @@
 
   .sidebar {
     display: none;
+
+
   }
 
   .nav_overlay {
@@ -70,6 +96,33 @@
       background-color: #942ee7;
       padding: 10px 15px;
     }
+
+      .toogle {
+        display: block;
+        display: flex;
+        margin-top: 40px;
+        align-items: center; 
+        background: var(--background);
+        border-radius: 8px;
+        shadow: var(--shadow);
+        padding: 5px 10px;
+        width: fit-content;
+
+        span {
+          margin-right: 10px;
+          color: var(--foreground);
+          font-size: 14px;
+        }
+
+        .tog-con-mobile {
+          border: 1px solid var(--secondaryBg);
+          display: flex;
+          align-items: center;
+          padding: 3px;
+          height: fit-content;
+          border-radius: 8px;
+        }
+      }
   }
 
   .open_overlay {
@@ -107,6 +160,14 @@
     z-index: 100;
     padding: 80px 50px 144px 50px;
 
+    .toogle {
+      margin-left: 15px;
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      margin: 20px 0;
+    }
+
     .ham,
     .nav_overlay {
       display: none;
@@ -114,10 +175,7 @@
 
     .sidebar {
       display: block;
-
-      .toogle {
-        margin-left: 15px;
-      }
+      position: relative;
 
       .sideHead {
         .prof {

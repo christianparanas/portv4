@@ -2,10 +2,13 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Squeeze as Hamburger } from "hamburger-react";
 import { useRouter } from "next/router";
+import { useTheme } from "next-themes";
 
 import ThemeChanger from "./ThemeChanger";
 
 export default function Nav() {
+  const { theme, setTheme } = useTheme();
+
   const { asPath } = useRouter();
   const [isOpen, setOpen] = useState(false);
   const [navOverlay, setNavOverlay] = useState("nav_overlay");
@@ -17,7 +20,7 @@ export default function Nav() {
     }
 
     setNavOverlay("nav_overlay");
-  }, [isOpen]);
+  }, [isOpen, theme]);
 
   const closeNav = () => {
     setNavOverlay("nav_overlay");
@@ -36,7 +39,6 @@ export default function Nav() {
           <div className="prof">Web Developer</div>
         </div>
         <div className="ops">
-          <ThemeChanger />
           <Hamburger color="#fff" toggled={isOpen} toggle={setOpen} />
         </div>
       </div>
@@ -58,6 +60,12 @@ export default function Nav() {
               Projects
             </div>
           </Link>
+          <div className="toogle">
+              <span>{theme == "dark" ? "Dark mode" : "Light mode"}</span>
+              <div className="tog-con-mobile">
+                <ThemeChanger /> 
+              </div>
+          </div>
         </div>
       </div>
 
@@ -82,10 +90,15 @@ export default function Nav() {
             </div>
           </Link>
         </div>
-        <div className="toogle">
-          <ThemeChanger />
-        </div>
       </div>
+
+        <div className="toogle">
+          <span>{theme == "dark" ? "Dark mode" : "Light mode"}</span>
+          <div className="tog-con">
+            <ThemeChanger /> 
+          </div>
+        </div>
     </div>
   );
 }
+

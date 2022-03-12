@@ -87,32 +87,33 @@ export default function Projects() {
                   Personal projects:
                 </div>
                 <div className="diff_proj_content">
-                  {error && (<div>Something went wrong.</div>)}
-
-                  <Masonry
-                    breakpointCols={breakpointColumnsObj}
-                    className="my-masonry-grid"
-                    columnClassName="my-masonry-grid_column"
-                  >
-                    {!isLoading ? (projects.map((project, key) => {
-                      return (
-                        <React.Fragment key={key}>
-                          <Card props={project} />
-                        </React.Fragment>
-                      );
-                    })) 
-                    : 
-                    ([...Array(8).keys()].map((el, key) => (
+                  {error ? (<div className="wentWrong">Something went wrong. <span>reload</span></div>)
+                    :
+                    (<Masonry
+                      breakpointCols={breakpointColumnsObj}
+                      className="my-masonry-grid"
+                      columnClassName="my-masonry-grid_column"
+                    >
+                      {!isLoading ? (projects.map((project, key) => {
+                        return (
+                          <React.Fragment key={key}>
+                            <Card props={project} />
+                          </React.Fragment>
+                        );
+                      })) 
+                      : 
+                      ([...Array(8).keys()].map((el, key) => (
                         <React.Fragment key={key}>
                           <Skeleton count={1} height={132} />
                         </React.Fragment>
-                    )))
-                  }
-                  </Masonry>
+                      )))
+                      }
+                    </Masonry>)
+                    }
                 </div>
               </div>
 
-              <div className="loadMoreBtn" onClick={loadMoreProjects}>load more</div>
+              {!error && <div className="loadMoreBtn" onClick={loadMoreProjects}>load more</div>}
             </div>
           </div>
         </main>

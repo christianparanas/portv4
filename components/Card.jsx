@@ -1,5 +1,6 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import * as moment from 'moment';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 
 const baseURL = "https://github.com/"
 
@@ -7,8 +8,20 @@ const baseURL = "https://github.com/"
 import { Repo, Live } from "./svgs";
 
 function Card({ props }) {
+  const [isLoading, setIsLoading] = useState(true)
+
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 2000)
+  }, [])
+
   return (
-    <div className="card__container">
+    <>
+    {isLoading ? (<Skeleton count={1} height={132} />) :
+
+    (<div className="card__container">
       <div className="card_header">
         <h3 className="project_title">{props.name.length >= 25 ? `${props.name.substring(0, 20)} ...` : props.name }</h3>
         <div className="project_links">
@@ -27,7 +40,9 @@ function Card({ props }) {
         })}
       </div>
       <span className="updated_at">Last updated: {moment(props.updated_at).fromNow()}</span>
-    </div>
+    </div>)
+    }
+    </>
   );
 }
 

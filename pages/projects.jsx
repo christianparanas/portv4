@@ -40,9 +40,7 @@ export default function Projects() {
       
       setTimeout(() => {
         setIsLoading(false)
-      }, 3000)
-
-      console.log(data)
+      }, 1000)
     }
 
     fetchUserGithubData()

@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import DarkModeToggle from "react-dark-mode-toggle";
 
+import { Moon, Sun } from './svgs' 
+
 export default function ThemeChanger() {
   const { theme, setTheme } = useTheme();
-  const [isDarkMode, setIsDarkMode] = useState(theme == "light" ? false : true);
+  const [isDarkMode, setIsDarkMode] = useState(null);
+
+  useEffect(() => {
+    setIsDarkMode(theme == "light" ? false : true)
+  }, [theme])
 
   function changeTheme() {
     if (theme == "light") {
@@ -18,6 +24,6 @@ export default function ThemeChanger() {
   }
 
   return (
-      <DarkModeToggle onChange={changeTheme} checked={isDarkMode} size={55} />
+      <div className="themeChanger" onClick={changeTheme}>{ isDarkMode ? <Sun /> : <Moon /> }</div>
   );
 }

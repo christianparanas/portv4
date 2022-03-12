@@ -21,6 +21,16 @@ a {
   font-family: "Fredoka One", sans-serif;
 }
 
+.themeChanger {
+  background-color: #942ee7;
+  height: 34px;
+  width: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  margin-top: 2px;
+}
+
 .footer {
   margin-top: -50px;
   width: calc(100% - 60px);

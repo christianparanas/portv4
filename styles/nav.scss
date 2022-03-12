@@ -7,25 +7,18 @@
 
   .toogle {
     display: none;
+    margin-top: 40px;
+    align-items: center; 
     background: var(--background);
     border-radius: 8px;
     shadow: var(--shadow);
-    padding: 5px 12px;
-    align-items: center;
-
+    padding: 5px 10px 7px 10px;
+    width: fit-content;
 
     span {
       margin-right: 10px;
       color: var(--foreground);
-    }
-
-    .tog-con {
-      border: 1px solid var(--secondaryBg);
-      display: flex;
-      align-items: center;
-      padding: 3px;
-      height: fit-content;
-      border-radius: 8px;
+      font-size: 14px;
     }
   }
 
@@ -41,6 +34,16 @@
       display: flex;
       align-items: center;
       gap: 8px;
+
+      .hamburger-react {
+        width: 44px !important;
+        height: 44px !important;
+        -webkit-tap-highlight-color: transparent;
+
+        div {
+          width: 26px !important;
+        }
+      }
     }
 
     .leftham {
@@ -99,29 +102,6 @@
 
       .toogle {
         display: block;
-        display: flex;
-        margin-top: 40px;
-        align-items: center; 
-        background: var(--background);
-        border-radius: 8px;
-        shadow: var(--shadow);
-        padding: 5px 10px;
-        width: fit-content;
-
-        span {
-          margin-right: 10px;
-          color: var(--foreground);
-          font-size: 14px;
-        }
-
-        .tog-con-mobile {
-          border: 1px solid var(--secondaryBg);
-          display: flex;
-          align-items: center;
-          padding: 3px;
-          height: fit-content;
-          border-radius: 8px;
-        }
       }
   }
 

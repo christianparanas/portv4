@@ -39,6 +39,7 @@ export default function Nav() {
           <div className="prof">Web Developer</div>
         </div>
         <div className="ops">
+          <ThemeChanger />
           <Hamburger color="#fff" toggled={isOpen} toggle={setOpen} />
         </div>
       </div>
@@ -60,12 +61,6 @@ export default function Nav() {
               Projects
             </div>
           </Link>
-          <div className="toogle">
-              <span>{theme == "dark" ? "Dark mode" : "Light mode"}</span>
-              <div className="tog-con-mobile">
-                <ThemeChanger /> 
-              </div>
-          </div>
         </div>
       </div>
 

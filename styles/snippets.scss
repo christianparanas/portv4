@@ -16,8 +16,8 @@
         .header {
           font-size: 12px;
           background: var(--secondaryBg);
+          box-shadow: var(--shadow);
           border: 3px solid var(--borderColor);
-          shadow: var(--shadow);
           padding: 10px;
           border-radius: 8px;
         }

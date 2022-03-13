@@ -1,15 +1,33 @@
-import CodeMirror from '@uiw/react-codemirror';
-import { javascript } from '@codemirror/lang-javascript';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { solarizedDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
-export default function App() {
+export default function Code() {
+  const codeString = `
+    import * as React from "react"
+
+    const Moon = (props) => (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={22}
+        height={22}
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth={2}
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        {...props}
+      >
+        <path d="M0 0h24v24H0z" stroke="none" />
+        <path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z" />
+      </svg>
+    )
+
+    export default Moon`;
+
   return (
-    <CodeMirror
-      value="console.log('hello world!');"
-      height="200px"
-      extensions={[javascript({ jsx: true })]}
-      onChange={(value, viewUpdate) => {
-        console.log('value:', value);
-      }}
-    />
+    <SyntaxHighlighter language="javascript" style={solarizedDark}>
+      {codeString}
+    </SyntaxHighlighter>
   );
 }

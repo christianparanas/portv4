@@ -34,8 +34,18 @@ export default function Snippets() {
 
       <FadeIn>
         <div className="snippets">
-          hello
-          <Code />
+          <h3>Code Snippets | Gists</h3>
+
+          <div className="wrapper">
+            {data && data.map((gist, key) => {
+              return (
+                <div key={key} className="gist">
+                  <div className="header">{gist.description}</div>
+                  <Code />
+                </div>
+              )
+            })}
+          </div>
         </div>
       </FadeIn>
     </div>

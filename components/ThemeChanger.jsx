@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import DarkModeToggle from "react-dark-mode-toggle";
 
 import { Moon, Sun } from './svgs' 
 

@@ -2,10 +2,31 @@
   height: 100%;
   min-height: 92vh;
   position: relative;
+  font-family: "Roboto", sans-serif;
 
 
   .snippets {
-    padding-top: 100px;
-  }
+    padding: 100px 20px 20px;
 
+
+    .wrapper {
+
+      .gist {
+
+        .header {
+          font-size: 12px;
+          background: var(--secondaryBg);
+          border: 3px solid var(--borderColor);
+          shadow: var(--shadow);
+          padding: 10px;
+          border-radius: 8px;
+        }
+
+        pre {
+          font-size: 10px;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
 }

@@ -33,7 +33,10 @@
     .ops {
       display: flex;
       align-items: center;
-      gap: 8px;
+
+      .themeChanger {
+        margin-right: 12px;
+      }
 
       .hamburger-react {
         width: 44px !important;

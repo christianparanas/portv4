@@ -63,7 +63,11 @@
           box-shadow: 0 1px 4px RGB(26 26 67 / 10%);
           background-color: var(--secondaryBg);
           width: fit-content;
-          padding: 8px 10px;
+          padding: 8px;
+          width: 44px;
+          height: 44px;
+          display: grid;
+          place-items: center;
           margin-right: 10px;
           border-radius: 50%;
 
@@ -88,6 +92,7 @@
           box-shadow: 0 1px 4px RGB(26 26 67 / 10%);
           cursor: pointer;
           transition: all .3s ease-in-out;
+          font-family: "Fredoka One", sans-serif;
 
           &:hover {
             background-color: #47166e;

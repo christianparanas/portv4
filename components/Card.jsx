@@ -23,7 +23,7 @@ function Card({ props }) {
 
     (<div className="card__container">
       <div className="card_header">
-        <h3 className="project_title">{props.name.length >= 25 ? `${props.name.substring(0, 20)} ...` : props.name }</h3>
+        <h4 className="project_title">{props.name.length >= 25 ? `${props.name.substring(0, 20)} ...` : props.name }</h4>
         <div className="project_links">
           <a href={ baseURL + props.full_name } target="_blank"><Repo /></a>
           {props.homepage && <a href={ props.homepage } target="_blank"><Live /></a>}

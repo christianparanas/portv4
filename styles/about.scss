@@ -92,7 +92,6 @@
           box-shadow: 0 1px 4px RGB(26 26 67 / 10%);
           cursor: pointer;
           transition: all .3s ease-in-out;
-          font-family: "Fredoka One", sans-serif;
 
           &:hover {
             background-color: #47166e;
@@ -147,7 +146,7 @@
 
     .content {
       grid-column: 2;
-      padding: 90px 0 30px;
+      padding: 90px 30px;
 
       .title {
         margin-top: 0;

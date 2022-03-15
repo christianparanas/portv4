@@ -15,6 +15,7 @@ const fetcher = async (params) => {
   return data
 }
 
+
 export default function Snippets() {
   const { data, error } = useSWR([`/users/christianparanas/gists`], fetcher)
 
@@ -26,26 +27,27 @@ export default function Snippets() {
   }, [data])
 
   return (
-    <div className="snippets__container">
+    <div className="container">
       <Head>
         <title>Snippets | Christian Paranas</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <FadeIn>
         <div className="snippets">
-          <h3>Code Snippets | Gists</h3>
+          <main className="content">
+            <h3>Code Snippets | Gists</h3>
 
-          <div className="wrapper">
-            {data && data.map((gist, key) => {
-              return (
-                <div key={key} className="gist">
-                  <div className="header">{gist.description}</div>
-                  <Code />
-                </div>
-              )
-            })}
-          </div>
+            <div className="wrapper">
+              {data && data.map((gist, key) => {
+                return (
+                  <div key={key} className="gist">
+                    <div className="header">{gist.description}</div>
+                    <Code props={gist.url} />
+                  </div>
+                )
+              })}
+            </div>
+          </main>
         </div>
       </FadeIn>
     </div>

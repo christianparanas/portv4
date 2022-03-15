@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 // import variables
 @import "variables";
@@ -10,7 +9,7 @@ body {
   margin: 0;
   background-color: var(--background);
   color: var(--foreground);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Fredoka One", sans-serif
 }
 
 a {
@@ -40,16 +39,20 @@ a {
   margin: 0 auto;
 
   .ff {
-    font-family: "Fredoka One", sans-serif;
     border-top: 1px solid rgba(0, 0, 4, 0.125);
     padding: 20px 0;
   }
 }
 
-@media only screen and (min-width: 452px) {
+@media only screen and (min-width: 500px) {
   .footer {
+    width: 100%;
     max-width: 800px;
     margin: 0 auto;
+
+    .ff {
+      padding: 20px 30px;
+    }
   }
 }
 
@@ -67,6 +70,16 @@ a {
       max-width: 800px;
       width: 90%;
       margin: 0 auto;
+      padding: 20px 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer {
+
+    .ff {
+      padding: 20px 30px;
     }
   }
 }

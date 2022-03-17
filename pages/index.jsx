@@ -3,20 +3,60 @@ import Image from "next/image";
 import FadeIn from "react-fade-in";
 
 // import components
-import { Linkedin, Git } from "../components/svgs";
+import { Linkedin, Git, Icon1, Icon2, Icon3, Icon4 } from "../components/svgs";
+
+const servicesArr = [
+  {
+    icon: "1",
+    title: "Custom Systems",
+    description: "Streamline and automate your business process with systems that are customized for your needs."
+  },
+  {
+    icon: "2",
+    title: "Websites",
+    description: "Elevate your digital presence with a professionally made website that increases your brand value."
+  },
+  {
+    icon: "3",
+    title: "Online Stores",
+    description: "Bring your business online, reach more customers, and make handling transactions easier and efficient."
+  },
+  {
+    icon: "4",
+    title: "Mobile Applications",
+    description: "Promote your business or organization and reach even more people with mobile applications either on Android or iOS."
+  },
+  {
+    icon: "2",
+    title: "Graphic Design",
+    description: "Get modern and beautiful logos and layouts, update the look and feel of your business, and make it more impressive."
+  },
+  {
+    icon: "2",
+    title: "Web Scraping",
+    description: "Extract data from any website and collect the necessary information to further enhance your business."
+  },
+]
 
 export default function Home() {
+
+  const attachIcon = (icon) => {
+    if(icon == "1") return <Icon1 />
+    if(icon == "2") return <Icon2 />
+    if(icon == "3") return <Icon3 />
+    if(icon == "4") return <Icon4 />
+  }
+
   return (
     <div className="container">
       <Head>
-        <title>About Me | Christian Paranas</title>
+        <title>Christian Paranas | Web Developer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <FadeIn>
         <main className="main">
           <div className="content">
-            <h1 className="title">About Me</h1>
             <div className="img">
               <Image
                 src="/me.png"
@@ -48,7 +88,25 @@ export default function Home() {
                 and other various frameworks, libraries, and technologies
                 related to them.
               </div>
-              <div className="t1">Have a project in mind? or just want to say Hi? Feel free to send me a message.</div>
+            </div>
+
+            <div className="services">
+              <div className="header">
+                <h1>Services</h1>
+                <p>I provide impactful solutions that can be scaled to grow with your business or organization in the long term.</p>
+              </div>
+
+              <div className="services-wrapper">
+                {servicesArr.map((service, key) => {
+                  return (
+                      <div key={key} className="service-wrapper">
+                        <div>{ attachIcon(service.icon) }</div>
+                        <h3>{ service.title }</h3>
+                        <p>{ service.description }</p>
+                      </div>
+                    )
+                })}
+              </div>
             </div>
 
             <div className="reachout">

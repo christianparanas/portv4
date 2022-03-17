@@ -4,7 +4,7 @@
   position: relative;
 
   .content {
-    padding: 90px 30px 30px;
+    padding: 70px 30px 30px;
     height: fit-content;
     min-height: 90vh;
 
@@ -36,6 +36,37 @@
         img {
           width: 16px;
           height: 16px;
+        }
+      }
+    }
+
+    .services {
+      margin: 50px 0 40px;
+
+
+      .header {
+        h1 {
+          font-size: 24px;
+        }
+      }
+
+      .services-wrapper {
+        display: grid;
+        grid-gap: 15px;
+
+        .service-wrapper {
+          background-color: var(--secondaryBg);
+          width: 100%;
+          padding: 20px;
+          border-radius: 8px;
+          position: relative;
+          height: fit-content;
+          box-shadow: var(--shadow);
+          border: 3px solid var(--borderColor);
+
+          p {
+            margin: 0; 
+          }
         }
       }
     }
@@ -133,6 +164,16 @@
         .t1 {
           line-height: 25px;
           font-size: 18px;
+        }
+      }
+
+      .services {
+
+
+        .services-wrapper {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 20px;
         }
       }
     }

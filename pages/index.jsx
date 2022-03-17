@@ -48,6 +48,7 @@ export default function Home() {
                 and other various frameworks, libraries, and technologies
                 related to them.
               </div>
+              <div className="t1">Have a project in mind? or just want to say Hi? Feel free to send me a message.</div>
             </div>
 
             <div className="reachout">

@@ -2,14 +2,18 @@
   height: 100%;
   min-height: 92vh;
   position: relative;
-  font-family: "Roboto", sans-serif;
 
 
   .content {
-    padding: 100px 20px 20px;
+    padding: 90px 20px 20px;
+
+    .title {
+      font-size: 24px;
+    }
 
 
     .wrapper {
+        font-family: "Roboto", sans-serif;
 
       .gist {
 

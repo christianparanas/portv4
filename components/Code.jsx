@@ -6,8 +6,9 @@ import { solarizedDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 const fetchURLContent = async (url) => {
     const res = await fetch(`${url}`)
     const data = await res.json()
+    console.log(data)
 
-    return data.files['app.html'].content
+    return data.files[Object.keys(data.files)[0]].content
   }
 
 export default function Code({ props }) {
@@ -23,7 +24,7 @@ export default function Code({ props }) {
   }, [])
 
   return (
-    <SyntaxHighlighter language="javascript" style={solarizedDark}>
+    <SyntaxHighlighter language="javascript" wrapLines={true} style={solarizedDark}>
       {code}
     </SyntaxHighlighter>
   );

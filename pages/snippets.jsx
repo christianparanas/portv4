@@ -2,9 +2,11 @@ import Head from "next/head";
 import { useState, useEffect } from "react";
 import FadeIn from "react-fade-in";
 import useSWR from 'swr'
+import Masonry from "react-masonry-css";
 
 // components
 import { Code } from '../components'
+
 
 const baseURL = 'https://api.github.com'
 
@@ -14,6 +16,13 @@ const fetcher = async (params) => {
 
   return data
 }
+
+const breakpointColumnsObj = {
+  default: 2,
+  1100: 2,
+  700: 1,
+  500: 1,
+};
 
 
 export default function Snippets() {
@@ -38,14 +47,20 @@ export default function Snippets() {
             <h1 className="title">Gists</h1>
 
             <div className="wrapper">
-              {data && data.map((gist, key) => {
-                return (
-                  <div key={key} className="gist">
-                    <div className="header">{gist.description}</div>
-                    <Code props={gist.url} />
-                  </div>
-                )
-              })}
+              <Masonry
+                breakpointCols={breakpointColumnsObj}
+                className="my-masonry-grid"
+                columnClassName="my-masonry-grid_column"
+              >
+                {data && data.map((gist, key) => {
+                  return (
+                    <div key={key} className="gist">
+                      <div className="header">{gist.description}</div>
+                      <Code props={gist.url} />
+                    </div>
+                  )
+                })}
+              </Masonry>
             </div>
           </main>
         </div>

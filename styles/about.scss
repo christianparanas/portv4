@@ -48,6 +48,10 @@
         h1 {
           font-size: 24px;
         }
+
+        p {
+          color: var(--secondaryFg);
+        }
       }
 
       .services-wrapper {
@@ -57,15 +61,32 @@
         .service-wrapper {
           background-color: var(--secondaryBg);
           width: 100%;
-          padding: 20px;
+          padding: 15px;
           border-radius: 8px;
           position: relative;
           height: fit-content;
           box-shadow: var(--shadow);
           border: 3px solid var(--borderColor);
+          transition: all .3s ease;
+          cursor: pointer;
 
           p {
             margin: 0; 
+            color: var(--secondaryFg);
+            font-size: 14px;
+          }
+
+          &:hover {
+            border: 3px solid #6b21a8;
+            background: #6b21a8;
+
+            h3 {
+              color: #fff;
+            }
+
+            p {
+              color: #e3e3e3;
+            }
           }
         }
       }
@@ -173,7 +194,7 @@
         .services-wrapper {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          grid-gap: 20px;
+          grid-gap: 15px;
         }
       }
     }

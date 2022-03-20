@@ -1,0 +1,36 @@
+
+
+.blog, .blogLayout {
+	height: 100%;
+  min-height: 92vh;
+  position: relative;
+
+  .content {
+	  padding: 90px 30px 30px;
+	  height: fit-content;
+	  min-height: 90vh;
+	}
+}
+
+@media only screen and (min-width: 500px) {
+  .blog, .blogLayout {
+
+    .content {
+      width: 800px;
+      margin: 0 auto;
+      padding: 80px 20px 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: 999px) {
+  .blog, .blogLayout {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+
+    .content {
+      grid-column: 2;
+      padding: 90px 30px;
+    }
+  }
+}

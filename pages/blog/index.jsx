@@ -19,14 +19,18 @@ export default function Blog() {
       <main className="blog">
 
         <div className="content">
-          {blogs.map((blog) => (
-            <div key={blog.link}>
-              <h4>{blog.module.meta['description']}</h4>
-              <Link href={'/blog' + (blog.link).split(".").slice(0, -1).join(".")}>
-                <a>Read more →</a>
-              </Link>
-            </div>
-          ))}
+          <h1 className="title">Blog</h1>
+
+          <div className="wrapper">
+            {blogs.map((blog) => (
+              <div className="con" key={blog.link}>
+                <h4>{blog.module.meta['title']}</h4>
+                <Link href={'/blog' + (blog.link).split(".").slice(0, -1).join(".")}>
+                  <a>Read more →</a>
+                </Link>
+              </div>
+            ))}  
+          </div>
         </div>
       </main>
 

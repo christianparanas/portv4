@@ -9,6 +9,28 @@
 	  padding: 90px 30px 30px;
 	  height: fit-content;
 	  min-height: 90vh;
+
+	  .wrapper {
+	  	display: grid;
+	  	grid-gap: 15px;
+
+	  	.con {
+	  		padding: 15px 12px;
+	  		background: var(--secondaryBg);
+	  		border-radius: 8px;
+	  		height: fit-content;
+			  box-shadow: var(--shadow);
+			  border: 3px solid var(--borderColor);
+
+	  		h4 {
+	  			margin: 0 0 10px;
+	  		}
+
+	  		a {
+	  			color: var(--secondaryFg);
+	  		}
+	  	}
+	  }
 	}
 }
 

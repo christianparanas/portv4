@@ -100,7 +100,7 @@ export default function Home() {
                 {servicesArr.map((service, key) => {
                   return (
                       <div key={key} className="service-wrapper">
-                        <div>{ attachIcon(service.icon) }</div>
+                        <div className="icon">{ attachIcon(service.icon) }</div>
                         <h3>{ service.title }</h3>
                         <p>{ service.description }</p>
                       </div>

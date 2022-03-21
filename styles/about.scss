@@ -70,6 +70,14 @@
           transition: all .3s ease;
           cursor: pointer;
 
+          .icon {
+
+            svg {
+              width: 40px;
+              height: 40px;
+            }
+          }
+
           p {
             margin: 0; 
             color: var(--secondaryFg);

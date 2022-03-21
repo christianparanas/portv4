@@ -11,6 +11,7 @@
   "dependencies": {
     "@mdx-js/loader": "^2.1.0",
     "@next/mdx": "^12.1.0",
+    "@prisma/client": "^3.11.0",
     "hamburger-react": "^2.4.0",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
-    "husky": "^7.0.4"
+    "husky": "^7.0.4",
+    "prisma": "^3.11.0"
   }
 }

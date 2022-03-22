@@ -69,6 +69,14 @@ export default function Nav() {
               Projects
             </div>
           </Link>
+          <Link href="/projects">
+            <div
+              className={`item ${asPath == "/guestbook" ? "activePage" : ""}`}
+              onClick={closeNav}
+            >
+              Guestbook
+            </div>
+          </Link>
         </div>
       </div>
 
@@ -95,6 +103,15 @@ export default function Nav() {
               }`}
             >
               Projects
+            </div>
+          </Link>
+          <Link href="/projects">
+            <div
+              className={`sideItem ${
+                asPath == "/guestbook" ? "activePage" : ""
+              }`}
+            >
+              Guestbook
             </div>
           </Link>
         </div>

@@ -1,12 +1,14 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useEffect } from 'react'
+import { signIn, useSession, signOut } from 'next-auth/react';
 
 import prisma from '../../lib/prisma';
 import { Auth } from '../../components'
 
 
 export default function Guests(props) {
+  const { data: session } = useSession();
 
   useEffect(() => {
     if(props) console.log(props)
@@ -22,7 +24,19 @@ export default function Guests(props) {
       <main className="guests">
 
         <div className="content">
-          <div className="create_drop_wrapper">
+          <div className="drop_wrapper">
+            {session ? (
+              <div className="create">
+                <div>Share a message for a future visitor of my site.</div>
+                <p>Your information is only used to display your name and reply by email.</p>
+                <div className="con">
+                  <textarea name="" placeholder="Your message" id="" rows="6"></textarea>
+                  <button>Post</button>
+                </div>
+
+              </div>
+            ) : (<div>Please login</div>)}
+
             <Auth />
           </div>
 
@@ -51,7 +65,7 @@ export const getStaticProps = async () => {
   const fallbackData = entries.map((entry) => ({
     id: entry.id.toString(),
     body: entry.body,
-    created_by: entry.created_by.toString(),
+    name: entry.name.toString(),
     updated_at: entry.updatedAt.toString()
   }));
 

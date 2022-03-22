@@ -7,5 +7,51 @@
     padding: 90px 30px 30px;
     height: fit-content;
     min-height: 90vh;
+
+    .drop_wrapper {
+
+      .create {
+        background: var(--secondaryBg);
+        padding: 15px;
+        box-shadow: var(--shadow);
+        border: 3px solid var(--borderColor);
+        border-radius: 8px;
+
+        p {
+          color: var(--secondaryFg);
+          font-size: 12px;
+          margin-top: 5px;
+        }
+
+        .con {
+          width: 100%;
+
+          textarea {
+            width: 100%;
+            outline: 0;
+            resize: vertical;
+            min-height: 80px;
+            border: 0;
+            background: var(--background);
+            border-radius: 8px;
+            padding: 10px;
+            border: 3px solid var(--borderColor);
+        border-radius: 8px;
+          }
+
+          button {
+            width: 100%;
+            outline: 0;
+            padding: 10px 0;
+            text-align: center;
+            background: #6b21a8;
+            border-radius: 8px; 
+            border: 0;
+            color: #fff;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
   }
 }

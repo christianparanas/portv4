@@ -49,14 +49,53 @@
             border: 0;
             color: #fff;
             margin-top: 10px;
+            font-family: "Fredoka One", san-serif;
 
             box-shadow: var(--shadow);
           }
         }
       }
+    }
 
-      .drop_content_wrapper {
-        margin-top: 40px;
+    .drop_content_wrapper {
+      margin-top: 40px;
+      display: grid;
+      grid-gap: 10px;
+
+      .drop {
+        background: var(--secondaryBg);
+        color: var(--secondaryFg);
+        box-shadow: var(--shadow);
+        border: 3px solid var(--borderColor);
+        padding: 10px;
+        border-radius: 8px;
+
+        .header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .con {
+            display: grid;
+            grid-template-columns: 40px 1fr;
+            grid-gap: 10px;
+            align-items: center;
+
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+            }
+          }
+
+          .date {
+            font-size: 10px;
+          }
+        }
+
+        .drop_body {
+          margin: 5px 0;
+        }
       }
     }
   }

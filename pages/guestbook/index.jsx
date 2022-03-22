@@ -1,19 +1,53 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useEffect } from 'react'
+import useSWR from 'swr'
+import * as moment from 'moment';
+import { useEffect, useRef, useState } from 'react'
 import { signIn, useSession, signOut } from 'next-auth/react';
 
-import prisma from '../../lib/prisma';
-import { Auth } from '../../components'
+
+import fetcher from '../../lib/fetcher'
 
 
-export default function Guests(props) {
+export default function Guests() {
   const { data: session } = useSession();
+  const [entries, setEntries] = useState([])
+  const inputEl = useRef(null);
+
+  const { data, error } = useSWR('/api/guestbook', fetcher);
 
   useEffect(() => {
-    if(props) console.log(props)
+    if(data) {
+      console.log(data)
+      setEntries(data)
+    }
 
   }, [])
+
+
+  const loadEntries = async (data) => {
+    setEntries(prevArray => [data, ...prevArray])
+  }
+
+  const postEntry = async (e) => {
+    e.preventDefault();
+    if(inputEl.current.value == "") return
+
+    const res = await fetch('/api/guestbook', {
+      body: JSON.stringify({
+        body: inputEl.current.value
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'POST'
+    });
+
+    const data = await res.json()
+    loadEntries(data)
+
+    inputEl.current.value = '';
+  }
 
   return (
     <div className="container">
@@ -29,10 +63,10 @@ export default function Guests(props) {
               <div className="create">
                 <div>Share a message for a future visitor of my site.</div>
                 <p>Your information is only used to display your name and reply by email.</p>
-                <div className="con">
-                  <textarea name="" placeholder="Your message" id="" rows="6"></textarea>
-                  <button>Post</button>
-                </div>
+                <form className="con" onSubmit={postEntry}>
+                  <textarea ref={inputEl} placeholder="Your message" rows="6" required></textarea>
+                  <button type="submit">Post</button>
+                </form>
 
 
                 <div>
@@ -50,9 +84,16 @@ export default function Guests(props) {
           </div>
 
           <div className="drop_content_wrapper">
-            {props && props.fallbackData.map((dropMsg, key) => {
+            {entries && entries.map((dropMsg, key) => {
               return (
                 <div className="drop" key={key}>
+                  <div className="header">
+                    <div className="con">
+                      <img src="https://avatars.githubusercontent.com/u/59472122?v=4" alt="" />
+                      <div className="name">{ dropMsg.name }</div>
+                    </div>
+                    <div className="date">{moment(dropMsg.updatedAt).calendar()}</div>
+                  </div>
                   <div className="drop_body">{ dropMsg.body }</div>
                 </div>
               )
@@ -63,27 +104,3 @@ export default function Guests(props) {
     </div>
   )
 }
-
-export const getStaticProps = async () => {
-  const entries = await prisma.guests.findMany({
-    orderBy: {
-      updatedAt: 'desc'
-    }
-  });
-
-  const fallbackData = entries.map((entry) => ({
-    id: entry.id.toString(),
-    body: entry.body,
-    name: entry.name.toString(),
-    updated_at: entry.updatedAt.toString()
-  }));
-
-  console.log(fallbackData)
-
-
-  return {
-    props: {
-      fallbackData,
-    }
-  };
-};

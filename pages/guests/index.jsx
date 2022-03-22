@@ -8,9 +8,9 @@ import prisma from '../../lib/prisma';
 export default function Guests({ props }) {
 
   useEffect(() => {
-  	console.log(props)
+  	if(props) console.log(props)
 
-  }, [])
+  }, [props])
 
   return (
     <div className="container">
@@ -22,7 +22,6 @@ export default function Guests({ props }) {
 
         guests
       </main>
-
     </div>
   )
 }

@@ -18,5 +18,4 @@ model guests {
   created_by String   @db.VarChar(256)
   createdAt  DateTime  @default(now()) @map(name: "created_at")
   updatedAt  DateTime  @updatedAt @map(name: "updated_at")
-
 }

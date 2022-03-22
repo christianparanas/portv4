@@ -7,7 +7,7 @@ import prisma from '../../lib/prisma';
 import { Auth } from '../../components'
 
 
-export default function Guests(props) {
+export default function Guestbook(props) {
   const { data: session } = useSession();
 
   useEffect(() => {

@@ -155,7 +155,7 @@ export default function Guests() {
           </div>
         </div>
       </main>
-      <FadeIn />
+      </FadeIn>
     </div>
   )
 }

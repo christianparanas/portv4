@@ -4,6 +4,7 @@ import FadeIn from "react-fade-in";
 
 // import components
 import { Linkedin, Git, Icon1, Icon2, Icon3, Icon4 } from "../components/svgs";
+import { Auth } from "../components";
 
 const servicesArr = [
   {
@@ -89,7 +90,7 @@ export default function Home() {
                 related to them.
               </div>
             </div>
-
+            
             <div className="services">
               <div className="header">
                 <h1>Services</h1>

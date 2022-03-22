@@ -3,14 +3,15 @@ import Link from "next/link";
 import { useEffect } from 'react'
 
 import prisma from '../../lib/prisma';
+import { Auth } from '../../components'
 
 
-export default function Guests({ props }) {
+export default function Guests(props) {
 
   useEffect(() => {
-  	if(props) console.log(props)
+    if(props) console.log(props)
 
-  }, [props])
+  }, [])
 
   return (
     <div className="container">
@@ -20,7 +21,21 @@ export default function Guests({ props }) {
 
       <main className="guests">
 
-        guests
+        <div className="content">
+          <div className="create_drop_wrapper">
+            <Auth />
+          </div>
+
+          <div className="drop_content_wrapper">
+            {props && props.fallbackData.map((dropMsg, key) => {
+              return (
+                <div className="drop" key={key}>
+                  <div className="drop_body">{ dropMsg.body }</div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
       </main>
     </div>
   )

@@ -1,0 +1,11 @@
+.guests {
+  height: 100%;
+  min-height: 92vh;
+  position: relative;
+
+  .content {
+    padding: 90px 30px 30px;
+    height: fit-content;
+    min-height: 90vh;
+  }
+}

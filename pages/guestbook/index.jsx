@@ -18,10 +18,17 @@ export default function Guests() {
   const inputEl = useRef(null);
   const [isLoading, setIsLoading] = useState(true)
   const [submitting, setSubmitting] = useState(false)
+  const [authLoading, setAuthLoading] = useState(true)
 
   const { data, error } = useSWR('/api/guestbook', fetcher);
 
   useEffect(() => {
+    if(session) {
+      setTimeout(() => {
+        setAuthLoading(false)
+      }, 1000)
+    }
+
     if(data) {
       console.log(data)
       setEntries(data)
@@ -72,31 +79,33 @@ export default function Guests() {
           <h1 className="title">Guestbook</h1>
 
           <div className="drop_wrapper">
-            {session ? (
-              <div className="create">
-                <div className="hh">Share a message for a future visitor of my site.</div>
-                <form className="con" onSubmit={postEntry}>
-                  <textarea ref={inputEl} placeholder="Your message" rows="6" required></textarea>
-                  <button type="submit">{ submitting ? "..." : "Post" }</button>
-                </form>
+            {authLoading ? (
+                session ? (
+                  <div className="create">
+                    <div className="hh">Share a message for a future visitor of my site.</div>
+                    <form className="con" onSubmit={postEntry}>
+                      <textarea ref={inputEl} placeholder="Your message" rows="6" required></textarea>
+                      <button type="submit">{ submitting ? "..." : "Post" }</button>
+                    </form>
 
 
-                <div className="pp">
-                  Signed in as {session.user.email} <br />
-                  <button onClick={(e) => { e.preventDefault(); signOut()}}>Sign out</button>
+                    <div className="pp">
+                      Signed in as {session.user.email} <br />
+                      <button onClick={(e) => { e.preventDefault(); signOut()}}>Sign out</button>
+                    </div>
+                  </div>
+                ) : (
+                <div class="out_ui">
+                  <span>Sign In to leave a message. 😉</span>
+                  <button className="git_btn" onClick={(e) => { e.preventDefault(); signIn('github') }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" class="sbui-icon "><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    <span>Sign In with Github</span>
+                  </button>
                 </div>
-              </div>
-            ) : (
-            <div class="out_ui">
-              <span>Sign In to leave a message. 😉</span>
-              <button className="git_btn" onClick={(e) => { e.preventDefault(); signIn('github') }}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" class="sbui-icon "><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                <span>Sign In with Github</span>
-              </button>
-            </div>
-            )
-          }
-
+                )
+      
+              ) : (<>Loading...</>)}
+            
           </div>
 
           <div className="drop_content_wrapper">

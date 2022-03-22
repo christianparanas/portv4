@@ -142,3 +142,27 @@
     }
   }
 }
+
+
+@media only screen and (min-width: 500px) {
+  .guests {
+
+    .content {
+      width: 800px;
+      margin: 0 auto;
+      padding: 80px 20px 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: 999px) {
+  .guests {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+
+    .content {
+      grid-column: 2;
+      padding: 90px 30px;
+    }
+  }
+}

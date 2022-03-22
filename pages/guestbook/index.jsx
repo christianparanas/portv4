@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Masonry from "react-masonry-css";
 import useSWR from 'swr'
+import FadeIn from "react-fade-in";
 import * as moment from 'moment';
 import React, { useEffect, useRef, useState } from 'react'
 import { signIn, useSession, signOut } from 'next-auth/react';
@@ -80,6 +81,7 @@ export default function Guests() {
         <title>Guestbook | Christian Paranas</title>
       </Head>
 
+      <FadeIn>
       <main className="guests">
 
         <div className="content">
@@ -153,6 +155,7 @@ export default function Guests() {
           </div>
         </div>
       </main>
+      <FadeIn />
     </div>
   )
 }

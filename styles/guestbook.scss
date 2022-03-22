@@ -8,9 +8,46 @@
     height: fit-content;
     min-height: 90vh;
 
+    .title {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
     .drop_wrapper {
 
+      .out_ui {
+        min-height: 120px;
+        text-align: center; 
+
+        span {
+          font-size: 14px;
+        }
+
+        .git_btn {
+          background: #6b21a8;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          padding: 8px 16px;
+          border-radius: 8px;
+          width: fit-content;
+          border: 0;
+          outline: 0;
+          height: fit-content;
+          margin: 10px auto;
+
+          span {
+            margin-left: 10px;
+          }
+        }
+      }
+
       .create {
+
+        .hh {
+          margin-bottom: 10px;
+        }
 
         p {
           color: var(--secondaryFg);
@@ -20,6 +57,11 @@
 
         .con {
           width: 100%;
+          margin-bottom: 20px;
+
+          .pp {
+            font-size: 8px;
+          }
 
           textarea {
             width: 100%;
@@ -94,7 +136,7 @@
         }
 
         .drop_body {
-          margin: 5px 0;
+          margin: 10px 0 0;
         }
       }
     }

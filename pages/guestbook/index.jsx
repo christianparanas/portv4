@@ -7,7 +7,7 @@ import prisma from '../../lib/prisma';
 import { Auth } from '../../components'
 
 
-export default function Guestbook(props) {
+export default function Guests(props) {
   const { data: session } = useSession();
 
   useEffect(() => {
@@ -34,10 +34,19 @@ export default function Guestbook(props) {
                   <button>Post</button>
                 </div>
 
-              </div>
-            ) : (<div>Please login</div>)}
 
-            <Auth />
+                <div>
+                  Signed in as {session.user.email} <br />
+                  <button onClick={() => signOut()}>Sign out</button>
+                </div>
+              </div>
+            ) : (
+            <div>
+              Not signed in <br />
+              <button onClick={(e) => { e.preventDefault(); signIn('github') }}>Sign in</button>
+            </div>)
+          }
+
           </div>
 
           <div className="drop_content_wrapper">
@@ -74,7 +83,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-    	fallbackData,
+      fallbackData,
     }
   };
 };

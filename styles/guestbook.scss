@@ -57,6 +57,11 @@
           font-family: "Fredoka One", san-serif;
           justify-content: center;
 
+          svg {
+            width: 16px;
+            height: 16px;
+          }
+
           .loader,
             .loader:after {
               border-radius: 50%;
@@ -78,6 +83,7 @@
               -webkit-animation: load8 1.1s infinite linear;
               animation: load8 1.1s infinite linear;
             }
+
             @-webkit-keyframes load8 {
               0% {
                 -webkit-transform: rotate(0deg);
@@ -115,6 +121,13 @@
             .showLoginLoader {
               display: block;
             }
+        }
+
+        .one {
+          background: var(--secondaryBg);
+          color: var(--secondaryFg);
+          box-shadow: var(--shadow);
+          border: 3px solid var(--borderColor);
         }
       }
 

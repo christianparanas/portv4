@@ -4,6 +4,7 @@ export { default as Repo } from "./Repo";
 export { default as Live } from "./Live";
 export { default as Moon } from "./Moon";
 export { default as Sun } from "./Sun";
+export { default as Google } from "./Google";
 
 export { default as Icon1 } from "./Icon1";
 export { default as Icon2 } from "./Icon2";

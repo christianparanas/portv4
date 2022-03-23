@@ -11,7 +11,9 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
 
+import { Google } from '../../components/svgs' 
 import fetcher from '../../lib/fetcher'
+
 
 
 const breakpointColumnsObj = {
@@ -33,10 +35,15 @@ export default function Guests() {
    // login btn loader
   const [loginLoader, setLoginLoader] = useState("loader");
   const [loginLoaderTxt, setLoginLoaderTxt] = useState("loginTxtnIco");
+  const [loginLoader1, setLoginLoader1] = useState("loader");
+  const [loginLoaderTxt1, setLoginLoaderTxt1] = useState("loginTxtnIco");
+
+
 
   const { data, error } = useSWR('/api/guestbook', fetcher);
 
   useEffect(() => {
+    console.log(session)
 
     setTimeout(() => {
       setAuthLoading(false)
@@ -53,20 +60,32 @@ export default function Guests() {
   }, [data, session])
 
 
-  const onLoginShowLoader = () => {
-    setLoginLoaderTxt("loginTxtnIco hideLoginTxtnIco");
-    setLoginLoader("loader showLoginLoader");
+  const onLoginShowLoader = (provider) => {
+    if(provider == 1) {
+      setLoginLoaderTxt("loginTxtnIco hideLoginTxtnIco");
+      setLoginLoader("loader showLoginLoader");
+      return
+    }
+
+    setLoginLoaderTxt1("loginTxtnIco hideLoginTxtnIco");
+    setLoginLoader1("loader showLoginLoader");
   };
 
-  const onLoginHideLoader = () => {
-    setLoginLoaderTxt("loginTxtnIco");
-    setLoginLoader("loader");
+  const onLoginHideLoader = (provider) => {
+    if(provider == 1) {
+      setLoginLoaderTxt("loginTxtnIco");
+      setLoginLoader("loader");
+      return
+    }
+
+    setLoginLoaderTxt1("loginTxtnIco");
+    setLoginLoader1("loader");
   };
 
   const loadEntries = async (data) => {
     setEntries(prevArray => [data, ...prevArray])
     setSubmitting(false)
-    onLoginHideLoader();
+    onLoginHideLoader(1);
   }
 
   const postEntry = async (e) => {
@@ -74,7 +93,7 @@ export default function Guests() {
     if(inputEl.current.value == "") return
 
     setSubmitting(true)
-    onLoginShowLoader();
+    onLoginShowLoader(1);
 
     const res = await fetch('/api/guestbook', {
       body: JSON.stringify({
@@ -127,12 +146,19 @@ export default function Guests() {
               ) : (
               <div class="out_ui">
                 <span>Sign In to leave a message. 😉</span>
-                <button className="git_btn" onClick={(e) => { onLoginShowLoader(); signIn('github') }}>
+                <button className="git_btn" onClick={(e) => { onLoginShowLoader(1); signIn('github') }}>
                   <span className={loginLoaderTxt}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" class="sbui-icon "><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                     <span>Sign In with Github</span>
                   </span>
                   <div className={loginLoader}></div>
+                </button>
+                <button className="git_btn one" onClick={(e) => { onLoginShowLoader(2); signIn('google') }}>
+                  <span className={loginLoaderTxt1}>
+                    <Google />
+                    <span>Sign In with Google</span>
+                  </span>
+                  <div className={loginLoader1}></div>
                 </button>
               </div>
               )

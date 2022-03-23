@@ -85,7 +85,9 @@ export default function Guests() {
       <main className="guests">
 
         <div className="content">
-          <h1 className="title">Guestbook</h1>
+          <div className="content_header">
+            <h1 className="title">Guestbook</h1>
+          </div>
 
           <div className="drop_wrapper">
             {!authLoading ? (
@@ -98,7 +100,7 @@ export default function Guests() {
                   </form>
 
                   <div className="pp">
-                    Signed in as {session.user.email} <br />
+                    Signed in as <span>{session.user.name}</span>
                     <button onClick={(e) => { e.preventDefault(); signOut()}}>Sign out</button>
                   </div>
                 </div>

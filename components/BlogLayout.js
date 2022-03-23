@@ -5,7 +5,7 @@ export default function BlogLayout({ children, meta}) {
   return (
     <div className="container">
       <Head>
-        <title>Projects | Christian Paranas</title>
+        <title>{meta.title} | Christian Paranas</title>
       </Head>
 
       <FadeIn>

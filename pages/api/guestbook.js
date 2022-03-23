@@ -15,13 +15,14 @@ export default async function handler(req, res) {
         id: entry.id.toString(),
         body: entry.body,
         name: entry.name,
+        image: entry.image,
         updatedAt: entry.updatedAt
       }))
     );
   }
 
   const session = await getSession({ req });
-  const { email, name } = session.user;
+  const { email, name, image } = session.user;
 
   if (!session) {
     return res.status(403).send('Unauthorized');
@@ -32,7 +33,8 @@ export default async function handler(req, res) {
       data: {
         email,
         body: (req.body.body || '').slice(0, 500),
-        name: name
+        name: name,
+        image: image
       }
     });
 
@@ -40,6 +42,7 @@ export default async function handler(req, res) {
       id: newEntry.id.toString(),
       body: newEntry.body,
       name: newEntry.name,
+      image: newEntry.image,
       updatedAt: newEntry.updatedAt
     });
   }

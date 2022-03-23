@@ -33,17 +33,17 @@ export default function Guests() {
   const { data, error } = useSWR('/api/guestbook', fetcher);
 
   useEffect(() => {
+
     setTimeout(() => {
       setAuthLoading(false)
     }, 2000)
 
     if(data) {
-      console.log(data)
       setEntries(data)
 
       setTimeout(() => {
         setIsLoading(false)
-      }, 1000)
+      }, 2000)
     }
 
   }, [data, session])
@@ -123,7 +123,7 @@ export default function Guests() {
           </div>
 
           <div className="drop_content_wrapper">
-            {data && entries.length == 0 ? (<div>Empty 😥</div>) 
+            {data && entries.length == 0 ? (<div className="empty">Empty 😥</div>) 
               : 
               (<Masonry
                   breakpointCols={breakpointColumnsObj}
@@ -135,7 +135,7 @@ export default function Guests() {
                       <div className="drop" key={key}>
                         <div className="header">
                           <div className="con">
-                            <img src="https://avatars.githubusercontent.com/u/59472122?v=4" alt="" />
+                            <img src={dropMsg.image} alt="" />
                             <div className="info">
                               <div className="name">{ dropMsg.name }</div>
                               <div className="date">{moment(dropMsg.updatedAt).calendar()}</div>

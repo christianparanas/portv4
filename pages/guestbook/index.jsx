@@ -134,9 +134,11 @@ export default function Guests() {
                         <div className="header">
                           <div className="con">
                             <img src="https://avatars.githubusercontent.com/u/59472122?v=4" alt="" />
-                            <div className="name">{ dropMsg.name }</div>
+                            <div className="info">
+                              <div className="name">{ dropMsg.name }</div>
+                              <div className="date">{moment(dropMsg.updatedAt).calendar()}</div>
+                            </div>
                           </div>
-                          <div className="date">{moment(dropMsg.updatedAt).calendar()}</div>
                         </div>
                         <div className="drop_body">{ dropMsg.body }</div>
                       </div>

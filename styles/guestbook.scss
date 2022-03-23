@@ -47,8 +47,9 @@
           border: 0;
           outline: 0;
           height: fit-content;
-          margin: 10px auto;
+          margin: 15px auto;
           cursor: pointer;
+          font-family: "Fredoka One", san-serif;
 
           span {
             margin-left: 10px;
@@ -172,8 +173,14 @@
             }
           }
 
-          .date {
-            font-size: 10px;
+          .info {
+            .name {
+              color: var(--foreground);
+            }
+
+              .date {
+              font-size: 10px;
+            }
           }
         }
 
@@ -181,6 +188,8 @@
           margin: 10px 0 0;
           white-space: pre-wrap;
           height: fit-content;
+          color: var(--foreground);
+          font-size: 14px;
         }
       }
     }

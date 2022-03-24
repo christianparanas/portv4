@@ -3,51 +3,51 @@ import { useState, useEffect } from "react";
 import { Squeeze as Hamburger } from "hamburger-react";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
+import clsx from "classnames";
 
 import ThemeChanger from "components/ThemeChanger";
+import styles from './nav.module.scss'
 
 export default function Nav() {
   const { theme, setTheme } = useTheme();
-
   const { asPath } = useRouter();
   const [isOpen, setOpen] = useState(false);
-  const [navOverlay, setNavOverlay] = useState("nav_overlay");
 
   useEffect(() => {
-    if (isOpen) {
-      setNavOverlay("nav_overlay open_overlay");
-      return;
-    }
 
-    setNavOverlay("nav_overlay");
   }, [isOpen, theme]);
 
+  const navoverlay = clsx({
+    [[styles.overlay, styles.open_overlay].join(" ")]: isOpen,
+    [styles["overlay"]]: !isOpen,
+  });
+
+
   const closeNav = () => {
-    setNavOverlay("nav_overlay");
     setOpen(false);
   };
 
   return (
-    <div className="nav_wrapper">
-      <div className="ham">
-        <div className="leftham">
+    <div className={styles.wrapper}>
+      <div className={styles.ham}>
+        <div className={styles.leftham}>
           <Link href="/">
-            <div className="name" onClick={closeNav}>
+            <div className={styles.name} onClick={closeNav}>
               Christian Paranas
             </div>
           </Link>
-          <div className="prof">Web Developer</div>
+          <div className={styles.prof}>Web Developer</div>
         </div>
-        <div className="ops">
+        <div className={styles.ops}>
           <ThemeChanger />
           <Hamburger color="#fff" toggled={isOpen} toggle={setOpen} />
         </div>
       </div>
-      <div className={navOverlay}>
-        <div className="items">
+      <div className={navoverlay}>
+        <div className={styles.items}>
           <Link href="/">
             <div
-              className={`item ${asPath == "/" ? "activePage" : ""}`}
+              className={`${styles.item} ${asPath == "/" ? styles.activePage : ""}`}
               onClick={closeNav}
             >
               Home
@@ -55,7 +55,7 @@ export default function Nav() {
           </Link>
           <Link href="/about">
             <div
-              className={`item ${asPath == "/about" ? "activePage" : ""}`}
+              className={`${styles.item} ${asPath == "/about" ? styles.activePage : ""}`}
               onClick={closeNav}
             >
               About
@@ -63,7 +63,7 @@ export default function Nav() {
           </Link>
           <Link href="/blog">
             <div
-              className={`item ${asPath == "/blog" ? "activePage" : ""}`}
+              className={`${styles.item} ${asPath == "/blog" ? styles.activePage : ""}`}
               onClick={closeNav}
             >
               Blog
@@ -71,7 +71,7 @@ export default function Nav() {
           </Link>
           <Link href="/projects">
             <div
-              className={`item ${asPath == "/projects" ? "activePage" : ""}`}
+              className={`${styles.item} ${asPath == "/projects" ? styles.activePage : ""}`}
               onClick={closeNav}
             >
               Projects
@@ -79,7 +79,7 @@ export default function Nav() {
           </Link>
           <Link href="/guestbook">
             <div
-              className={`item ${asPath == "/guestbook" ? "activePage" : ""}`}
+              className={`${styles.item} ${asPath == "/guestbook" ? styles.activePage : ""}`}
               onClick={closeNav}
             >
               Guestbook
@@ -88,26 +88,26 @@ export default function Nav() {
         </div>
       </div>
 
-      <div className="sidebar">
-        <div className="sideHead">
-          <div className="name">Christian Paranas</div>
-          <div className="prof">Web Developer</div>
+      <div className={styles.sidebar}>
+        <div className={styles.sideHead}>
+          <div className={styles.name}>Christian Paranas</div>
+          <div className={styles.prof}>Web Developer</div>
         </div>
-        <div className="sideItems">
+        <div className={styles.sideItems}>
           <Link href="/">
-            <div className={`sideItem ${asPath == "/" ? "activePage" : ""}`}>
+            <div className={`${styles.sideItem} ${asPath == "/" ? styles.activePage : ""}`}>
               About
             </div>
           </Link>
           <Link href="/blog">
-            <div className={`sideItem ${asPath == "/blog" ? "activePage" : ""}`}>
+            <div className={`${styles.sideItem} ${asPath == "/blog" ? styles.activePage : ""}`}>
               Blog
             </div>
           </Link>
           <Link href="/projects">
             <div
-              className={`sideItem ${
-                asPath == "/projects" ? "activePage" : ""
+              className={`${styles.sideItem} ${
+                asPath == "/projects" ? styles.activePage : ""
               }`}
             >
               Projects
@@ -115,8 +115,8 @@ export default function Nav() {
           </Link>
           <Link href="/guestbook">
             <div
-              className={`sideItem ${
-                asPath == "/guestbook" ? "activePage" : ""
+              className={`${styles.sideItem} ${
+                asPath == "/guestbook" ? styles.activePage : ""
               }`}
             >
               Guestbook
@@ -125,9 +125,9 @@ export default function Nav() {
         </div>
       </div>
 
-        <div className="toogle">
+        <div className={styles.toggle}>
           <span>{theme == "dark" ? "Dark mode" : "Light mode"}</span>
-          <div className="tog-con">
+          <div className={styles.togCon}>
             <ThemeChanger /> 
           </div>
         </div>

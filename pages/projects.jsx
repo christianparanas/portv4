@@ -1,6 +1,5 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
-import FadeIn from "react-fade-in";
 import Masonry from "react-masonry-css";
 import useSWR from 'swr'
 import * as _ from 'lodash'
@@ -78,7 +77,6 @@ export default function Projects() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <FadeIn>
         <main className={styles.wrapper}>
           <h1 className={styles.title}>Projects</h1>
           <p className={styles.description}>
@@ -120,7 +118,6 @@ export default function Projects() {
               {(!error && !(projects.length >= publicRepoCount)) && <div className={styles.loadMoreBtn} onClick={loadMoreProjects}>load more</div>}
             </div>
         </main>
-      </FadeIn>
     </Page>
   );
 }

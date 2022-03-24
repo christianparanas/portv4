@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import FadeIn from "react-fade-in";
 
 // import components
 import { Linkedin, Git, Icon1, Icon2, Icon3, Icon4 } from "../components/icons";

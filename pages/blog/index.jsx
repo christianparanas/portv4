@@ -1,5 +1,4 @@
 import Head from "next/head";
-import FadeIn from "react-fade-in";
 import Link from "next/link";
 import { useEffect } from 'react'
 
@@ -20,7 +19,6 @@ export default function Blog() {
         <title>Blog | Christian Paranas</title>
       </Head>
 
-      <FadeIn>
       <main className={styles.wrapper}>
         <h1 className="title">Blog</h1>
 
@@ -35,7 +33,6 @@ export default function Blog() {
           ))}  
         </div>
       </main>
-      </FadeIn>
     </Page>
   )
 }

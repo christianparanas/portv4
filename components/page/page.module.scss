@@ -29,6 +29,7 @@
   width: 100%;
   padding: 30px 15px;
   display: grid;
+  color: var(--secondaryFg);
 
   p {
     opacity: 0.3;
@@ -48,6 +49,7 @@
     .footer_content {
       grid-column: 2;
       padding: 20px;
+
     }
   }
 }

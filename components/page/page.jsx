@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import FadeIn from "react-fade-in";
 
 import Nav from 'components/nav/nav'
 import styles from './page.module.scss'
@@ -23,7 +24,7 @@ const Page = ({ children }) => (
 
     <div className={styles.content}>
       <main className={styles.main}>
-        {children}
+        <FadeIn>{children}</FadeIn>
       </main>
     </div>
     <footer className={styles.footer}>

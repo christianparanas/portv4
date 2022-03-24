@@ -6,6 +6,7 @@ const baseURL = "https://github.com/"
 
 // import components
 import { Repo, Live } from "components/icons";
+import styles from './project.module.scss'
 
 function Project({ props }) {
   const [isLoading, setIsLoading] = useState(true)
@@ -20,25 +21,25 @@ function Project({ props }) {
     <>
     {isLoading ? (<Skeleton count={1} height={132} />) :
 
-    (<div className="card__container">
-      <div className="card_header">
-        <h4 className="project_title">{props.name.length >= 25 ? `${props.name.substring(0, 20)} ...` : props.name }</h4>
-        <div className="project_links">
+    (<div className={styles.container}>
+      <div className={styles.header}>
+        <h4 className={styles.title}>{props.name.length >= 25 ? `${props.name.substring(0, 20)} ...` : props.name }</h4>
+        <div className={styles.links}>
           <a href={ baseURL + props.full_name } target="_blank"><Repo /></a>
           {props.homepage && <a href={ props.homepage } target="_blank"><Live /></a>}
         </div>
       </div>
-      <div className="project_description">{props.description ? props.description : "No description provided."}</div>
-      <div className="project_tools">
+      <div className={styles.description}>{props.description ? props.description : "No description provided."}</div>
+      <div className={styles.tools}>
         {[...props.topics].map((tool, key) => {
           return (
-            <div className="tool" key={key}>
+            <div className={styles.tool} key={key}>
               {tool}
             </div>
           );
         })}
       </div>
-      <span className="updated_at">Last updated: {moment(props.updated_at).fromNow()}</span>
+      <span className={styles.updated_at}>Last updated: {moment(props.updated_at).fromNow()}</span>
     </div>)
     }
     </>

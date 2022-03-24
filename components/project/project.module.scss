@@ -1,0 +1,86 @@
+
+.container {
+	  background-color: var(--secondaryBg);
+	  width: 100%;
+	  padding: 10px 10px 10px;
+	  border-radius: 8px;
+	  position: relative;
+	  height: fit-content;
+	  box-shadow: var(--shadow);
+	  border: 3px solid var(--borderColor);
+
+
+	.header {
+		display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+		.title {
+			margin: 0;
+		}
+
+		.links {
+
+			svg {
+        stroke: var(--secondaryFg);
+        width: 28px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          stroke: #6b21a8;
+        }
+      }
+
+      svg:nth-child(1) {
+        width: 24px;
+        margin-right: 10px;
+      }
+    
+		}
+	}
+
+	.description {
+		width: 100%;
+    margin: 10px 0 15px;
+    color: var(--secondaryFg);
+    font-size: 12px;
+	}
+
+	.tools {
+		  position: absolute;
+	    bottom: -8px;
+	    width: calc(100% - 30px);
+	    display: flex;
+	    overflow-x: auto;
+
+		.tool {
+      width: fit-content;
+      background-color: #6b21a8;
+      color: white;
+      font-size: 14px;
+      padding: 2px 4px;
+      border-radius: 3px;
+      white-space: nowrap;
+      margin-right: 5px;
+      font-size: 12px;
+    }
+	}
+
+	.updated_at {
+		font-size: 10px;
+    color: var(--secondaryFg);
+    position: absolute;
+    top: 0;
+    display: none;
+    transition: all .3s ease;
+	}
+
+	&:hover {
+
+    .updated_at {
+      display: block;
+    }
+  }
+}

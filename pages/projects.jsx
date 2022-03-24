@@ -117,7 +117,7 @@ export default function Projects() {
                 </div>
 
 
-              {(!error && !(projects.length >= publicRepoCount)) && <div className="loadMoreBtn" onClick={loadMoreProjects}>load more</div>}
+              {(!error && !(projects.length >= publicRepoCount)) && <div className={styles.loadMoreBtn} onClick={loadMoreProjects}>load more</div>}
             </div>
         </main>
       </FadeIn>

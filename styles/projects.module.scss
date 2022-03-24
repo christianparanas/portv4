@@ -15,6 +15,22 @@
 	.grid_wrapper {
 		margin-top: 50px;
 
+		.loadMoreBtn {
+      width: fit-content;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background: var(--secondaryBg);
+      box-shadow: var(--shadow);
+      border: 3px solid var(--borderColor);
+      cursor: pointer;
+      margin: 30px auto;
+      font-family: "Fredoka One", sans-serif;
+
+      &:hover {
+        background: var(--background);
+      }
+    }
+
 		.content {
 
 		}

@@ -8,8 +8,9 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
 // import components
-import { Card } from "../components";
+import Project from "components/project/project";
 
+import styles from 'styles/projects.module.scss'
 import Page from 'components/page/page'
 
 const breakpointColumnsObj = {
@@ -78,27 +79,18 @@ export default function Projects() {
       </Head>
 
       <FadeIn>
-        <main className="projects">
-          <div className="content">
-            <h1 className="title">Projects</h1>
-            <p className="head_p">
-              Some existing open-source projects that I worked on with other
-              people for work, or as personal side-projects.
-            </p>
+        <main className={styles.wrapper}>
+          <h1 className={styles.title}>Projects</h1>
+          <p className={styles.description}>
+            Some existing open-source projects that I worked on with other
+            people for work, or as personal side-projects.
+          </p>
 
-            <div className="diff_projs">
-              <div className="diff_proj">
-                <div className="head">
-                  <img
-                    draggable="false"
-                    role="img"
-                    className="emoji"
-                    alt="💻"
-                    src="https://s.w.org/images/core/emoji/13.0.1/svg/1f4bb.svg"
-                  />
-                  Personal projects:
-                </div>
-                <div className="diff_proj_content">
+            <div className={styles.grid_wrapper}>
+                <h2>Personal Projects</h2>
+
+                <div className={styles.content}>
+
                   {error ? (<div className="wentWrong">Something went wrong. <span>reload</span></div>)
                     :
                     (<Masonry
@@ -109,7 +101,7 @@ export default function Projects() {
                       {!isLoading ? (projects.map((project, key) => {
                         return (
                           <React.Fragment key={key}>
-                            <Card props={project} />
+                            <Project props={project} />
                           </React.Fragment>
                         );
                       })) 
@@ -123,11 +115,10 @@ export default function Projects() {
                     </Masonry>)
                     }
                 </div>
-              </div>
+
 
               {(!error && !(projects.length >= publicRepoCount)) && <div className="loadMoreBtn" onClick={loadMoreProjects}>load more</div>}
             </div>
-          </div>
         </main>
       </FadeIn>
     </Page>

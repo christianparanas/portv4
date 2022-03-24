@@ -1,0 +1,33 @@
+.wrapper {
+
+	.title {
+		margin-top: 0;
+	}
+
+	.description {
+		color: var(--secondaryFg);
+	}
+
+	.description {
+
+	}
+
+	.grid_wrapper {
+		margin-top: 50px;
+
+		.content {
+
+		}
+	}
+
+
+		@media (min-width: 500px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: 999px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+}
+

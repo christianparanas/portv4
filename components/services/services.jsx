@@ -1,3 +1,5 @@
+import Masonry from "react-masonry-css";
+
 import styles from './services.module.scss'
 
 const servicesArr = [
@@ -33,6 +35,13 @@ const servicesArr = [
   },
 ]
 
+const breakpointColumnsObj = {
+  default: 3,
+  1100: 3,
+  700: 2,
+  500: 1,
+};
+
 const Services = () => (
   <div className={styles.services_wrapper}>
     <div className={styles.services_header}>
@@ -41,6 +50,11 @@ const Services = () => (
     </div>
 
     <div className={styles.services_content_wrapper}>
+      <Masonry
+        breakpointCols={breakpointColumnsObj}
+        className="my-masonry-grid"
+        columnClassName="my-masonry-grid_column"
+      >
       {servicesArr.map((service, key) => {
         return (
           <div className={styles.service_wrapper} key={key}>
@@ -49,6 +63,7 @@ const Services = () => (
           </div>
         )
       })}
+      </Masonry>
     </div>
   </div>
 )

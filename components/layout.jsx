@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Nav from "./Nav";
+import Nav from "./nav/nav";
 
 export default function Layout({ children }) {
   const [footerYear, setFooterYear] = useState(null);

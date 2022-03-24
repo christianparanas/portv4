@@ -1,0 +1,47 @@
+.container {
+
+}
+
+.main {
+  padding: 90px 15px;
+  margin-bottom: 50px;
+
+  @media (min-width: 480px) {
+    margin-bottom: 80px;
+  }
+}
+
+.footer {
+  width: 100%;
+  padding: 30px 15px;
+
+
+  p {
+    opacity: 0.3;
+  }
+}
+.copyright {
+  text-align: center;
+}
+
+.links {
+  display: grid;
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+
+  li {
+    margin-bottom: 0;
+
+    font-weight: 500;
+    transition: color 0.2s ease-out;
+
+    &:hover,
+    &:focus {
+
+    }
+  }
+}

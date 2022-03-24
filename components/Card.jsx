@@ -5,7 +5,7 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 const baseURL = "https://github.com/"
 
 // import components
-import { Repo, Live } from "./svgs";
+import { Repo, Live } from "./icons";
 
 function Card({ props }) {
   const [isLoading, setIsLoading] = useState(true)

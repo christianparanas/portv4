@@ -4,7 +4,7 @@ import { Squeeze as Hamburger } from "hamburger-react";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
 
-import ThemeChanger from "./ThemeChanger";
+import ThemeChanger from "components/ThemeChanger";
 
 export default function Nav() {
   const { theme, setTheme } = useTheme();
@@ -28,7 +28,7 @@ export default function Nav() {
   };
 
   return (
-    <div className="nav">
+    <div className="nav_wrapper">
       <div className="ham">
         <div className="leftham">
           <Link href="/">
@@ -50,7 +50,15 @@ export default function Nav() {
               className={`item ${asPath == "/" ? "activePage" : ""}`}
               onClick={closeNav}
             >
-              About Me
+              Home
+            </div>
+          </Link>
+          <Link href="/about">
+            <div
+              className={`item ${asPath == "/about" ? "activePage" : ""}`}
+              onClick={closeNav}
+            >
+              About
             </div>
           </Link>
           <Link href="/blog">
@@ -88,7 +96,7 @@ export default function Nav() {
         <div className="sideItems">
           <Link href="/">
             <div className={`sideItem ${asPath == "/" ? "activePage" : ""}`}>
-              About Me
+              About
             </div>
           </Link>
           <Link href="/blog">

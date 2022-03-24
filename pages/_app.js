@@ -32,9 +32,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
 
     <ThemeProvider defaultTheme="dark">
       <SessionProvider session={session}>
-        <Layout>
           <Component {...pageProps} />
-        </Layout>
       </SessionProvider>
     </ThemeProvider>
     </>

@@ -1,6 +1,6 @@
-.nav {
+.nav_wrapper {
   color: #fff;
-  background: #6b21a8;
+  background: var(--headerBg);
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -19,18 +19,17 @@
       margin-right: 10px;
       color: var(--foreground);
       font-size: 14px;
-      font-family: "Fredoka One", sans-serif;
     }
   }
 
   .ham {
-    background: #6b21a8;
+    background: var(--headerBg);
+    backdrop-filter: saturate(180%) blur(20px);
     padding: 10px 25px;
     display: flex;
     z-index: 6;
     justify-content: space-between;
     position: relative;
-    font-family: "Fredoka One", sans-serif;
 
     .ops {
       display: flex;
@@ -56,14 +55,13 @@
 
       .prof {
         color: rgba(255, 255, 255, 0.6);
-        font-family: "Fredoka One", sans-serif;
+
         font-size: 10px;
       }
 
       .name {
-        font-family: "Fredoka One", sans-serif;
+
         margin-bottom: 3px;
-        border-bottom: 1px solid #6b21a8;
         cursor: pointer;
       }
     }
@@ -84,21 +82,22 @@
     left: 0;
     padding: 0 30px;
     height: 0;
+    background: rgba(9, 26, 40, 1);
   }
 
   .items {
     .item {
       padding: 10px 15px 10px 8px;
-      border-bottom: 1px solid #6b21a8;
       width: fit-content;
       cursor: pointer;
       margin-bottom: 10px;
       transition: all 0.3s ease-in-out;
       border-radius: 8px;
-      font-family: "Fredoka One", sans-serif;
+      font-weight: 500;
+
 
       &:hover {
-        background-color: #942ee7;
+        background-color: #483b5275;
         padding: 10px 15px;
       }
     }
@@ -106,6 +105,11 @@
     .activePage {
       background-color: #942ee7;
       padding: 10px 15px;
+
+      &:hover {
+        background-color: #942ee7;
+        padding: 10px 15px;
+      }
     }
 
       .toogle {
@@ -167,7 +171,7 @@
       position: relative;
 
       .sideHead {
-        font-family: "Fredoka One", sans-serif;
+
 
         .prof {
           color: rgba(255, 255, 255, 0.6);
@@ -192,7 +196,7 @@
           transition: all 0.3s ease-in-out;
           border-radius: 8px;
           padding: 5px 15px 5px 15px;
-          font-family: "Fredoka One", sans-serif;
+
 
           &:hover {
             background-color: #942ee7;

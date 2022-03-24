@@ -11,7 +11,7 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
 
-import { Google } from '../../components/svgs' 
+import { Google } from '../../components/icons' 
 import fetcher from '../../lib/fetcher'
 
 

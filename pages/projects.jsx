@@ -8,9 +8,10 @@ import 'react-loading-skeleton/dist/skeleton.css'
 
 // import components
 import Project from "components/project/project";
-
-import styles from 'styles/projects.module.scss'
 import Page from 'components/page/page'
+
+// import styles
+import styles from 'styles/projects.module.scss'
 
 const breakpointColumnsObj = {
   default: 2,
@@ -18,6 +19,7 @@ const breakpointColumnsObj = {
   700: 1,
   500: 1,
 };
+
 
 const baseURL = 'https://api.github.com'
 

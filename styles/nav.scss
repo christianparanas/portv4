@@ -24,7 +24,6 @@
 
   .ham {
     background: var(--headerBg);
-    backdrop-filter: saturate(180%) blur(20px);
     padding: 10px 25px;
     display: flex;
     z-index: 6;
@@ -82,7 +81,7 @@
     left: 0;
     padding: 0 30px;
     height: 0;
-    background: rgba(9, 26, 40, 1);
+    background: var(--headerBg);
   }
 
   .items {

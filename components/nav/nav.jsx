@@ -39,7 +39,7 @@ export default function Nav() {
           <div className={styles.prof}>Web Developer</div>
         </div>
         <div className={styles.ops}>
-          <ThemeChanger />
+          <div className={styles.togCon1}><ThemeChanger /></div>
           <Hamburger color="#fff" toggled={isOpen} toggle={setOpen} />
         </div>
       </div>
@@ -96,6 +96,11 @@ export default function Nav() {
         <div className={styles.sideItems}>
           <Link href="/">
             <div className={`${styles.sideItem} ${asPath == "/" ? styles.activePage : ""}`}>
+              Home
+            </div>
+          </Link>
+          <Link href="/about">
+            <div className={`${styles.sideItem} ${asPath == "/about" ? styles.activePage : ""}`}>
               About
             </div>
           </Link>

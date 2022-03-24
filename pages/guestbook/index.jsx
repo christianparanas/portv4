@@ -14,7 +14,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import { Google } from '../../components/icons' 
 import fetcher from '../../lib/fetcher'
 
-
+import Page from 'components/page/page'
 
 const breakpointColumnsObj = {
   default: 2,
@@ -112,7 +112,7 @@ export default function Guests() {
   }
 
   return (
-    <div className="container">
+    <Page>
       <Head>
         <title>Guestbook | Christian Paranas</title>
       </Head>
@@ -209,6 +209,6 @@ export default function Guests() {
         </div>
       </main>
       </FadeIn>
-    </div>
+    </Page>
   )
 }

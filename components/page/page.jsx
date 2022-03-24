@@ -21,11 +21,14 @@ const Page = ({ children }) => (
   <div className={styles.container}>
     <Nav />
 
-    <main className={styles.main}>
-      {children}
-    </main>
+    <div className={styles.content}>
+      <main className={styles.main}>
+        {children}
+      </main>
+    </div>
     <footer className={styles.footer}>
-      <ul className={styles.links}>
+      <div className={styles.footer_content}>
+        <ul className={styles.links}>
         {footerLinks.map(link => (
           <li key={link.name}>
             <Link href={link.url}>
@@ -35,6 +38,7 @@ const Page = ({ children }) => (
         ))}
       </ul>
       <p className={styles.copyright}>&copy; Christian Paranas {new Date().getFullYear()}</p>
+      </div>
     </footer>
   </div>
 )

@@ -10,6 +10,8 @@ import 'react-loading-skeleton/dist/skeleton.css'
 // import components
 import { Card } from "../components";
 
+import Page from 'components/page/page'
+
 const breakpointColumnsObj = {
   default: 2,
   1100: 2,
@@ -69,7 +71,7 @@ export default function Projects() {
   }
 
   return (
-    <div className="container">
+    <Page>
       <Head>
         <title>Projects | Christian Paranas</title>
         <link rel="icon" href="/favicon.ico" />
@@ -128,6 +130,6 @@ export default function Projects() {
           </div>
         </main>
       </FadeIn>
-    </div>
+    </Page>
   );
 }

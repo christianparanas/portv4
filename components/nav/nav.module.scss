@@ -34,8 +34,8 @@
       display: flex;
       align-items: center;
 
-      .themeChanger {
-        margin-right: 20px;
+      .togCon1 {
+        margin-right: 12px;
       }
 
       div:nth-child(2), .hamburger-react {
@@ -123,7 +123,7 @@
 }
 
 @media only screen and (min-width: 452px) {
-  .nav {
+  .wrapper {
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -143,12 +143,13 @@
 }
 
 @media only screen and (min-width: 999px) {
-  .nav {
+  .wrapper {
     position: fixed;
     width: 380px;
     height: 100%;
     z-index: 100;
     padding: 80px 50px 144px 50px;
+    background: #6b21a8;
 
     .toggle {
       margin-left: 15px;
@@ -156,10 +157,14 @@
       bottom: 0;
       display: flex;
       margin: 20px 0;
+
+      span {
+        font-weight: 800;
+      }
     }
 
     .ham,
-    .nav_overlay {
+    .overlay {
       display: none;
     }
 
@@ -168,8 +173,6 @@
       position: relative;
 
       .sideHead {
-
-
         .prof {
           color: rgba(255, 255, 255, 0.6);
           font-size: 15px;
@@ -193,6 +196,7 @@
           transition: all 0.3s ease-in-out;
           border-radius: 8px;
           padding: 5px 15px 5px 15px;
+          font-weight: 500;
 
 
           &:hover {

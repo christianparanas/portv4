@@ -17,6 +17,7 @@
 			box-shadow: var(--shadow);
 			border-radius: 8px;
 			padding: 15px;
+			height: fit-content;
 
 			h3, p {
 				margin: 0;
@@ -36,5 +37,13 @@
 			  opacity: 0.8;
 			}
 		}
+
+		@media (min-width: 500px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: 999px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
 	}
 }

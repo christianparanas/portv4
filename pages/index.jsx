@@ -14,7 +14,7 @@ export default function Home() {
     <Page>
       <PageHeader
         title="Hi, my name is Christian."
-        description="I’m a web developer based in Tacloban City, Philipines. My current toolset includes React, Angular, Node, Laravel, and other various frameworks, libraries, and technologies related to them."
+        description="I’m a web developer based in Tacloban City, Philippines. My current toolset includes React, Angular, Node, Laravel, and other various frameworks, libraries, and technologies related to them."
       >
         <button href="/about">More about me</button>
       </PageHeader>

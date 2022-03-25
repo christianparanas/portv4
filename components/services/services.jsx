@@ -4,32 +4,32 @@ import styles from './services.module.scss'
 
 const servicesArr = [
   {
-    icon: "1",
+    icon: "/icons/sys.svg",
     title: "Custom Systems",
     description: "Streamline and automate your business process with systems that are customized for your needs."
   },
   {
-    icon: "2",
+    icon: "/icons/web.svg",
     title: "Websites",
     description: "Elevate your digital presence with a professionally made website that increases your brand value."
   },
   {
-    icon: "3",
+    icon: "/icons/ecommerce.svg",
     title: "Online Stores",
     description: "Bring your business online, reach more customers, and make handling transactions easier and efficient."
   },
   {
-    icon: "4",
+   icon: "/icons/app.svg",
     title: "Mobile Applications",
     description: "Promote your business or organization and reach even more people with mobile applications either on Android or iOS."
   },
   {
-    icon: "2",
+    icon: "/icons/design.svg",
     title: "Graphic Design",
     description: "Get modern and beautiful logos and layouts, update the look and feel of your business, and make it more impressive."
   },
   {
-    icon: "2",
+   icon: "/icons/scrape.svg",
     title: "Web Scraping",
     description: "Extract data from any website and collect the necessary information to further enhance your business."
   },
@@ -58,6 +58,9 @@ const Services = () => (
       {servicesArr.map((service, key) => {
         return (
           <div className={styles.service_wrapper} key={key}>
+            <div className={styles.img_wrapper}>
+              <img src={service.icon} alt="" />
+            </div>
             <h3>{ service.title }</h3>
             <p>{ service.description }</p>
           </div>

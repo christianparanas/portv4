@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
     <>
     <Head>
-        <title>Christian Paranas | web Developer</title>
+        <title>Christian Paranas | Web Developer</title>
         <meta name="description" content="Hi, I am Christian Paranas a web development enthusiast that is armed with experience, learning, and passion." />
         <meta name='thumbnail' content='https://christianparanas.vercel.app/me.png' />
         <meta property='og:title' content='Christian Paranas | Web Developer' />

@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useEffect } from 'react'
 
-import { blogs } from "../../lib/getBlogs";
+import { blogs } from "lib/getBlogs";
 
 import styles from 'styles/blog.module.scss'
 import Page from 'components/page/page'

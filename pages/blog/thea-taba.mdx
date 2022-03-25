@@ -1,10 +1,11 @@
-import BlogLayout from '../../components/BlogLayout'
+import BlogLayout from 'components/blogLayout/blogLayout'
 
 export const meta = {
   title: 'Thea taba',
   description: 'Getting started with the Next framework',
   date: 'Aug 04, 2020',
-  readTime: 2
+  readTime: 2,
+  isPublished: true
 }
 
 export default ({ children }) => <BlogLayout meta={meta}>{children}</BlogLayout>;

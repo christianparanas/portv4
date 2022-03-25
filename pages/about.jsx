@@ -18,7 +18,7 @@ export default function About() {
 
       <main className={styles.wrapper}>
         <div className={styles.img_wrapper}>
-          <Image src={me} alt="Picture of me (Christian Paranas)" placeholder="blur" width={300} height={300} className={styles.image} />
+          <Image responsive={true} src={me} alt="Picture of me (Christian Paranas)" placeholder="blur" width={450} height={450} className={styles.image} />
         </div>
 
         <div className="data">

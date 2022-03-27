@@ -1,5 +1,4 @@
-import styles from './pageheader.module.scss'
-
+import styles from "./pageheader.module.scss";
 
 const PageHeader = ({ title, description, children, compact }) => (
   <div className={styles.wrapper}>
@@ -7,6 +6,6 @@ const PageHeader = ({ title, description, children, compact }) => (
     {description && <p className={styles.description}>{description}</p>}
     {children}
   </div>
-)
+);
 
-export default PageHeader
+export default PageHeader;

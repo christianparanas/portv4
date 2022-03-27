@@ -1,14 +1,16 @@
-import BlogLayout from 'components/blogLayout/blogLayout'
+import BlogLayout from "components/blogLayout/blogLayout";
 
 export const meta = {
-  title: 'Introduction to Next.js',
-  description: 'Getting started with the Next framework',
-  date: 'Aug 04, 2020',
+  title: "Introduction to Next.js",
+  description: "Getting started with the Next framework",
+  date: "Aug 04, 2020",
   readTime: 2,
-  isPublished: false
-}
+  isPublished: false,
+};
 
-export default ({ children }) => <BlogLayout meta={meta}>{children}</BlogLayout>;
+export default ({ children }) => (
+  <BlogLayout meta={meta}>{children}</BlogLayout>
+);
 
 ## My Headline
 

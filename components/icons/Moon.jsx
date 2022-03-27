@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from "react";
 
 const Moon = (props) => (
   <svg
@@ -16,6 +16,6 @@ const Moon = (props) => (
     <path d="M0 0h24v24H0z" stroke="none" />
     <path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z" />
   </svg>
-)
+);
 
-export default Moon
+export default Moon;

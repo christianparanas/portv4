@@ -1,17 +1,16 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useEffect } from 'react'
+import { useEffect } from "react";
 
 import { blogs } from "lib/getBlogs";
 
-import styles from 'styles/blog.module.scss'
-import Page from 'components/page/page'
+import styles from "styles/blog.module.scss";
+import Page from "components/page/page";
 
 export default function Blog() {
-
   useEffect(() => {
-    console.log(blogs)
-  }, [])
+    console.log(blogs);
+  }, []);
 
   return (
     <Page>
@@ -25,14 +24,16 @@ export default function Blog() {
         <div className={styles.grid_wrapper}>
           {blogs.map((blog) => (
             <div className={styles.con} key={blog.link}>
-              <h4>{blog.module.meta['title']}</h4>
-              <Link href={'/blog' + (blog.link).split(".").slice(0, -1).join(".")}>
+              <h4>{blog.module.meta["title"]}</h4>
+              <Link
+                href={"/blog" + blog.link.split(".").slice(0, -1).join(".")}
+              >
                 <a>Read more →</a>
               </Link>
             </div>
-          ))}  
+          ))}
         </div>
       </main>
     </Page>
-  )
+  );
 }

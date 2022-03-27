@@ -8,7 +8,7 @@
   .toggle {
     display: none;
     margin-top: 40px;
-    align-items: center; 
+    align-items: center;
     background: var(--background);
     border-radius: 8px;
     shadow: var(--shadow);
@@ -38,7 +38,8 @@
         margin-right: 12px;
       }
 
-      div:nth-child(2), .hamburger-react {
+      div:nth-child(2),
+      .hamburger-react {
         width: 44px !important;
         height: 44px !important;
         -webkit-tap-highlight-color: transparent;
@@ -59,7 +60,6 @@
       }
 
       .name {
-
         margin-bottom: 3px;
         cursor: pointer;
       }
@@ -92,7 +92,6 @@
       border-radius: 8px;
       font-weight: 500;
 
-
       &:hover {
         background-color: #483b5275;
         padding: 10px 15px;
@@ -109,10 +108,9 @@
       }
     }
 
-      .toogle {
-        display: block;
-
-      }
+    .toogle {
+      display: block;
+    }
   }
 
   .open_overlay {
@@ -198,7 +196,6 @@
           padding: 5px 15px 5px 10px;
           font-weight: 500;
 
-
           &:hover {
             background-color: #942ee7;
             padding: 5px 15px;
@@ -207,7 +204,7 @@
 
         .activePage {
           background-color: #942ee7;
-            padding: 5px 15px;
+          padding: 5px 15px;
         }
       }
     }

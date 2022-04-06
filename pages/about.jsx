@@ -33,7 +33,7 @@ export default function About() {
             Hi, I am Christian Paranas, an IT student from the Philippines. I
             love spending my free time watching video tutorials and reading
             articles about software development because I know it will give me
-            great benefits when the time comes. I don't what I'm going to put in
+            great benefits when the time comes. I don't know what I'm going to put in
             here, so, I will be right back haha.
           </p>
           <p>

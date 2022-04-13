@@ -1,6 +1,6 @@
 .content {
   min-height: calc(100vh - 280px);
-  height: 100vh;
+  height: fit-content;
 
   @media (min-width: 999px) {
     display: grid;

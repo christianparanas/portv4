@@ -15,34 +15,34 @@ const footerLinks = [
   { name: "Dribbble", url: "https://dribbble.com/chris" },
   { name: "Books", url: "/books" },
   { name: "Changelog", url: "/changelog" },
-  { name: "Newsletter", url: "/newsletter" }
+  { name: "Newsletter", url: "/newsletter" },
 ];
 
 const Page = ({ children }) => (
   <div className={styles.container}>
     <Nav />
 
-    <div className={styles.content}>
-      <main className={styles.main}>
-        <FadeIn>{children}</FadeIn>
-      </main>
-    </div>
-    <footer className={styles.footer}>
-      <div className={styles.footer_content}>
-        <ul className={styles.links}>
-          {footerLinks.map((link) => (
-            <li key={link.name}>
-              <Link href={link.url}>
-                <a>{link.name}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <p className={styles.copyright}>
-          &copy; Christian Paranas {new Date().getFullYear()}
-        </p>
+    <FadeIn>
+      <div className={styles.content}>
+        <main className={styles.main}>{children}</main>
       </div>
-    </footer>
+      <footer className={styles.footer}>
+        <div className={styles.footer_content}>
+          <ul className={styles.links}>
+            {footerLinks.map((link) => (
+              <li key={link.name}>
+                <Link href={link.url}>
+                  <a>{link.name}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className={styles.copyright}>
+            &copy; Christian Paranas {new Date().getFullYear()}
+          </p>
+        </div>
+      </footer>
+    </FadeIn>
   </div>
 );
 

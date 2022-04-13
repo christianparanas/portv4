@@ -1,19 +1,16 @@
-
 .wrapper {
+  .img_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 
-	.img_wrapper {
-		width: 100%;
-		display: flex;
-		justify-content: center;
+    .image {
+      margin: 0 auto;
+      border-radius: 50%;
+    }
+  }
 
-		.image {
-			margin: 0 auto;
-			border-radius: 50%;
-		}
-	}
-
-	.data {
-		margin-top: 50px;
-	}
+  .data {
+    margin-top: 50px;
+  }
 }
-

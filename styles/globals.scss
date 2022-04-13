@@ -1,24 +1,24 @@
 @font-face {
   font-weight: 400;
-  font-family: 'GT Walsheim Pro';
+  font-family: "GT Walsheim Pro";
   font-style: normal;
-  src: url('/fonts/GTWalsheimPro-Regular.woff2') format('woff2');
+  src: url("/fonts/GTWalsheimPro-Regular.woff2") format("woff2");
   font-display: optional;
 }
 
 @font-face {
   font-weight: 500;
-  font-family: 'GT Walsheim Pro';
+  font-family: "GT Walsheim Pro";
   font-style: normal;
-  src: url('/fonts/GTWalsheimPro-Medium.woff2') format('woff2');
+  src: url("/fonts/GTWalsheimPro-Medium.woff2") format("woff2");
   font-display: optional;
 }
 
 @font-face {
   font-weight: 700;
-  font-family: 'GT Walsheim Pro';
+  font-family: "GT Walsheim Pro";
   font-style: normal;
-  src: url('/fonts/GTWalsheimPro-Bold.woff2') format('woff2');
+  src: url("/fonts/GTWalsheimPro-Bold.woff2") format("woff2");
   font-display: optional;
 }
 
@@ -60,7 +60,6 @@ a {
   cursor: pointer;
 }
 
-
 .my-masonry-grid {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,7 +75,6 @@ a {
   }
 }
 
-
 @media only screen and (min-width: 500px) {
   .my-masonry-grid {
     margin-left: -15px;
@@ -90,7 +88,7 @@ a {
 }
 
 .react-loading-skeleton {
-  margin-bottom: 15px !important; 
+  margin-bottom: 15px !important;
   border-radius: 8px !important;
   background: var(--secondaryBg) !important;
   box-shadow: var(--shadow) !important;
@@ -100,5 +98,3 @@ a {
 .react-loading-skeleton:after {
   background: var(--background) !important;
 }
-
-

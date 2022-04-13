@@ -1,21 +1,16 @@
-
 .wrapper {
-
-
-
-	.interact {
-
-		.authwall {
-		  padding-top: 20px;
+  .interact {
+    .authwall {
+      padding-top: 20px;
       min-height: 210px;
-      text-align: center; 
+      text-align: center;
 
       span {
         font-size: 14px;
       }
 
       .provider_btn {
-      	background: #6b21a8;
+        background: #6b21a8;
         color: #fff;
         display: flex;
         align-items: center;
@@ -96,7 +91,8 @@
 
         .showLoginLoader {
           display: block;
-          border-color: var(--secondaryFg);        }
+          border-color: var(--secondaryFg);
+        }
       }
 
       .one {
@@ -106,18 +102,15 @@
         border: 3px solid var(--borderColor);
 
         .icon {
-        	width: 14px;
-        	height: 14px;
+          width: 14px;
+          height: 14px;
         }
       }
-		}
+    }
 
-
-		.create {
-
-
-			.logged_indicator {
-				font-size: 14px;
+    .create {
+      .logged_indicator {
+        font-size: 14px;
         color: var(--secondaryFg);
 
         span {
@@ -130,7 +123,7 @@
           padding: 6px 10px;
           text-align: center;
           background: #6b21a8;
-          border-radius: 8px; 
+          border-radius: 8px;
           border: 0;
           color: #fff;
           margin-top: 10px;
@@ -139,14 +132,14 @@
           box-shadow: var(--shadow);
           margin-left: 10px;
         }
-			}
+      }
 
-			.info {
-				margin-bottom: 10px;
-			}
+      .info {
+        margin-bottom: 10px;
+      }
 
-			form {
-				width: 100%;
+      form {
+        width: 100%;
         margin: 10px 0 20px;
         position: relative;
 
@@ -168,16 +161,16 @@
         }
 
         button {
-        	position: absolute;
-        	bottom: -5px;
-        	right: 15px;
-        	width: 80px;
+          position: absolute;
+          bottom: -5px;
+          right: 15px;
+          width: 80px;
 
           outline: 0;
           padding: 10px 0;
           text-align: center;
           background: #6b21a8;
-          border-radius: 8px; 
+          border-radius: 8px;
           border: 0;
           color: #fff;
           margin-top: 10px;
@@ -243,12 +236,12 @@
             display: block;
           }
         }
-			}
-		}
-	}
+      }
+    }
+  }
 
-	.messages {
-		margin-top: 40px;
+  .messages {
+    margin-top: 40px;
     display: grid;
     grid-gap: 10px;
 
@@ -260,7 +253,7 @@
     }
 
     .message {
-    	background: var(--secondaryBg);
+      background: var(--secondaryBg);
       color: var(--secondaryFg);
       box-shadow: var(--shadow);
       border: 3px solid var(--borderColor);
@@ -291,21 +284,19 @@
             color: var(--foreground);
           }
 
-            .date {
+          .date {
             font-size: 10px;
           }
         }
       }
 
       .message_body {
-    	  margin: 10px 0 0;
+        margin: 10px 0 0;
         white-space: pre-wrap;
         height: fit-content;
         color: var(--foreground);
         font-size: 14px;
       }
-
     }
-
-	}
+  }
 }

@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 import Masonry from "react-masonry-css";
 import useSWR from "swr";
 import FadeIn from "react-fade-in";
@@ -11,7 +10,6 @@ import clsx from "classnames";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-import { Google } from "../components/icons";
 import fetcher from "../lib/fetcher";
 
 import Page from "components/page/page";

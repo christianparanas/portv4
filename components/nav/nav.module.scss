@@ -1,6 +1,6 @@
 .wrapper {
   color: #fff;
-  // background: var(--headerBg);
+  background: var(--headerBg);
 
   position: fixed;
   width: 100%;
@@ -25,7 +25,6 @@
 
   .ham {
     // background: var(--headerBg);
-    backdrop-filter: blur(8px);
     padding: 12px 20px;
     display: flex;
     z-index: 6;

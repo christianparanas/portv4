@@ -34,7 +34,10 @@ function Project({ props }) {
                 <Repo />
               </a>
               {props.homepage && (
-                <a href={`https://${props.homepage}`} target="_blank">
+                <a
+                  href={props.homepage.indexOf("https://") == 0 ? props.homepage : "https://" + props.homepage }
+                  target="_blank"
+                >
                   <Live />
                 </a>
               )}

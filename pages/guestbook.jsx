@@ -69,8 +69,6 @@ export default function Guests() {
   };
 
   useEffect(() => {
-    console.log(session);
-
     setTimeout(() => {
       setAuthLoading(false);
     }, 2000);

@@ -42,6 +42,8 @@ export default function Projects() {
   useEffect(async () => {
     if (data) {
       // store the data from the api to projects variable
+      console.log(data)
+
       setProjects(data);
 
       setTimeout(() => {

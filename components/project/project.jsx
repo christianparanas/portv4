@@ -34,7 +34,7 @@ function Project({ props }) {
                 <Repo />
               </a>
               {props.homepage && (
-                <a href={props.homepage} target="_blank">
+                <a href={`https://${props.homepage}`} target="_blank">
                   <Live />
                 </a>
               )}

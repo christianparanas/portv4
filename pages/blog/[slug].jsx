@@ -6,12 +6,13 @@ import { MDXRemote } from "next-mdx-remote";
 import matter from "gray-matter";
 import SyntaxHighlighter from "react-syntax-highlighter";
 
+import DocLayout from "components/docLayout/docLayout";
+
 const Doc = ({ frontMatter: { title }, mdxSource }) => {
   return (
-    <div className="">
-      <h1>{title}</h1>
-      <MDXRemote {...mdxSource} components={{ SyntaxHighlighter }} />
-    </div>
+    <DocLayout title={title}>
+      {<MDXRemote {...mdxSource} components={{ SyntaxHighlighter }} />}
+    </DocLayout>
   );
 };
 

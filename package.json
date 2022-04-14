@@ -29,6 +29,8 @@
     "swr": "^1.2.2"
   },
   "devDependencies": {
+    "gray-matter": "^4.0.3",
+    "next-mdx-remote": "^4.0.2",
     "prisma": "^3.11.0"
   }
 }

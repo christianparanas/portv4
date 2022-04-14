@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <Page>
       <PageHeader
-        title="Hi, my name is Christian."
+        title="Hi, I am Christian Paranas."
         description="I’m a web developer based in Tacloban City, Philippines. My current toolset includes React, Angular, Node, Laravel, and other various frameworks, libraries, and technologies related to them."
       >
         <Link href="/about">

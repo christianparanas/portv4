@@ -1,8 +1,5 @@
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
-import { useEffect } from "react";
-
 import styles from "styles/about.module.scss";
 import Page from "components/page/page";
 
@@ -30,11 +27,7 @@ export default function About() {
 
         <div className={styles.data}>
           <p>
-            Hi, I am Christian Paranas, an IT student from the Philippines. I
-            love spending my free time watching video tutorials and reading
-            articles about software development because I know it will give me
-            great benefits when the time comes. I don't know what I'm going to put in
-            here, so, I will be right back haha.
+            Hi, I am Christian Paranas, an IT student from the Philippines.
           </p>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam

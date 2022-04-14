@@ -53,7 +53,7 @@ function Project({ props }) {
             })}
           </div>
           <span className={styles.updated_at}>
-            Last updated: {moment(props.updated_at).fromNow()}
+            Created at: {moment(props.created_at).fromNow()}
           </span>
         </div>
       )}

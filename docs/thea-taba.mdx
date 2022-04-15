@@ -1,11 +1,10 @@
 ---
 title: Functions for Beginners
-date: 'August 4, 2021'
+date: "August 4, 2021"
 description: Learn how to create and use functions
-thumbnailUrl: '/javascript-functions-thumbnail.jpeg'
-tags: ['functions', 'javascript']
+thumbnailUrl: "/javascript-functions-thumbnail.jpeg"
+tags: ["functions", "javascript"]
 ---
-
 
 <div>
   This is a blog post about <strong>functions</strong>. <br/>
@@ -14,10 +13,19 @@ tags: ['functions', 'javascript']
 <br/>
 ### This is a Markdown subheading
 We just used a `###` subheading in our blog post.
-<SyntaxHighlighter language="javascript">
+<CodeBlock>
   {`
-    const doStuff = () => {
-      return console.log('hey')
+    import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+    import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
+    function CodeBlock({ children }) {
+      return (
+        <SyntaxHighlighter language="javascript" style={atomDark}>
+          {children}
+        </SyntaxHighlighter>
+      )
     }
+
+    export default CodeBlock
   `}
-</SyntaxHighlighter>
+</CodeBlock>

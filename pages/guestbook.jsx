@@ -7,7 +7,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { signIn, useSession, signOut } from "next-auth/react";
 import clsx from "classnames";
 
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 import fetcher from "../lib/fetcher";

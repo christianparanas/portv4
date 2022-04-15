@@ -10,7 +10,7 @@
       }
 
       .provider_btn {
-        background: #6b21a8;
+        background: var(--navBg);
         color: #fff;
         display: flex;
         align-items: center;
@@ -122,7 +122,7 @@
           outline: 0;
           padding: 6px 10px;
           text-align: center;
-          background: #6b21a8;
+          background: var(--navBg);
           border-radius: 8px;
           border: 0;
           color: #fff;
@@ -169,7 +169,7 @@
           outline: 0;
           padding: 10px 0;
           text-align: center;
-          background: #6b21a8;
+          background: var(--navBg);
           border-radius: 8px;
           border: 0;
           color: #fff;

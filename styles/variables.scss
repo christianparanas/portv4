@@ -3,6 +3,8 @@
   --foreground: #365771;
   --secondaryFg: #365771a6;
   --secondaryBg: #fff;
+  --navBg: #11191f;
+  --navsBg: #18232c;
   --shadow: 0 4px 4px 0 RGB(43 80 237 / 20%);
   --borderColor: #fafafa;
   --fontFamily: "GT Walsheim Pro", -apple-system, BlinkMacSystemFont, Segoe UI,
@@ -14,13 +16,15 @@
 }
 
 [data-theme="dark"] {
-  --background: #091a28;
+  --background: #11191f;
   --foreground: white;
   --secondaryFg: #afadad;
-  --secondaryBg: #1f2937;
+  --secondaryBg: #18232c;
+  --navBg: #6b21a8;
+  --navsBg: #942ee7;
   --shadow: 0 4px 4px 0 RGB(31 41 55 / 20%);
   --headerBg: #091a28;
-  --borderColor: #1f2937;
+  --borderColor: #18232c;
   --buttonBg: #6b21a8;
   --hoverBg: #483b5275;
 }

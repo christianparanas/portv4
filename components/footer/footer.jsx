@@ -11,9 +11,6 @@ const footerLinks = [
   { name: "RSS", url: "/feed.xml" },
   { name: "Blog", url: "/blog" },
   { name: "Dribbble", url: "https://dribbble.com/chris" },
-  { name: "Books", url: "/books" },
-  { name: "Changelog", url: "/changelog" },
-  { name: "Newsletter", url: "/newsletter" },
 ];
 
 function Footer() {
@@ -23,7 +20,7 @@ function Footer() {
         <ul className={styles.links}>
           {footerLinks.map((link) => (
             <li key={link.name}>
-              <Link href={link.url}>
+              <Link href={link.url} passHref>
                 <a>{link.name}</a>
               </Link>
             </li>

@@ -4,7 +4,6 @@ import path from "path";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import matter from "gray-matter";
-import SyntaxHighlighter from "react-syntax-highlighter";
 import CodeBlock from 'components/codeBlock'
 
 import DocLayout from "components/docLayout/docLayout"

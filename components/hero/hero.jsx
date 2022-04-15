@@ -1,6 +1,6 @@
-import styles from "./pageheader.module.scss";
+import styles from "./hero.module.scss";
 
-const PageHeader = ({ title, description, children, compact }) => (
+const Hero = ({ title, description, children }) => (
   <div className={styles.wrapper}>
     <h1 className={styles.title}>{title}</h1>
     {description && <p className={styles.description}>{description}</p>}
@@ -8,4 +8,4 @@ const PageHeader = ({ title, description, children, compact }) => (
   </div>
 );
 
-export default PageHeader;
+export default Hero;

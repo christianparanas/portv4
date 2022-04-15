@@ -1,4 +1,5 @@
 import Masonry from "react-masonry-css";
+import Image from "next/image";
 
 import styles from "./services.module.scss";
 
@@ -68,7 +69,7 @@ const Services = () => (
           return (
             <div className={styles.service_wrapper} key={key}>
               <div className={styles.img_wrapper}>
-                <img src={service.icon} alt="" />
+                <Image src={service.icon} alt="" width={60} height={60} />
               </div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import * as moment from "moment";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import Skeleton from "react-loading-skeleton";
 
 const baseURL = "https://github.com/";
 

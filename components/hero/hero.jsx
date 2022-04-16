@@ -1,5 +1,4 @@
 import GitHubCalendar from "react-github-calendar";
-import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 
 import styles from "./hero.module.scss";

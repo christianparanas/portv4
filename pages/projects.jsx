@@ -41,6 +41,7 @@ export default function Projects() {
 
   useEffect(async () => {
     if (data) {
+      console.log(data);
       // store the data from the api to projects variable
       setProjects(data);
 
@@ -50,7 +51,7 @@ export default function Projects() {
     }
 
     fetchUserGithubData();
-  }, [data]);
+  }, []);
 
   const fetchUserGithubData = async () => {
     const res = await fetch("https://api.github.com/users/christianparanas");

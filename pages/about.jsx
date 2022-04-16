@@ -13,6 +13,7 @@ export default function About() {
       </Head>
 
       <main className={styles.wrapper}>
+        <h1>About Me</h1>
         <div className={styles.img_wrapper}>
           <Image
             responsive={true}
@@ -26,31 +27,7 @@ export default function About() {
         </div>
 
         <div className={styles.data}>
-          <p>
-            Hi, I am Christian Paranas, an IT student from the Philippines.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-            magnam illum rerum laborum? Quaerat ratione, sapiente omnis
-            consequatur fugit deserunt eaque beatae voluptate, optio, possimus
-            voluptas ipsa iure magnam dolores debitis quos cumque aspernatur
-            error saepe consequuntur facilis consectetur minus soluta
-            laudantium. Numquam voluptates quidem a obcaecati deleniti alias
-            amet, saepe voluptate, sequi magnam ad est fuga, odit sapiente ipsam
-            consequuntur dolorum. Illo ratione cum quae temporibus fugiat
-            dolorem pariatur non ea maxime in dicta laudantium necessitatibus
-            enim, tempore sunt magni laborum cumque harum voluptate impedit
-            obcaecati. Modi error incidunt soluta corporis et, culpa, sit
-            nesciunt, reprehenderit explicabo cumque repellendus.
-          </p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
-            exercitationem quidem optio in soluta deleniti vel maiores ad harum
-            eaque numquam sapiente illo repudiandae expedita officia id
-            laudantium autem, sequi est hic ratione illum? Consequuntur possimus
-            mollitia voluptatum, fugit deserunt dolor dicta. Dolore voluptates
-            veritatis eum aliquid quia ab officiis.
-          </p>
+          <p>Hi, I am Christian Paranas, an IT student from the Philippines.</p>
         </div>
       </main>
     </Page>

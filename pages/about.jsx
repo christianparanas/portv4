@@ -16,7 +16,6 @@ export default function About() {
         <h1>About Me</h1>
         <div className={styles.img_wrapper}>
           <Image
-            responsive={true}
             src={me}
             alt="Picture of me (Christian Paranas)"
             placeholder="blur"
@@ -27,7 +26,7 @@ export default function About() {
         </div>
 
         <div className={styles.data}>
-          <p>Hi, I am Christian Paranas, an IT student from the Philippines.</p>
+          <p>In dev.</p>
         </div>
       </main>
     </Page>

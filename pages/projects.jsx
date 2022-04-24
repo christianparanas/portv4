@@ -6,6 +6,14 @@ import * as _ from "lodash";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
+import {
+  ApolloClient,
+  InMemoryCache,
+  createHttpLink,
+  gql,
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
+
 // import components
 import Project from "components/project/project";
 import Page from "components/page/page";
@@ -29,7 +37,9 @@ const fetcher = async (params) => {
   return data;
 };
 
-export default function Projects() {
+export default function Projects({ pinnedRepos }) {
+  console.log(pinnedRepos);
+
   const [limit, setLimit] = useState(8);
   const { data, error } = useSWR(
     [`/users/christianparanas/repos?sort=created_at&per_page=${limit}`],
@@ -41,8 +51,6 @@ export default function Projects() {
 
   useEffect(async () => {
     if (data) {
-      console.log(data);
-      // store the data from the api to projects variable
       setProjects(data);
 
       setTimeout(() => {
@@ -88,7 +96,19 @@ export default function Projects() {
         </p>
 
         <div className={styles.grid_wrapper}>
-          <h2>Personal Projects</h2>
+          <h2>Pinned Projects</h2>
+
+          <div className={styles.content}>
+            <Masonry
+              breakpointCols={breakpointColumnsObj}
+              className="my-masonry-grid"
+              columnClassName="my-masonry-grid_column"
+            >
+              {pinnedRepos.map((repo, key) => (
+                <Project key={key} props={repo} />
+              ))}
+            </Masonry>
+          </div>
 
           <div className={styles.content}>
             {error ? (
@@ -118,7 +138,7 @@ export default function Projects() {
             )}
           </div>
 
-          {!error && !(projects.length >= publicRepoCount) && (
+          {!error && !(projects.length >= publicRepoCount) && !isLoading && (
             <div className={styles.loadMoreBtn} onClick={loadMoreProjects}>
               load more
             </div>
@@ -127,4 +147,61 @@ export default function Projects() {
       </main>
     </Page>
   );
+}
+
+export async function getStaticProps() {
+  const httpLink = createHttpLink({
+    uri: "https://api.github.com/graphql",
+  });
+
+  const authLink = setContext((_, { headers }) => {
+    return {
+      headers: {
+        ...headers,
+        authorization: `Bearer ${process.env.GITHUB_PERSONAL_ACCESS_TOKEN}`,
+      },
+    };
+  });
+
+  const client = new ApolloClient({
+    link: authLink.concat(httpLink),
+    cache: new InMemoryCache(),
+  });
+
+  const { data } = await client.query({
+    query: gql`
+      {
+        user(login: "christianparanas") {
+          pinnedItems(first: 5) {
+            edges {
+              node {
+                ... on Repository {
+                  id
+                  name
+                  description
+                  homepageUrl
+                  url
+                  openGraphImageUrl
+                  languages(first: 10) {
+                    nodes {
+                      name
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `,
+  });
+
+  const { user } = data;
+  const pinnedRepos = user.pinnedItems.edges.map(({ node }) => node);
+
+  return {
+    props: {
+      pinnedRepos,
+    },
+  };
 }

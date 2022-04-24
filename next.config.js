@@ -3,6 +3,9 @@ module.exports = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  env: {
+    GITHUB_PERSONAL_ACCESS_TOKEN: process.env.GITHUB_PERSONAL_ACCESS_TOKEN,
+  },
 };
 
 const withMDX = require("@next/mdx")();

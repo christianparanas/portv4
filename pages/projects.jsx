@@ -1,19 +1,17 @@
 import Head from "next/head";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Masonry from "react-masonry-css";
-import useSWR from "swr";
 import * as _ from "lodash";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+
+// styles
 import "react-loading-skeleton/dist/skeleton.css";
-
-
+import styles from "styles/projects.module.scss";
 
 // import components
 import Project from "components/project/project";
 import Page from "components/page/page";
 
-// import styles
-import styles from "styles/projects.module.scss";
+// libs
 import { getPinnedRepos, getRepos } from "lib/github";
 
 const breakpointColumnsObj = {
@@ -23,59 +21,7 @@ const breakpointColumnsObj = {
   500: 1,
 };
 
-const baseURL = "https://api.github.com";
-
-const fetcher = async (params) => {
-  const res = await fetch(`${baseURL + params}`);
-  const data = res.json();
-
-  return data;
-};
-
 export default function Projects({ repos, pinnedRepos }) {
-  console.log(repos);
-
-  const [limit, setLimit] = useState(8);
-  const { data, error } = useSWR(
-    [`/users/christianparanas/repos?sort=created_at&per_page=${limit}`],
-    fetcher
-  );
-  const [projects, setProjects] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [publicRepoCount, setPublicRepoCount] = useState(null);
-
-  useEffect(async () => {
-    if (data) {
-      setProjects(data);
-
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 1000);
-    }
-
-    fetchUserGithubData();
-  }, []);
-
-  const fetchUserGithubData = async () => {
-    const res = await fetch("https://api.github.com/users/christianparanas");
-    const datas = await res.json();
-
-    // store the public repo count for later use - load more
-    setPublicRepoCount(datas.public_repos);
-  };
-
-  const loadMoreProjects = () => {
-    // this limit state change will trigger the useSWR fetcher and load the new data from api with the new limit
-    setLimit((prevState) => prevState + 4);
-
-    // take the new loaded data from api and get only the new 4 projects from the api
-    let newLoadedProjects = _.takeRight(data, 4);
-
-    // store the 4 new projects from the api to the projects variable
-    // this solved the unnecessary re-rendering of other already loaded projects in the dom
-    setProjects((prevArray) => [...prevArray, ...newLoadedProjects]);
-  };
-
   return (
     <Page>
       <Head>
@@ -105,7 +51,6 @@ export default function Projects({ repos, pinnedRepos }) {
             </Masonry>
           </div>
 
-              
           <h2>Repos</h2>
           <div className={styles.content}>
             <Masonry
@@ -119,11 +64,9 @@ export default function Projects({ repos, pinnedRepos }) {
             </Masonry>
           </div>
 
-          {!error && !(projects.length >= publicRepoCount) && !isLoading && (
-            <div className={styles.loadMoreBtn} onClick={loadMoreProjects}>
-              load more
-            </div>
-          )}
+          <div className={styles.loadMoreBtn}>
+            load more
+          </div>
         </div>
       </main>
     </Page>
@@ -131,13 +74,13 @@ export default function Projects({ repos, pinnedRepos }) {
 }
 
 export async function getStaticProps() {
-  const repos = await getRepos()
-  const pinnedRepos = await getPinnedRepos()
+  const repos = await getRepos();
+  const pinnedRepos = await getPinnedRepos();
 
   return {
     props: {
       repos,
-      pinnedRepos
+      pinnedRepos,
     },
   };
 }

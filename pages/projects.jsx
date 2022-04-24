@@ -6,13 +6,7 @@ import * as _ from "lodash";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-import {
-  ApolloClient,
-  InMemoryCache,
-  createHttpLink,
-  gql,
-} from "@apollo/client";
-import { setContext } from "@apollo/client/link/context";
+
 
 // import components
 import Project from "components/project/project";
@@ -20,6 +14,7 @@ import Page from "components/page/page";
 
 // import styles
 import styles from "styles/projects.module.scss";
+import { getPinnedRepos, getRepos } from "lib/github";
 
 const breakpointColumnsObj = {
   default: 2,
@@ -37,8 +32,8 @@ const fetcher = async (params) => {
   return data;
 };
 
-export default function Projects({ pinnedRepos }) {
-  console.log(pinnedRepos);
+export default function Projects({ repos, pinnedRepos }) {
+  console.log(repos);
 
   const [limit, setLimit] = useState(8);
   const { data, error } = useSWR(
@@ -110,32 +105,18 @@ export default function Projects({ pinnedRepos }) {
             </Masonry>
           </div>
 
+              
+          <h2>Repos</h2>
           <div className={styles.content}>
-            {error ? (
-              <div className="wentWrong">
-                Something went wrong. <span>reload</span>
-              </div>
-            ) : (
-              <Masonry
-                breakpointCols={breakpointColumnsObj}
-                className="my-masonry-grid"
-                columnClassName="my-masonry-grid_column"
-              >
-                {!isLoading
-                  ? projects.map((project, key) => {
-                      return (
-                        <React.Fragment key={key}>
-                          <Project props={project} />
-                        </React.Fragment>
-                      );
-                    })
-                  : [...Array(8).keys()].map((el, key) => (
-                      <React.Fragment key={key}>
-                        <Skeleton count={1} height={132} />
-                      </React.Fragment>
-                    ))}
-              </Masonry>
-            )}
+            <Masonry
+              breakpointCols={breakpointColumnsObj}
+              className="my-masonry-grid"
+              columnClassName="my-masonry-grid_column"
+            >
+              {repos.map((repo, key) => (
+                <Project key={key} props={repo} />
+              ))}
+            </Masonry>
           </div>
 
           {!error && !(projects.length >= publicRepoCount) && !isLoading && (
@@ -150,58 +131,13 @@ export default function Projects({ pinnedRepos }) {
 }
 
 export async function getStaticProps() {
-  const httpLink = createHttpLink({
-    uri: "https://api.github.com/graphql",
-  });
-
-  const authLink = setContext((_, { headers }) => {
-    return {
-      headers: {
-        ...headers,
-        authorization: `Bearer ${process.env.GITHUB_PERSONAL_ACCESS_TOKEN}`,
-      },
-    };
-  });
-
-  const client = new ApolloClient({
-    link: authLink.concat(httpLink),
-    cache: new InMemoryCache(),
-  });
-
-  const { data } = await client.query({
-    query: gql`
-      {
-        user(login: "christianparanas") {
-          pinnedItems(first: 5) {
-            edges {
-              node {
-                ... on Repository {
-                  id
-                  name
-                  description
-                  homepageUrl
-                  url
-                  openGraphImageUrl
-                  languages(first: 10) {
-                    nodes {
-                      name
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    `,
-  });
-
-  const { user } = data;
-  const pinnedRepos = user.pinnedItems.edges.map(({ node }) => node);
+  const repos = await getRepos()
+  const pinnedRepos = await getPinnedRepos()
 
   return {
     props: {
-      pinnedRepos,
+      repos,
+      pinnedRepos
     },
   };
 }

@@ -64,9 +64,7 @@ export default function Projects({ repos, pinnedRepos }) {
             </Masonry>
           </div>
 
-          <div className={styles.loadMoreBtn}>
-            load more
-          </div>
+          {false && <div className={styles.loadMoreBtn}>load more</div>}
         </div>
       </main>
     </Page>

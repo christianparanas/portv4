@@ -4,6 +4,7 @@
   position: fixed;
   width: 100%;
   z-index: 100;
+  border-bottom: 1px solid var(--navsBg);
 
   .toggle {
     display: none;
@@ -148,6 +149,7 @@
     z-index: 100;
     padding: 80px 50px 144px 50px;
     background: var(--navBg);
+    border-right: 3px solid var(--navsBg);
 
     .toggle {
       margin-left: 15px;

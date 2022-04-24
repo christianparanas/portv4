@@ -23,6 +23,6 @@ export default function ThemeChanger() {
   }
 
   return (
-      <div className="themeChanger" onClick={changeTheme}>{ isDarkMode ? <Sun /> : <Moon /> }</div>
+      <div className="themeChanger" onClick={changeTheme}>{ isDarkMode ? <Moon /> : <Sun /> }</div>
   );
 }

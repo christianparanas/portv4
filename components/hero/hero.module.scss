@@ -1,5 +1,5 @@
 .wrapper {
-  margin: 50px 0 100px;
+  margin: 50px 0 50px;
 
   @media (min-width: 480px) {
     margin-bottom: 90px;
@@ -13,7 +13,7 @@
     font-weight: 700;
     font-size: 16px;
     font-family: var(--fontFamily);
-    background: var(--navBg);
+    background: var(--navsBg);
     border: none;
     border-radius: 9999px;
     transition: background-color 200ms ease-out, color 200ms ease-out;

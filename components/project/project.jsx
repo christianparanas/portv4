@@ -1,15 +1,7 @@
-import { useState, useEffect } from "react";
-import * as moment from "moment";
-import Skeleton from "react-loading-skeleton";
-
-const baseURL = "https://github.com/";
-
-// import components
 import { Repo, Live } from "components/icons";
 import styles from "./project.module.scss";
 
 function Project({ props }) {
-  console.log(props.languages);
 
   return (
     <div className={styles.container}>

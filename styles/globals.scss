@@ -1,29 +1,18 @@
-// @tailwind base;
-// @tailwind components;
-// @tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@font-face {
-  font-weight: 400;
-  font-family: "GT Walsheim Pro";
-  font-style: normal;
-  src: url("/fonts/GTWalsheimPro-Regular.woff2") format("woff2");
-  font-display: optional;
-}
 
-@font-face {
-  font-weight: 500;
-  font-family: "GT Walsheim Pro";
-  font-style: normal;
-  src: url("/fonts/GTWalsheimPro-Medium.woff2") format("woff2");
-  font-display: optional;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-@font-face {
-  font-weight: 700;
-  font-family: "GT Walsheim Pro";
-  font-style: normal;
-  src: url("/fonts/GTWalsheimPro-Bold.woff2") format("woff2");
-  font-display: optional;
+
+
+
+@layer base {
+  html {
+    @apply font-sans bg-[#11191f];
+
+  }
 }
 
 
@@ -34,9 +23,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: var(--fontFamily);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -49,7 +35,6 @@ a {
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
-  font-family: var(--fontFamily);
 }
 
 .themeChanger {

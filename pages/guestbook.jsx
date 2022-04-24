@@ -12,7 +12,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 
 import fetcher from "../lib/fetcher";
 
-import Page from "components/page/page";
+import Page from "components/Page";
 import styles from "styles/guestbook.module.scss";
 
 const breakpointColumnsObj = {

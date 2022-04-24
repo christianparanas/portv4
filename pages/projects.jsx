@@ -9,7 +9,7 @@ import styles from "styles/projects.module.scss";
 
 // import components
 import Project from "components/project/project";
-import Page from "components/page/page";
+import Page from "components/Page";
 
 // libs
 import { getPinnedRepos, getRepos } from "lib/github";

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "styles/about.module.scss";
-import Page from "components/page/page";
+import Page from "components/Page";
 
 import me from "public/me.png";
 

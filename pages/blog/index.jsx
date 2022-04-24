@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 import Head from "next/head";
 import Link from "next/link";
 import styles from "styles/blog.module.scss";
-import Page from "components/page/page";
+import Page from "components/Page";
 
 export default function Blog({ docs }) {
   console.log(docs);

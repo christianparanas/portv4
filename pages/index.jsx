@@ -1,8 +1,6 @@
-import Link from "next/link";
-
-import Page from "components/page/page";
-import Hero from "components/hero/hero";
-import Services from "components/services/services";
+import Page from "components/Page";
+import Hero from "components/Hero";
+import Services from "components/services";
 
 export default function Home() {
   return (
@@ -10,11 +8,7 @@ export default function Home() {
       <Hero
         title="Hi, I am Christian Paranas."
         description="I’m a web developer based in Tacloban City, Philippines. My current toolset includes React, Angular, Node, Laravel, and other various frameworks, libraries, and technologies related to them."
-      >
-        <Link href="/about">
-          <button>More about me</button>
-        </Link>
-      </Hero>
+      />
 
       <Services />
     </Page>

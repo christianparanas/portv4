@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         <link rel='canonical' href='https://christianparanas.vercel.app/' />
       </Head>
 
-    <ThemeProvider defaultTheme="dark">
+    <ThemeProvider attribute="class">
       <SessionProvider session={session}>
           <Component {...pageProps} />
       </SessionProvider>

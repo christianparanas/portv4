@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-
 import { Moon, Sun } from './icons' 
 
 export default function ThemeChanger() {

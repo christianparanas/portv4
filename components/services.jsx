@@ -48,7 +48,7 @@ const breakpointColumnsObj = {
 };
 
 const Services = () => (
-  <div className=''>
+  <div className="">
     <div className="">
       <h2 className="text-2xl font-bold">Services</h2>
       <p className="mt-2 mb-4 text-sm text-gray-200">
@@ -63,17 +63,15 @@ const Services = () => (
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >
-        {servicesArr.map((service, key) => {
-          return (
-            <div className="bg-[#18232c] p-4 rounded-lg shadow-lg" key={key}>
-              <div className="">
-                <Image src={service.icon} alt="" width={60} height={60} />
-              </div>
-              <h3 className="text-xl font-bold my-2">{service.title}</h3>
-              <p className="text-sm text-gray-300">{service.description}</p>
+        {servicesArr.map((service, key) => (
+          <div className="bg-white dark:bg-[#18232c] p-4 rounded-lg shadow-md" key={key}>
+            <div className="">
+              <Image src={service.icon} alt="" width={60} height={60} />
             </div>
-          );
-        })}
+            <h3 className="text-xl font-bold my-2">{service.title}</h3>
+            <p className="text-sm text-gray-300">{service.description}</p>
+          </div>
+        ))}
       </Masonry>
     </div>
   </div>

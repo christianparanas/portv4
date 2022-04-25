@@ -18,7 +18,7 @@ export default function Nav() {
   };
 
   return (
-    <div className="fixed top-0 w-full bg-[#11191f] z-50 border-b border-[#18232c]/75">
+    <div className="text-slate-100 fixed top-0 w-full bg-[#11191f] z-50 border-b border-[#18232c]/75">
       <div className="flex justify-between items-center px-4 py-2">
         <Link href="/">
           <div className="text-lg font-extrabold" onClick={closeNav}>

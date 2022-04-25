@@ -1,21 +1,20 @@
 import { Repo, Live } from "components/icons";
-import styles from "./project.module.scss";
 
 function Project({ props }) {
 
   return (
-    <div className={styles.container}>
+    <div className="dark:bg-[#18232c] p-3 rounded-lg">
       {props.openGraphImageUrl && (
-        <img className={styles.image} src={props.openGraphImageUrl} alt="" />
+        <img className="rounded-md mb-4 w-full" src={props.openGraphImageUrl} alt="" />
       )}
 
-      <div className={styles.header}>
-        <h4 className={styles.title}>
+      <div className="flex justify-between">
+        <h4 className="text-lg">
           {props.name.length >= 25
             ? `${props.name.substring(0, 20)} ...`
             : props.name}
         </h4>
-        <div className={styles.links}>
+        <div className={`grid ${props.homepageUrl ? "grid-cols-2" : "grid-cols-1" } gap-2`}>
           <a href={props.url} target="_blank">
             <Repo />
           </a>
@@ -26,14 +25,14 @@ function Project({ props }) {
           )}
         </div>
       </div>
-      <div className={styles.description}>
+      <div className="my-4 text-sm text-slate-300">
         {props.description ? props.description : "No description provided."}
       </div>
 
-      <div className={styles.tools}>
+      <div className="flex overflow-x-auto">
         {(props.languages.edges ? props.languages.edges : props.languages.nodes).map((tool, key) => {
           return (
-            <div className={styles.tool} key={key}>
+            <div className="mr-1 bg-[#11191f] pt-2 py-1 px-3 rounded-lg shadow-lg text-xs" key={key}>
               {tool.name ? tool.name : tool.node.name }
             </div>
           );

@@ -2,21 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
 
 @layer base {
-  html,
   body {
-    @apply font-sans bg-[#fafafa] dark:bg-[#11191f];
+    @apply bg-[#fafafa] dark:bg-[#11191f];
     padding: 0;
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: 'Be Vietnam Pro', sans-serif;
   }
 
   * {
+    font-family: 'Be Vietnam Pro', sans-serif;
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    @apply bg-[#25252e];
+
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#1a1a21] border-4 border-solid border-[#25252e];
+    border-radius: 100vh;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-[#1a1a21];
   }
 }
 

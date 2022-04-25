@@ -1,6 +1,5 @@
 import React from "react";
 import Link from 'next/link'
-import styles from './footer.module.scss'
 
 const footerLinks = [
   { name: "Home", url: "/" },
@@ -15,18 +14,18 @@ const footerLinks = [
 
 function Footer() {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.footer_content}>
-        <ul className={styles.links}>
+    <footer className="mt-12 mb-4 md:mt-20">
+      <div className="p-2">
+        <ul className="grid grid-cols-3 gap-4 mb-12">
           {footerLinks.map((link) => (
             <li key={link.name}>
               <Link href={link.url} passHref>
-                <a>{link.name}</a>
+                <a className="hover:text-slate-400 transition-all cursor-pointer">{link.name}</a>
               </Link>
             </li>
           ))}
         </ul>
-        <p className={styles.copyright}>
+        <p className="flex justify-center text-slate-400">
           &copy; Christian Paranas {new Date().getFullYear()}
         </p>
       </div>

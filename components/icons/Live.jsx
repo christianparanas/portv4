@@ -6,8 +6,7 @@ const Live = (props) => (
     fill="none"
     viewBox="0 0 24 24"
     stroke="#afadad"
-    width="2em"
-    height="2em"
+    className="w-6 h-6"
     {...props}
   >
     <path

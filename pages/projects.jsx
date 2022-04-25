@@ -5,10 +5,9 @@ import * as _ from "lodash";
 
 // styles
 import "react-loading-skeleton/dist/skeleton.css";
-import styles from "styles/projects.module.scss";
 
 // import components
-import Project from "components/project/project";
+import Project from "components/Project";
 import Page from "components/Page";
 
 // libs
@@ -29,17 +28,17 @@ export default function Projects({ repos, pinnedRepos }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.wrapper}>
-        <h1 className={styles.title}>Projects</h1>
-        <p className={styles.description}>
+      <main className="mt-[100px]">
+        <h1 className="text-2xl font-black mb-4">Projects</h1>
+        <p className="text-md text-slate-300">
           Some existing open-source projects that I worked on with other people
           for work, or as personal side-projects.
         </p>
 
-        <div className={styles.grid_wrapper}>
-          <h2>Pinned Projects</h2>
+        <div className="mt-10">
+          <h2 className="text-xl mb-4">Pinned Repos</h2>
 
-          <div className={styles.content}>
+          <div className="">
             <Masonry
               breakpointCols={breakpointColumnsObj}
               className="my-masonry-grid"
@@ -51,8 +50,8 @@ export default function Projects({ repos, pinnedRepos }) {
             </Masonry>
           </div>
 
-          <h2>Repos</h2>
-          <div className={styles.content}>
+          <h2 className="text-xl my-4 mt-6">Repos</h2>
+          <div className="">
             <Masonry
               breakpointCols={breakpointColumnsObj}
               className="my-masonry-grid"

@@ -3,7 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import Head from "next/head";
 import Link from "next/link";
-import styles from "styles/blog.module.scss";
+
 import Page from "components/Page";
 
 export default function Blog({ docs }) {
@@ -15,19 +15,19 @@ export default function Blog({ docs }) {
         <title>Blog | Christian Paranas</title>
       </Head>
 
-      <main className={styles.wrapper}>
-        <h1 className="title">Blog</h1>
+      <main className="mt-[100px]">
+        <h1 className="text-2xl font-black">Blog</h1>
 
-        <div className={styles.grid_wrapper}>
+        <div className="mt-10 grid md:grid-cols-2 gap-4">
           {docs.map((doc, key) => (
-            <div className={styles.con} key={key}>
+            <div className="dark:bg-[#18232c] p-4 rounded-lg shadow-lg" key={key}>
               <h4>{doc.frontMatter.title}</h4>
-              <p>{doc.frontMatter.description}</p>
+              <p className="text-sm dark:text-slate-400 mb-6">{doc.frontMatter.description}</p>
               <Link
                 href={"/blog/" + doc.slug}
                 passHref
               >
-                <a>Read more →</a>
+                <a className="text-sm">Read more →</a>
               </Link>
             </div>
           ))}

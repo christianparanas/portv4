@@ -13,7 +13,6 @@ import "react-loading-skeleton/dist/skeleton.css";
 import fetcher from "../lib/fetcher";
 
 import Page from "components/Page";
-import styles from "styles/guestbook.module.scss";
 
 const breakpointColumnsObj = {
   default: 2,
@@ -35,29 +34,6 @@ export default function Guests() {
   const [postLoader, setPostLoader] = useState(false);
   const [providerAuthLoader, setProviderAuthLoader] = useState(false);
   const [providerAuthLoader1, setProviderAuthLoader1] = useState(false);
-
-  const iconLoading = clsx({
-    [[styles.loader, styles.showLoginLoader].join(" ")]:
-      postLoader || providerAuthLoader,
-    [styles["loader"]]: !postLoader || !providerAuthLoader,
-  });
-
-  const textLoading = clsx({
-    [[styles.loginTxtnIco, styles.hideLoginTxtnIco].join(" ")]:
-      postLoader || providerAuthLoader,
-    [styles["loginTxtnIco"]]: !postLoader || !providerAuthLoader,
-  });
-
-  const iconLoading1 = clsx({
-    [[styles.loader, styles.showLoginLoader].join(" ")]: providerAuthLoader1,
-    [styles["loader"]]: !providerAuthLoader1,
-  });
-
-  const textLoading1 = clsx({
-    [[styles.loginTxtnIco, styles.hideLoginTxtnIco].join(" ")]:
-      providerAuthLoader1,
-    [styles["loginTxtnIco"]]: !providerAuthLoader1,
-  });
 
   const providerAuth = (op) => {
     if (op == 1) {
@@ -116,13 +92,13 @@ export default function Guests() {
       </Head>
 
       <FadeIn>
-        <main className={styles.wrapper}>
-          <h1 className="title">Guestbook</h1>
+        <main className="mt-[100px]">
+          <h1 className="text-3xl font-black">Guestbook</h1>
 
-          <div className={styles.interact}>
+          <div className="flex justify-center items-center h-[300px]">
             {!authLoading ? (
               session != undefined ? (
-                <div className={styles.create}>
+                <div className="">
                   <div className="hh">
                     Share a message for a future visitor of my site.
                   </div>
@@ -134,12 +110,12 @@ export default function Guests() {
                       required
                     ></textarea>
                     <button type="submit">
-                      <span className={textLoading}>Post</span>
-                      <div className={iconLoading}></div>
+                      <span className="">Post</span>
+                      <div className=""></div>
                     </button>
                   </form>
 
-                  <div className={styles.logged_indicator}>
+                  <div className="">
                     Signed in as <span>{session.user.name}</span>
                     <button
                       onClick={(e) => {
@@ -152,16 +128,16 @@ export default function Guests() {
                   </div>
                 </div>
               ) : (
-                <div class={styles.authwall}>
-                  <span>Sign In to leave a message. 😉</span>
+                <div className="grid gap-2">
+                  <span className="mb-4">Sign In to leave a message. 😉</span>
                   <button
-                    className={styles.provider_btn}
+                    className="w-fit"
                     onClick={(e) => {
                       providerAuth(1);
                       signIn("github");
                     }}
                   >
-                    <span className={textLoading}>
+                    <span className="flex items-center dark:bg-[#18232c] dark:hover:bg-[#18232c]/40 transition-all px-4 py-3 rounded-lg shadow-lg text-sm">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="20"
@@ -171,30 +147,30 @@ export default function Guests() {
                         stroke="currentColor"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        class="sbui-icon "
+                        className="w-6 h-6 mr-4"
                       >
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                       </svg>
                       <span>Sign In with Github</span>
                     </span>
-                    <div className={iconLoading}></div>
+                    <div className=""></div>
                   </button>
                   <button
-                    className={`${styles.provider_btn} ${styles.one}`}
+                    className="w-fit"
                     onClick={(e) => {
                       providerAuth(2);
                       signIn("google");
                     }}
                   >
-                    <span className={textLoading1}>
+                    <span className="flex items-center dark:bg-[#18232c] dark:hover:bg-[#18232c]/40 transition-all px-4 py-3 rounded-lg shadow-lg text-sm">
                       <img
                         src="/icons/google.svg"
                         alt=""
-                        className={styles.icon}
+                        className="w-6 h-6 mr-4"
                       />
                       <span>Sign In with Google</span>
                     </span>
-                    <div className={iconLoading1}></div>
+                    <div className=""></div>
                   </button>
                 </div>
               )
@@ -205,9 +181,10 @@ export default function Guests() {
             )}
           </div>
 
-          <div className={styles.messages}>
+
+          <div className="">
             {data && entries.length == 0 ? (
-              <div className={styles.empty}>Empty 😥</div>
+              <div className="">Empty 😥</div>
             ) : (
               <Masonry
                 breakpointCols={breakpointColumnsObj}
@@ -217,21 +194,21 @@ export default function Guests() {
                 {!isLoading
                   ? entries.map((dropMsg, key) => {
                       return (
-                        <div className={styles.message} key={key}>
-                          <div className={styles.header}>
-                            <div className={styles.con}>
+                        <div className="" key={key}>
+                          <div className="">
+                            <div className="">
                               <img src={dropMsg.image} alt="" />
-                              <div className={styles.info}>
-                                <div className={styles.name}>
+                              <div className="">
+                                <div className="">
                                   {dropMsg.name}
                                 </div>
-                                <div className={styles.date}>
+                                <div className="">
                                   {moment(dropMsg.updatedAt).calendar()}
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div className={styles.message_body}>
+                          <div className="">
                             {dropMsg.body}
                           </div>
                         </div>

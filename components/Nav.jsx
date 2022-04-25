@@ -18,8 +18,8 @@ export default function Nav() {
   };
 
   return (
-    <div className="text-slate-100 fixed top-0 w-full bg-[#11191f] z-50 border-b border-[#18232c]/75">
-      <div className="flex justify-between items-center px-4 py-2">
+    <div className="relative text-slate-100">
+      <div className="flex justify-between items-center px-4 py-2 bg-[#11191f] z-50 border-b border-[#18232c]/75 fixed top-0 w-full md:hidden">
         <Link href="/">
           <div className="text-lg font-extrabold" onClick={closeNav}>
             Christian Paranas
@@ -34,8 +34,8 @@ export default function Nav() {
       </div>
 
       <div
-        className={`absolute z-50 w-full h-screen p-4 bg-inherit transition-all ${
-          isOpen ? "block" : "hidden"
+        className={`bg-[#11191f] z-50 w-full h-full top-[64px] p-4 transition-all md:hidden ${
+          isOpen ? "fixed" : "hidden"
         }`}
       >
         <div className="grid gap-2 mt-4">
@@ -102,17 +102,18 @@ export default function Nav() {
         </div>
       </div>
 
-      <div className="hidden md:block">
-        <div className="">
-          <div className="">Christian Paranas</div>
-          <div className="">Web Developer</div>
+
+      <div className="sidebar hidden md:block bg-[#11191f] md:fixed w-[380px] p-4 border-r-4 h-screen border-[#18232c]">
+        <div className="mt-20 mb-10 pt-0 px-4 pb-4">
+          <div className="text-2xl font-black">Christian Paranas</div>
+          <div className="text-sm dark:text-slate-400">Web Developer</div>
         </div>
-        <div className="">
+        <div className="p-4 grid gap-2">
           <Link href="/">
             <div
-              className={`rounded-lg w-fit transition-all ${
-                asPath == "/guestbook"
-                  ? "px-4 py-2 bg-gray-800/75 shadow-lg"
+              className={`rounded-lg text-md w-fit transition-all cursor-pointer ${
+                asPath == "/"
+                  ? "px-4 py-2 bg-gray-800/50 shadow-sm"
                   : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
               }`}
             >
@@ -121,9 +122,9 @@ export default function Nav() {
           </Link>
           <Link href="/about">
             <div
-              className={`rounded-lg w-fit transition-all ${
+              className={`rounded-lg text-md w-fit transition-all cursor-pointer ${
                 asPath == "/about"
-                  ? "px-4 py-2 bg-gray-800/75 shadow-lg"
+                  ? "px-4 py-2 bg-gray-800/50 shadow-sm"
                   : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
               }`}
             >
@@ -132,9 +133,9 @@ export default function Nav() {
           </Link>
           <Link href="/blog">
             <div
-              className={`rounded-lg w-fit transition-all ${
+              className={`rounded-lg text-md w-fit transition-all cursor-pointer ${
                 asPath == "/blog"
-                  ? "px-4 py-2 bg-gray-800/75 shadow-lg"
+                  ? "px-4 py-2 bg-gray-800/50 shadow-sm"
                   : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
               }`}
             >
@@ -143,9 +144,9 @@ export default function Nav() {
           </Link>
           <Link href="/projects">
             <div
-              className={`rounded-lg w-fit transition-all ${
+              className={`rounded-xl text-md w-fit transition-all cursor-pointer ${
                 asPath == "/projects"
-                  ? "px-4 py-2 bg-gray-800/75 shadow-lg"
+                  ? "px-4 py-2 bg-gray-800/50 shadow-sm"
                   : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
               }`}
             >
@@ -154,9 +155,9 @@ export default function Nav() {
           </Link>
           <Link href="/guestbook">
             <div
-              className={`rounded-lg w-fit transition-all ${
+              className={`rounded-xl text-md w-fit transition-all cursor-pointer ${
                 asPath == "/guestbook"
-                  ? "px-4 py-2 bg-gray-800/75 shadow-lg"
+                  ? "px-4 py-2 bg-gray-800/50 shadow-sm"
                   : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
               }`}
             >

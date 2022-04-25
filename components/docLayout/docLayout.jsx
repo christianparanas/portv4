@@ -2,7 +2,7 @@ import Head from "next/head";
 import FadeIn from "react-fade-in";
 
 import styles from './docLayout.module.scss'
-import Footer from "components/footer/footer";
+import Footer from "components/Footer";
 
 export default function DocLayout({ children, title }) {
   return (

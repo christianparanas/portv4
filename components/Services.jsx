@@ -1,4 +1,4 @@
-import Masonry from "react-masonry-css";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Image from "next/image";
 import FadeIn from "react-fade-in";
 
@@ -41,13 +41,6 @@ const servicesArr = [
   },
 ];
 
-const breakpointColumnsObj = {
-  default: 3,
-  1100: 3,
-  700: 2,
-  500: 1,
-};
-
 const Services = () => (
   <div className="">
     <div className="">
@@ -59,23 +52,27 @@ const Services = () => (
     </div>
 
     <div className="">
-    <FadeIn>
-      <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className="my-masonry-grid"
-        columnClassName="my-masonry-grid_column"
-      >
-        
-        {servicesArr.map((service, key) => (
-          <div className="bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-none border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]" key={key}>
-            <div className="">
-              <Image src={service.icon} alt="" width={60} height={60} />
-            </div>
-            <h3 className="text-xl font-bold my-2 text-slate-700 dark:text-slate-50">{service.title}</h3>
-            <p className="text-sm text-slate-500 dark:text-gray-300 font-semibold">{service.description}</p>
-          </div>
-        ))}
-      </Masonry>
+      <FadeIn>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 500: 2, 900: 2 }}>
+          <Masonry gutter="15px">
+            {servicesArr.map((service, key) => (
+              <div
+                className="bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-none border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]"
+                key={key}
+              >
+                <div className="">
+                  <Image src={service.icon} alt="" width={60} height={60} />
+                </div>
+                <h3 className="text-xl font-bold my-2 text-slate-700 dark:text-slate-50">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-slate-500 dark:text-gray-300 font-semibold">
+                  {service.description}
+                </p>
+              </div>
+            ))}
+          </Masonry>
+        </ResponsiveMasonry>
       </FadeIn>
     </div>
   </div>

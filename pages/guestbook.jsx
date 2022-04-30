@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Masonry from "react-masonry-css";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import useSWR from "swr";
 import FadeIn from "react-fade-in";
 import * as moment from "moment";
@@ -10,15 +10,8 @@ import fetcher from "../lib/fetcher";
 import Page from "components/Page";
 import SpinLoader from "components/icons/SpinLoader";
 
-const breakpointColumnsObj = {
-  default: 2,
-  1100: 2,
-  700: 1,
-  500: 1,
-};
-
 export default function Guests() {
-  const { data, error } = useSWR("/api/guestbook", fetcher);
+  const { data } = useSWR("/api/guestbook", fetcher);
   const { data: session } = useSession();
   const [entries, setEntries] = useState([]);
   const inputEl = useRef(null);
@@ -77,7 +70,7 @@ export default function Guests() {
 
       <FadeIn>
         <main className="mt-[100px]">
-          <h1 className="text-3xl font-black">Guestbook</h1>
+          <h1 className="text-3xl font-black mb-10">Guestbook</h1>
 
           <div className="flex justify-center h-[300px]">
             {!authLoading ? (
@@ -93,23 +86,25 @@ export default function Guests() {
                 <GuestbookAuth signIn={signIn} />
               )
             ) : (
-              <div className="">Loading..</div>
+              <div className="mt-20">
+                <SpinLoader /> 
+              </div>
             )}
           </div>
 
-          <div className="">
+          <div className="mt-20">
             {data && entries.length == 0 ? (
               <div className="">Empty 😥</div>
             ) : (
-              <Masonry
-                breakpointCols={breakpointColumnsObj}
-                className="my-masonry-grid"
-                columnClassName="my-masonry-grid_column"
+              <ResponsiveMasonry
+                columnsCountBreakPoints={{ 350: 1, 500: 2, 900: 2 }}
               >
-                {entries.map((dropMsg, key) => (
-                  <GuestMessageCard dropMsg={dropMsg} key={key} />
-                ))}
-              </Masonry>
+                <Masonry gutter="15px">
+                  {entries.map((dropMsg, key) => (
+                    <GuestMessageCard dropMsg={dropMsg} key={key} />
+                  ))}
+                </Masonry>
+              </ResponsiveMasonry>
             )}
           </div>
         </main>
@@ -238,7 +233,9 @@ export function GuestbookAuth({ signIn }) {
               >
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
               </svg>
-              <span>Sign In with Github</span>
+              <span className="text-[12px] text-center">
+                Sign In with Github
+              </span>
             </div>
             <div
               className={`flex justify-center items-center ${
@@ -257,14 +254,14 @@ export function GuestbookAuth({ signIn }) {
             signIn("google");
           }}
         >
-          <div className="w-[210px] bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-lg border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]">
+          <div className="text-center w-[210px] bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-lg border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]">
             <div
               className={`flex items-center text-sm ${
                 providerAuthLoader2 ? "hidden" : ""
               }`}
             >
               <img src="/icons/google.svg" alt="" className="w-6 h-6 mr-4" />
-              <span>Sign In with Google</span>
+              <span className="text-[12px]">Sign In with Google</span>
             </div>
             <div
               className={`flex justify-center items-center ${

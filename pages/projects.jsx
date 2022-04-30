@@ -1,10 +1,9 @@
 import Head from "next/head";
 import React from "react";
-import Masonry from "react-masonry-css";
 import * as _ from "lodash";
+import FadeIn from "react-fade-in";
 
-// styles
-import "react-loading-skeleton/dist/skeleton.css";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 // import components
 import Project from "components/Project";
@@ -14,9 +13,9 @@ import Page from "components/Page";
 import { getPinnedRepos, getRepos } from "lib/github";
 
 const breakpointColumnsObj = {
-  default: 2,
-  1100: 2,
-  700: 1,
+  default: 3,
+  1100: 3,
+  700: 2,
   500: 1,
 };
 
@@ -39,31 +38,31 @@ export default function Projects({ repos, pinnedRepos }) {
           <h2 className="text-xl mb-4">Pinned Repos</h2>
 
           <div className="">
-            <Masonry
-              breakpointCols={breakpointColumnsObj}
-              className="my-masonry-grid"
-              columnClassName="my-masonry-grid_column"
+            <ResponsiveMasonry
+              columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 2 }}
             >
-              {pinnedRepos.map((repo, key) => (
-                <Project key={key} props={repo} />
-              ))}
-            </Masonry>
+              <Masonry gutter="15px">
+                {pinnedRepos.map((repo, key) => (
+                  <Project key={key} props={repo} />
+                ))}
+              </Masonry>
+            </ResponsiveMasonry>
           </div>
 
           <h2 className="text-xl my-4 mt-6">Repos</h2>
-          <div className="">
-            <Masonry
-              breakpointCols={breakpointColumnsObj}
-              className="my-masonry-grid"
-              columnClassName="my-masonry-grid_column"
+          <FadeIn>
+            <ResponsiveMasonry
+              columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 2 }}
             >
-              {repos.map((repo, key) => (
-                <Project key={key} props={repo} />
-              ))}
-            </Masonry>
-          </div>
+              <Masonry gutter="15px">
+                {repos.map((repo, key) => {
+                  return <Project key={key} props={repo} />;
+                })}
+              </Masonry>
+            </ResponsiveMasonry>
+          </FadeIn>
 
-          {false && <div className={styles.loadMoreBtn}>load more</div>}
+          {false && <div className="">load more</div>}
         </div>
       </main>
     </Page>

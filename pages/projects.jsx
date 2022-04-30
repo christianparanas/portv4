@@ -30,7 +30,7 @@ export default function Projects({ repos, pinnedRepos }) {
 
       <main className="mt-[100px]">
         <h1 className="text-2xl font-black mb-4">Projects</h1>
-        <p className="text-md text-slate-300">
+        <p className="text-md text-slate-500 dark:text-slate-300">
           Some existing open-source projects that I worked on with other people
           for work, or as personal side-projects.
         </p>

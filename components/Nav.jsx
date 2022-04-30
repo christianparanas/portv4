@@ -102,7 +102,6 @@ export default function Nav() {
         </div>
       </div>
 
-
       <div className="sidebar hidden md:block bg-[#11191f] md:fixed w-[380px] p-4 border-r-4 h-screen border-[#18232c]">
         <div className="mt-20 mb-10 pt-0 px-4 pb-4">
           <div className="text-2xl font-black">Christian Paranas</div>
@@ -111,7 +110,7 @@ export default function Nav() {
         <div className="p-4 grid gap-2">
           <Link href="/">
             <div
-              className={`rounded-lg text-md w-fit transition-all cursor-pointer ${
+              className={`rounded-lg text-[22px] w-fit transition-all cursor-pointer ${
                 asPath == "/"
                   ? "px-4 py-2 bg-gray-800/50 shadow-sm"
                   : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
@@ -122,7 +121,7 @@ export default function Nav() {
           </Link>
           <Link href="/about">
             <div
-              className={`rounded-lg text-md w-fit transition-all cursor-pointer ${
+              className={`rounded-lg text-[22px] w-fit transition-all cursor-pointer ${
                 asPath == "/about"
                   ? "px-4 py-2 bg-gray-800/50 shadow-sm"
                   : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
@@ -133,7 +132,7 @@ export default function Nav() {
           </Link>
           <Link href="/blog">
             <div
-              className={`rounded-lg text-md w-fit transition-all cursor-pointer ${
+              className={`rounded-lg text-[22px] w-fit transition-all cursor-pointer ${
                 asPath == "/blog"
                   ? "px-4 py-2 bg-gray-800/50 shadow-sm"
                   : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
@@ -144,7 +143,7 @@ export default function Nav() {
           </Link>
           <Link href="/projects">
             <div
-              className={`rounded-xl text-md w-fit transition-all cursor-pointer ${
+              className={`rounded-xl text-[22px] w-fit transition-all cursor-pointer ${
                 asPath == "/projects"
                   ? "px-4 py-2 bg-gray-800/50 shadow-sm"
                   : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
@@ -155,7 +154,7 @@ export default function Nav() {
           </Link>
           <Link href="/guestbook">
             <div
-              className={`rounded-xl text-md w-fit transition-all cursor-pointer ${
+              className={`rounded-xl text-[22px] w-fit transition-all cursor-pointer ${
                 asPath == "/guestbook"
                   ? "px-4 py-2 bg-gray-800/50 shadow-sm"
                   : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
@@ -165,12 +164,14 @@ export default function Nav() {
             </div>
           </Link>
         </div>
-      </div>
 
-      <div className="hidden">
-        <span>{theme == "dark" ? "Dark mode" : "Light mode"}</span>
-        <div className="">
-          <ThemeChanger />
+        <div className="hidden md:flex items-center absolute bottom-8 left-12">
+          <span className="text-md font-bold">
+            {theme == "dark" ? "Dark mode" : "Light mode"}
+          </span>
+          <div className="rounded-xl bg-gray-800/75 ml-2 shadow-lg">
+            <ThemeChanger />
+          </div>
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@ export default function Blog({ docs }) {
 
         <div className="mt-10 grid md:grid-cols-2 gap-4">
           {docs.map((doc, key) => (
-            <div className="dark:bg-[#18232c] p-4 rounded-lg shadow-lg" key={key}>
+            <div className="bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-lg border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]" key={key}>
               <h4>{doc.frontMatter.title}</h4>
               <p className="text-sm dark:text-slate-400 mb-6">{doc.frontMatter.description}</p>
               <Link

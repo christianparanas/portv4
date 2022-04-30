@@ -67,12 +67,12 @@ const Services = () => (
       >
         
         {servicesArr.map((service, key) => (
-          <div className="bg-white dark:bg-[#18232c] p-4 rounded-lg shadow-md" key={key}>
+          <div className="bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-none border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]" key={key}>
             <div className="">
               <Image src={service.icon} alt="" width={60} height={60} />
             </div>
-            <h3 className="text-xl font-bold my-2">{service.title}</h3>
-            <p className="text-sm dark:text-gray-300">{service.description}</p>
+            <h3 className="text-xl font-bold my-2 text-slate-700 dark:text-slate-50">{service.title}</h3>
+            <p className="text-sm text-slate-500 dark:text-gray-300 font-semibold">{service.description}</p>
           </div>
         ))}
       </Masonry>

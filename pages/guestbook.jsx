@@ -95,29 +95,31 @@ export default function Guests() {
         <main className="mt-[100px]">
           <h1 className="text-3xl font-black">Guestbook</h1>
 
-          <div className="flex justify-center items-center h-[300px]">
+          <div className="flex justify-center h-[300px]">
             {!authLoading ? (
               session != undefined ? (
-                <div className="">
-                  <div className="hh">
+                <div className="w-full mt-[40px]">
+                  <div className="mb-3">
                     Share a message for a future visitor of my site.
                   </div>
-                  <form className="con" onSubmit={postEntry}>
+                  <form className="relative" onSubmit={postEntry}>
                     <textarea
+                      className="w-full border-0 outline-none h-[120px] resize-none bg-white dark:bg-[#18232c] p-4 rounded-lg shadow-md text-[12px]"
                       ref={inputEl}
                       placeholder="Your message"
                       rows="4"
                       required
                     ></textarea>
-                    <button type="submit">
+                    <button className="absolute right-[20px] bottom-[-10px] text-slate-50 bg-[#11191f] py-3 px-6 shadow-lg rounded-lg cursor-pointer" type="submit">
                       <span className="">Post</span>
                       <div className=""></div>
                     </button>
                   </form>
 
-                  <div className="">
-                    Signed in as <span>{session.user.name}</span>
+                  <div className="mt-8 md:mt-2 text-[14px]">
+                    Signed in as <span className="text-black dark:text-slate-50">{session.user.name}</span>
                     <button
+                      className="ml-4 bg-[#18232c] p-1 px-3 rounded-lg cursor-pointer shadow-md hover:shadow-lg text-white"
                       onClick={(e) => {
                         e.preventDefault();
                         signOut();
@@ -193,26 +195,7 @@ export default function Guests() {
               >
                 {!isLoading
                   ? entries.map((dropMsg, key) => {
-                      return (
-                        <div className="" key={key}>
-                          <div className="">
-                            <div className="">
-                              <img src={dropMsg.image} alt="" />
-                              <div className="">
-                                <div className="">
-                                  {dropMsg.name}
-                                </div>
-                                <div className="">
-                                  {moment(dropMsg.updatedAt).calendar()}
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="">
-                            {dropMsg.body}
-                          </div>
-                        </div>
-                      );
+                      <GuestMessageCard dropMsg={dropMsg} key={key} />
                     })
                   : [...Array(8).keys()].map((el, key) => (
                       <React.Fragment key={key}>
@@ -225,5 +208,28 @@ export default function Guests() {
         </main>
       </FadeIn>
     </Page>
+  );
+}
+
+export function GuestMessageCard({ dropMsg }) {
+  return (
+    <div className="bg-white dark:bg-[#18232c] p-4 rounded-lg shadow-md">
+      <div className="mb-5">
+        <div className="flex items-center">
+          <img className="w-[50px] h-[50px] rounded-full mr-3" src={dropMsg.image} alt="" />
+          <div className="">
+            <div className="text-[14px]">
+              {dropMsg.name}
+            </div>
+            <div className="text-[10px] text-slate-300">
+              {moment(dropMsg.updatedAt).calendar()}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="whitespace-pre-wrap text-[14px]">
+        {dropMsg.body}
+      </div>
+    </div>
   );
 }

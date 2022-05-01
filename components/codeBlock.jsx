@@ -3,7 +3,11 @@ import { coldarkDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 function CodeBlock({ children }) {
   return (
-    <SyntaxHighlighter language="javascript" style={coldarkDark} showLineNumbers={true}>
+    <SyntaxHighlighter
+      language="javascript"
+      style={coldarkDark}
+      showLineNumbers={true}
+    >
       {children}
     </SyntaxHighlighter>
   );

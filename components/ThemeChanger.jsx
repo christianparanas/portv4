@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { Moon, Sun } from './icons' 
+import { Moon, Sun } from "./icons";
 
 export default function ThemeChanger() {
   const { theme, setTheme } = useTheme();
   const [isDarkMode, setIsDarkMode] = useState(null);
 
   useEffect(() => {
-    setIsDarkMode(theme == "light" ? false : true)
-  }, [theme])
+    setIsDarkMode(theme == "light" ? false : true);
+  }, [theme]);
 
   function changeTheme() {
     if (theme == "light") {
@@ -22,6 +22,8 @@ export default function ThemeChanger() {
   }
 
   return (
-      <div className="themeChanger" onClick={changeTheme}>{ isDarkMode ? <Moon /> : <Sun /> }</div>
+    <div className="themeChanger" onClick={changeTheme}>
+      {isDarkMode ? <Moon /> : <Sun />}
+    </div>
   );
 }

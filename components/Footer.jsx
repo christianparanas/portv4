@@ -1,5 +1,5 @@
 import React from "react";
-import Link from 'next/link'
+import Link from "next/link";
 
 const footerLinks = [
   { name: "Home", url: "/" },
@@ -20,7 +20,9 @@ function Footer() {
           {footerLinks.map((link) => (
             <li key={link.name}>
               <Link href={link.url} passHref>
-                <a className="hover:text-slate-400 transition-all cursor-pointer">{link.name}</a>
+                <a className="hover:text-slate-400 transition-all cursor-pointer">
+                  {link.name}
+                </a>
               </Link>
             </li>
           ))}

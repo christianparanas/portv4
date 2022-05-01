@@ -78,5 +78,6 @@ export async function getStaticProps() {
       repos,
       pinnedRepos,
     },
+    revalidate: 10,
   };
 }

@@ -72,7 +72,7 @@ export default function Nav() {
               }`}
               onClick={closeNav}
             >
-              Gist
+              Blog
             </div>
           </Link>
           <Link href="/blog">

@@ -5,7 +5,7 @@ function Project({ props }) {
     <div className="bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-lg border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]">
       {props.openGraphImageUrl && (
         <img
-          className="rounded-md mb-4 w-full"
+          className="rounded-md mb-4 w-full h-[192px] object-cover"
           src={props.openGraphImageUrl}
           alt=""
         />

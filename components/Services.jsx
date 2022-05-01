@@ -4,10 +4,10 @@ import FadeIn from "react-fade-in";
 
 const servicesArr = [
   {
-    icon: "/icons/sys.svg",
-    title: "Custom Systems",
+    icon: "/icons/design.svg",
+    title: "Graphic Design",
     description:
-      "Streamline and automate your business process with systems that are customized for your needs.",
+      "Get modern and beautiful logos and layouts, update the look and feel of your business, and make it more impressive.",
   },
   {
     icon: "/icons/web.svg",
@@ -28,10 +28,10 @@ const servicesArr = [
       "Promote your business or organization and reach even more people with mobile applications either on Android or iOS.",
   },
   {
-    icon: "/icons/design.svg",
-    title: "Graphic Design",
+    icon: "/icons/sys.svg",
+    title: "Custom Systems",
     description:
-      "Get modern and beautiful logos and layouts, update the look and feel of your business, and make it more impressive.",
+      "Streamline and automate your business process with systems that are customized for your needs.",
   },
   {
     icon: "/icons/scrape.svg",
@@ -53,7 +53,7 @@ const Services = () => (
 
     <div className="">
       <FadeIn>
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 500: 2, 900: 2 }}>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 500: 2, 900: 3 }}>
           <Masonry gutter="15px">
             {servicesArr.map((service, key) => (
               <div

@@ -12,13 +12,6 @@ import Page from "components/Page";
 // libs
 import { getPinnedRepos, getRepos } from "lib/github";
 
-const breakpointColumnsObj = {
-  default: 3,
-  1100: 3,
-  700: 2,
-  500: 1,
-};
-
 export default function Projects({ repos, pinnedRepos }) {
   return (
     <Page>
@@ -78,6 +71,6 @@ export async function getStaticProps() {
       repos,
       pinnedRepos,
     },
-    revalidate: 10,
+    revalidate: 1,
   };
 }

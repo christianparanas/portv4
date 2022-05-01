@@ -63,6 +63,18 @@ export default function Nav() {
               About
             </div>
           </Link>
+          <Link href="/gist">
+            <div
+              className={`rounded-lg w-fit transition-all ${
+                asPath == "/gist"
+                  ? "px-4 py-2 bg-[#18232c]/75  shadow-lg"
+                  : "px-2 py-2 hover:bg-[#18232c]/40 hover:px-4"
+              }`}
+              onClick={closeNav}
+            >
+              Gist
+            </div>
+          </Link>
           <Link href="/blog">
             <div
               className={`rounded-lg w-fit transition-all ${
@@ -128,6 +140,17 @@ export default function Nav() {
               }`}
             >
               About
+            </div>
+          </Link>
+          <Link href="/gist">
+            <div
+              className={`rounded-lg text-[22px] w-fit transition-all cursor-pointer ${
+                asPath == "/gist"
+                  ? "px-4 py-2 bg-gray-800/50 shadow-sm"
+                  : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
+              }`}
+            >
+              Gist
             </div>
           </Link>
           <Link href="/blog">

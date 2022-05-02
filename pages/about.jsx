@@ -51,8 +51,10 @@ export default function About() {
               <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
             </span>
             <div className="text-slate-800 dark:text-slate-50 font-semibold">
-              I am actively seeking for a client. If you have a project in mind or you think there is something where I can help you with my IT skills,
-              don't hesitate to contact me. I will gladly help you with it.
+              I am actively seeking for a client. If you have a project in mind
+              or you think there is something that I can help you with my IT
+              skills, don't hesitate to contact me. I will gladly help you with
+              it.
             </div>
             <div className="mt-6">
               <h2 className="font-semibold text-sm">Contact Me:</h2>

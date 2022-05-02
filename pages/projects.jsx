@@ -28,7 +28,7 @@ export default function Projects({ repos, pinnedRepos }) {
         </p>
 
         <div className="mt-10">
-          <h2 className="text-xl mb-4">Pinned Repos</h2>
+          <h2 className="text-lg mb-4">Pinned Repos</h2>
 
           <div className="">
             <ResponsiveMasonry
@@ -42,7 +42,7 @@ export default function Projects({ repos, pinnedRepos }) {
             </ResponsiveMasonry>
           </div>
 
-          <h2 className="text-xl my-4 mt-6">Repos</h2>
+          <h2 className="text-lg my-4 mt-20">Repos</h2>
           <FadeIn>
             <ResponsiveMasonry
               columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 2 }}

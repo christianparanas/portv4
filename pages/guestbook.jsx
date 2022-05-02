@@ -70,7 +70,7 @@ export default function Guests() {
 
       <FadeIn>
         <main className="mt-[100px]">
-          <h1 className="text-3xl font-black mb-10">Guestbook</h1>
+          <h1 className="text-3xl font-black mb-10 text-slate-900 dark:text-slate-50">Guestbook</h1>
 
           <div className="flex justify-center h-[300px]">
             {!authLoading ? (
@@ -125,7 +125,7 @@ export function GuestMessageCard({ dropMsg }) {
           />
           <div className="">
             <div className="text-[14px]">{dropMsg.name}</div>
-            <div className="text-[10px] text-slate-300">
+            <div className="text-[10px] text-slate-500 dark:text-slate-300">
               {moment(dropMsg.updatedAt).calendar()}
             </div>
           </div>
@@ -209,14 +209,14 @@ export function GuestbookAuth({ signIn }) {
       <div className="grid gap-2 place-items-center">
         <button
           className="w-fit"
-          onClick={(e) => {
+          onClick={() => {
             providerAuth(1);
             signIn("github");
           }}
         >
-          <div className="w-[210px] bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-lg border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]">
+          <div className="hover:bg-gray-800 dark:hover:bg-slate-900 hover:text-slate-100 w-[210px] bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-lg border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]">
             <div
-              className={`flex items-center text-sm ${
+              className={`flex justify-center items-center text-sm ${
                 providerAuthLoader1 ? "hidden" : ""
               }`}
             >
@@ -229,11 +229,11 @@ export function GuestbookAuth({ signIn }) {
                 stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="w-6 h-6 mr-4"
+                className="w-6 h-6 mr-2"
               >
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
               </svg>
-              <span className="text-[12px] text-center">
+              <span className="text-[12px] text-center font-semibold">
                 Sign In with Github
               </span>
             </div>
@@ -249,19 +249,19 @@ export function GuestbookAuth({ signIn }) {
 
         <button
           className="h-[54px]"
-          onClick={(e) => {
+          onClick={() => {
             providerAuth(2);
             signIn("google");
           }}
         >
-          <div className="text-center w-[210px] bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-lg border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]">
+          <div className="hover:bg-gray-800 hover:text-slate-100 dark:hover:bg-slate-900 text-center w-[210px] bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-lg border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]">
             <div
-              className={`flex items-center text-sm ${
+              className={`flex justify-center items-center text-sm ${
                 providerAuthLoader2 ? "hidden" : ""
               }`}
             >
               <img src="/icons/google.svg" alt="" className="w-6 h-6 mr-4" />
-              <span className="text-[12px]">Sign In with Google</span>
+              <span className="text-[12px] text-center font-semibold">Sign In with Google</span>
             </div>
             <div
               className={`flex justify-center items-center ${

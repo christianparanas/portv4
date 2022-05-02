@@ -40,13 +40,13 @@
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    @apply bg-[#1a1a21] border-4 border-solid border-[#25252e];
+    @apply bg-slate-500 dark:bg-[#1a1a21] border-4 border-solid border-[#25252e];
     border-radius: 100vh;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-[#1a1a21];
+    @apply bg-slate-500 dark:bg-[#1a1a21];
   }
 }
 

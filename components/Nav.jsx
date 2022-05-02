@@ -72,7 +72,7 @@ export default function Nav() {
               }`}
               onClick={closeNav}
             >
-              Blog
+              Gist
             </div>
           </Link>
           <Link href="/blog">
@@ -117,12 +117,12 @@ export default function Nav() {
       <div className="sidebar hidden md:block bg-[#11191f] md:fixed w-[380px] p-4 border-r-4 h-screen border-[#18232c]">
         <div className="mt-20 mb-10 pt-0 px-4 pb-4">
           <div className="text-2xl font-black">Christian Paranas</div>
-          <div className="text-sm dark:text-slate-400">Web Developer</div>
+          <div className="text-sm text-slate-400">Web Developer</div>
         </div>
         <div className="p-4 grid gap-2">
           <Link href="/">
             <div
-              className={`rounded-lg text-[22px] w-fit transition-all cursor-pointer ${
+              className={`rounded-lg text-[20px] w-fit transition-all cursor-pointer ${
                 asPath == "/"
                   ? "px-4 py-2 bg-gray-800/50 shadow-sm"
                   : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
@@ -133,7 +133,7 @@ export default function Nav() {
           </Link>
           <Link href="/about">
             <div
-              className={`rounded-lg text-[22px] w-fit transition-all cursor-pointer ${
+              className={`rounded-lg text-[20px] w-fit transition-all cursor-pointer ${
                 asPath == "/about"
                   ? "px-4 py-2 bg-gray-800/50 shadow-sm"
                   : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
@@ -144,7 +144,7 @@ export default function Nav() {
           </Link>
           <Link href="/gist">
             <div
-              className={`rounded-lg text-[22px] w-fit transition-all cursor-pointer ${
+              className={`rounded-lg text-[20px] w-fit transition-all cursor-pointer ${
                 asPath == "/gist"
                   ? "px-4 py-2 bg-gray-800/50 shadow-sm"
                   : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
@@ -155,7 +155,7 @@ export default function Nav() {
           </Link>
           <Link href="/blog">
             <div
-              className={`rounded-lg text-[22px] w-fit transition-all cursor-pointer ${
+              className={`rounded-lg text-[20px] w-fit transition-all cursor-pointer ${
                 asPath == "/blog"
                   ? "px-4 py-2 bg-gray-800/50 shadow-sm"
                   : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
@@ -166,7 +166,7 @@ export default function Nav() {
           </Link>
           <Link href="/projects">
             <div
-              className={`rounded-xl text-[22px] w-fit transition-all cursor-pointer ${
+              className={`rounded-xl text-[20px] w-fit transition-all cursor-pointer ${
                 asPath == "/projects"
                   ? "px-4 py-2 bg-gray-800/50 shadow-sm"
                   : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
@@ -177,7 +177,7 @@ export default function Nav() {
           </Link>
           <Link href="/guestbook">
             <div
-              className={`rounded-xl text-[22px] w-fit transition-all cursor-pointer ${
+              className={`rounded-xl text-[20px] w-fit transition-all cursor-pointer ${
                 asPath == "/guestbook"
                   ? "px-4 py-2 bg-gray-800/50 shadow-sm"
                   : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"

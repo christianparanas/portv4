@@ -18,7 +18,7 @@ export default function Gist({ gists, avatarUrl, username }) {
       </Head>
 
       <main className="mt-[100px]">
-        <h1 className="text-2xl font-black">
+        <h1 className="text-2xl font-black text-slate-900 dark:text-slate-50">
           {gists.length > 1 ? "Gists" : "Gist"}
         </h1>
 

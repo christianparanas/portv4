@@ -7,7 +7,6 @@ import Link from "next/link";
 import Page from "components/Page";
 
 export default function Blog({ docs }) {
-  console.log(docs);
 
   return (
     <Page>

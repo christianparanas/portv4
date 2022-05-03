@@ -9,7 +9,6 @@ import CodeBlock from "components/codeBlock";
 import { getGists } from "lib/github";
 
 export default function Gist({ gists, avatarUrl, username }) {
-  console.log(gists);
 
   return (
     <Page>

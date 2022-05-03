@@ -4,7 +4,6 @@ import Image from "next/image";
 import Page from "components/Page";
 import me from "public/me.png";
 import { Git, Linkedin } from "components/icons";
-import { Divide } from "hamburger-react";
 
 export default function About() {
   return (

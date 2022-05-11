@@ -131,7 +131,7 @@ export function GuestMessageCard({ dropMsg }) {
           </div>
         </div>
       </div>
-      <div className="whitespace-pre-wrap text-[14px]">{dropMsg.body}</div>
+      <div className="whitespace-pre-wrap text-[14px] text-slate-900 dark:text-slate-50">{dropMsg.body}</div>
     </div>
   );
 }

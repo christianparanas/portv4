@@ -26,6 +26,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         <meta name='author' content='Christian R. Paranas' />
         <meta name='robots' content='index,follow' />
         <link rel='canonical' href='https://christianparanas.vercel.app/' />
+        <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@bf7775b/css/all.css" rel='stylesheet' type='text/css' />
       </Head>
 
     <ThemeProvider attribute="class">

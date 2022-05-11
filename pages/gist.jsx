@@ -9,7 +9,6 @@ import CodeBlock from "components/codeBlock";
 import { getGists } from "lib/github";
 
 export default function Gist({ gists, avatarUrl, username }) {
-
   return (
     <Page>
       <Head>
@@ -21,16 +20,15 @@ export default function Gist({ gists, avatarUrl, username }) {
           {gists.length > 1 ? "Gists" : "Gist"}
         </h1>
 
-        <div className="mt-10">
-          <ResponsiveMasonry
-            columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 2 }}
-          >
-            <Masonry gutter="15px">
-              {gists.map((gist) => (
-                <GistCard gist={gist} avatarUrl={avatarUrl} username={username} key={gist.id} />
-              ))}
-            </Masonry>
-          </ResponsiveMasonry>
+        <div className="mt-10 grid gap-5 w-full">
+          {gists.map((gist) => (
+            <GistCard
+              gist={gist}
+              avatarUrl={avatarUrl}
+              username={username}
+              key={gist.id}
+            />
+          ))}
         </div>
       </main>
     </Page>
@@ -39,24 +37,45 @@ export default function Gist({ gists, avatarUrl, username }) {
 
 export function GistCard({ gist, avatarUrl, username }) {
   return (
-    <div className="bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-lg border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]">
-      <header className="text-sm mb-2">
-        <div className="flex mb-2 items-center">
-          <img src={avatarUrl} alt="gist user" className="w-[30px] h-[30px] object-cover rounded-full mr-3" />
-          <div className="">
-            <span>{username}</span>
-            <span className="mx-1">/</span>
-            <span>{gist.files[0].name}</span>
+    <div className="min-w-[200px] bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-lg border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]">
+      <header className="text-sm mb-2 flex flex-col md:flex-row md:justify-between">
+        <div className="">
+          <div className="flex mb-2 items-center">
+            <img
+              src={avatarUrl}
+              alt="gist user"
+              className="w-[30px] h-[30px] object-cover rounded-full mr-3"
+            />
+            <div className="">
+              <span>{username}</span>
+              <span className="mx-1">/</span>
+              <span>{gist.files[0].name}</span>
+            </div>
           </div>
+
+          <span className="text-[10px] dark:text-slate-400">
+            Created {moment(gist.createdAt).fromNow()}
+          </span>
+          <div className="">{gist.description}</div>
         </div>
 
-        <span className="text-[10px] dark:text-slate-400">
-          Created {moment(gist.createdAt).fromNow()}
-        </span>
-        <div className="">{gist.description}</div>
+        <div className="flex text-sm h-fit mt-4 md:mt-0">
+          <div className="flex items-center cursor-pointer hover:bg-slate-800 transition-all py-2 px-3 rounded-lg hover:shadow-md text-[12px]">
+            <i class="fal fa-code-branch mr-2"></i>
+            <span>0 forks</span>
+          </div>
+          <div className="flex items-center cursor-pointer hover:bg-slate-800 transition-all py-2 px-3 rounded-lg hover:shadow-md text-[12px]">
+            <i class="fal fa-comment-alt mr-2"></i>
+            <span>0 comments</span>
+          </div>
+          <div className="flex items-center cursor-pointer hover:bg-slate-800 transition-all py-2 px-3 rounded-lg hover:shadow-md text-[12px]">
+            <i class="fal fa-star mr-2"></i>
+            <span>0 stars</span>
+          </div>
+        </div>
       </header>
       <div className="text-sm">
-        <CodeBlock>{gist.files[0].text}</CodeBlock>
+        <CodeBlock className="overflow-auto">{gist.files[0].text}</CodeBlock>
       </div>
     </div>
   );

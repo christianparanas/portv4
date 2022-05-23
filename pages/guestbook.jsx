@@ -126,7 +126,7 @@ export function GuestMessageCard({ dropMsg }) {
           <div className="">
             <div className="text-[14px] text-slate-900 dark:text-slate-50 font-semibold">{dropMsg.name}</div>
             <div className="text-[9px] text-slate-500 dark:text-slate-400">
-              {moment(dropMsg.updatedAt).calendar()}
+              {moment(dropMsg.updatedAt).format('llll')}
             </div>
           </div>
         </div>

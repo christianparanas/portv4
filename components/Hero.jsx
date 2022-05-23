@@ -7,7 +7,7 @@ const Hero = ({ title, description }) => {
         {title}
       </h1>
 
-      <p className="text-sm text-slate-800 dark:text-gray-300 md:my-4 md:text-lg">
+      <p className="text-sm md:my-4 md:text-lg font-semibold text-slate-500 dark:text-gray-300">
         {description}
       </p>
       <Link href="/about">

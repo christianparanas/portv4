@@ -21,14 +21,14 @@ export default function Projects({ repos, pinnedRepos }) {
       </Head>
 
       <main className="mt-[100px]">
-        <h1 className="text-2xl font-black mb-4">Projects</h1>
+        <h1 className="text-2xl font-black mb-4 text-slate-900 dark:text-slate-50">Projects</h1>
         <p className="text-md text-slate-500 dark:text-slate-300">
           Some existing open-source projects that I worked on with other people
           for work, or as personal side-projects.
         </p>
 
         <div className="mt-10">
-          <h2 className="text-lg mb-4">Pinned Repos</h2>
+          <h2 className="text-md font-bold mb-4 text-slate-900 dark:text-slate-50">Pinned Repos</h2>
 
           <div className="">
             <ResponsiveMasonry
@@ -42,7 +42,7 @@ export default function Projects({ repos, pinnedRepos }) {
             </ResponsiveMasonry>
           </div>
 
-          <h2 className="text-lg my-4 mt-20">Repos</h2>
+          <h2 className="text-md font-bold my-4 mt-20 text-slate-900 dark:text-slate-50">Repos</h2>
           <FadeIn>
             <ResponsiveMasonry
               columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 2 }}

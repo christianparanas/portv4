@@ -119,7 +119,7 @@ export function GuestMessageCard({ dropMsg }) {
       <div className="mb-5">
         <div className="flex items-center">
           <img
-            className="w-[50px] h-[50px] rounded-full mr-3"
+            className="w-[50px] h-[50px] rounded-full mr-3 object-cover"
             src={dropMsg.image}
             alt=""
           />
@@ -193,6 +193,7 @@ export function DropNote({ postEntry, postLoader, session, inputEl, signOut }) {
 export function GuestbookAuth({ signIn }) {
   const [providerAuthLoader1, setProviderAuthLoader1] = useState(false);
   const [providerAuthLoader2, setProviderAuthLoader2] = useState(false);
+  const [providerAuthLoader3, setProviderAuthLoader3] = useState(false);
 
   const providerAuth = (op) => {
     if (op == 1) {
@@ -200,7 +201,12 @@ export function GuestbookAuth({ signIn }) {
       return;
     }
 
-    setProviderAuthLoader2(true);
+    if (op == 2) {
+      setProviderAuthLoader2(true);
+      return;
+    }
+
+    setProviderAuthLoader3(true);
   };
 
   return (
@@ -266,6 +272,31 @@ export function GuestbookAuth({ signIn }) {
             <div
               className={`flex justify-center items-center ${
                 providerAuthLoader2 ? "" : "hidden"
+              }`}
+            >
+              <SpinLoader />
+            </div>
+          </div>
+        </button>
+
+        <button
+          className="h-[54px]"
+          onClick={() => {
+            providerAuth(3);
+            signIn("credentials");
+          }}
+        >
+          <div className="hover:bg-gray-800 hover:text-slate-100 dark:hover:bg-slate-900 text-center w-[210px] bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-lg border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]">
+            <div
+              className={`flex justify-center items-center text-sm ${
+                providerAuthLoader3 ? "hidden" : ""
+              }`}
+            >
+              <span className="text-sm text-center font-semibold">Login anonymously</span>
+            </div>
+            <div
+              className={`flex justify-center items-center ${
+                providerAuthLoader3 ? "" : "hidden"
               }`}
             >
               <SpinLoader />

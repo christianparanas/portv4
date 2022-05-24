@@ -57,7 +57,9 @@ const Services = () => (
           <Masonry gutter="15px">
             {servicesArr.map((service, key) => (
               <div
-                className="bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-none border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]"
+                className={`bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-none border-[3px] border-solid border-[#fafafa] dark:border-[#11191f] hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer transition-all ${
+                  key == 2 || key == 4 ? "dark:bg-purple-800" : ""
+                }`}
                 key={key}
               >
                 <div className="">

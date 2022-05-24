@@ -14,8 +14,8 @@ const footerLinks = [
 
 function Footer() {
   return (
-    <footer className="mt-12 mb-4 md:mt-20">
-      <div className="p-2">
+    <footer className="mt-12 mb-4 md:mt-20 border-t border-slate-200 dark:border-slate-800">
+      <div className="py-2 mt-5">
         <ul className="grid grid-cols-3 gap-4 mb-12">
           {footerLinks.map((link) => (
             <li key={link.name}>

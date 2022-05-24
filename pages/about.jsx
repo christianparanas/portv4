@@ -39,7 +39,7 @@ export default function About() {
               <p>
                 If I have spare time, I do freelance work, like building
                 websites, software programs, photo editing, and other IT-related
-                tasks for my schoolmates and other people who need my services.
+                tasks for my schoolmates and for other people who needs my services.
               </p>
             </span>
           </div>

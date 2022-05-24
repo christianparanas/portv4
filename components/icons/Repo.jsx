@@ -9,7 +9,7 @@ const Repo = (props) => (
     strokeWidth={2}
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="w-6 h-6"
+    className="w-5 h-5 hover:stroke-slate-800 dark:hover:stroke-slate-200"
 
 
     {...props}

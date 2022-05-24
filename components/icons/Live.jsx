@@ -6,7 +6,7 @@ const Live = (props) => (
     fill="none"
     viewBox="0 0 24 24"
     stroke="#afadad"
-    className="w-6 h-6"
+    className="w-5 h-5 hover:stroke-slate-800 dark:hover:stroke-slate-200"
     {...props}
   >
     <path

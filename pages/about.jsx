@@ -32,7 +32,7 @@ export default function About() {
             <span className="md:text-lg mt-6 text-slate-900 dark:text-slate-50">
               <p className="mb-6">
                 Hello! I am Christian Paranas, a student from Tacloban city,
-                Philippines. I am currently in my 3rd year in college, taking a
+                Philippines. I am currently a 3rd year college student, taking a
                 bachelor's degree in Information Technology at Eastern Visayas
                 State University.
               </p>

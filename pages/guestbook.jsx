@@ -220,7 +220,7 @@ export function GuestbookAuth({ signIn }) {
             signIn("github");
           }}
         >
-          <div className="hover:bg-gray-800 dark:hover:bg-slate-900 hover:text-slate-100 w-[210px] bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-lg border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]">
+          <div className="group hover:bg-gray-800 dark:hover:bg-slate-900 hover:text-slate-100 w-[210px] bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-lg border-[3px] border-solid hover:border-slate-500 border-[#fafafa] dark:border-[#11191f]">
             <div
               className={`flex justify-center items-center text-sm ${
                 providerAuthLoader1 ? "hidden" : ""
@@ -239,7 +239,7 @@ export function GuestbookAuth({ signIn }) {
               >
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
               </svg>
-              <span className="text-sm text-center font-semibold text-slate-900 dark:text-slate-100">
+              <span className="text-sm text-center font-semibold text-slate-900 group-hover:text-slate-100 dark:text-slate-100">
                 Login with Github
               </span>
             </div>
@@ -260,14 +260,14 @@ export function GuestbookAuth({ signIn }) {
             signIn("google");
           }}
         >
-          <div className="hover:bg-gray-800 hover:text-slate-100 dark:hover:bg-slate-900 text-center w-[210px] bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-lg border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]">
+          <div className="group hover:bg-gray-900 hover:border-slate-500 hover:text-slate-100 dark:hover:bg-slate-900 text-center w-[210px] bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-lg border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]">
             <div
               className={`flex justify-center items-center text-sm ${
                 providerAuthLoader2 ? "hidden" : ""
               }`}
             >
               <img src="/icons/google.svg" alt="" className="w-6 h-6 mr-2" />
-              <span className="text-sm text-center font-semibold text-slate-900 dark:text-slate-100">Login with Google</span>
+              <span className="text-sm text-center font-semibold text-slate-900 dark:text-slate-100 group-hover:text-slate-100">Login with Google</span>
             </div>
             <div
               className={`flex justify-center items-center ${
@@ -286,7 +286,7 @@ export function GuestbookAuth({ signIn }) {
             signIn("credentials");
           }}
         >
-          <div className="hover:bg-gray-800  text-center w-[210px] bg-[#18232c] p-3 rounded-[8px] shadow-lg border-[3px] border-solid border-[#11191f]">
+          <div className="hover:bg-gray-900  text-center w-[210px] bg-[#18232c] p-3 rounded-[8px] shadow-lg border-[3px] border-solid border-slate-500 dark:border-[#11191f] dark:hover:bg-slate-900">
             <div
               className={`flex justify-center items-center text-sm ${
                 providerAuthLoader3 ? "hidden" : ""

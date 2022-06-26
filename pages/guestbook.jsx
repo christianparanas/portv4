@@ -220,7 +220,7 @@ export function GuestbookAuth({ signIn }) {
             signIn("github");
           }}
         >
-          <div className="group hover:bg-gray-800 dark:hover:bg-slate-900 hover:text-slate-100 w-[210px] bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-lg border-[3px] border-solid hover:border-slate-500 border-[#fafafa] dark:border-[#11191f]">
+          <div className="group hover:bg-gray-800 dark:hover:bg-slate-900 hover:text-slate-100 w-[210px] bg-white dark:bg-[#18232c] p-3 py-[10px] rounded-[8px] custom-shadow dark:shadow-lg border-[3px] border-solid hover:border-slate-500 border-[#fafafa] dark:border-[#11191f]">
             <div
               className={`flex justify-center items-center text-sm ${
                 providerAuthLoader1 ? "hidden" : ""
@@ -260,7 +260,7 @@ export function GuestbookAuth({ signIn }) {
             signIn("google");
           }}
         >
-          <div className="group hover:bg-gray-900 hover:border-slate-500 hover:text-slate-100 dark:hover:bg-slate-900 text-center w-[210px] bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-lg border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]">
+          <div className="group hover:bg-gray-900 hover:border-slate-500 hover:text-slate-100 dark:hover:bg-slate-900 text-center w-[210px] bg-white dark:bg-[#18232c] p-3 py-[10px] rounded-[8px] custom-shadow dark:shadow-lg border-[3px] border-solid border-[#fafafa] dark:border-[#11191f]">
             <div
               className={`flex justify-center items-center text-sm ${
                 providerAuthLoader2 ? "hidden" : ""
@@ -286,7 +286,7 @@ export function GuestbookAuth({ signIn }) {
             signIn("credentials");
           }}
         >
-          <div className="hover:bg-gray-900  text-center w-[210px] bg-[#18232c] p-3 rounded-[8px] shadow-lg border-[3px] border-solid border-slate-500 dark:border-[#11191f] dark:hover:bg-slate-900">
+          <div className="hover:bg-gray-900  text-center w-[210px] bg-[#18232c] p-3 py-[10px] rounded-[8px] shadow-lg border-[3px] border-solid border-slate-500 dark:border-[#11191f] dark:hover:bg-slate-900">
             <div
               className={`flex justify-center items-center text-sm ${
                 providerAuthLoader3 ? "hidden" : ""

@@ -36,14 +36,14 @@ function Project({ props }) {
         {props.description ? props.description : "No description provided."}
       </div>
 
-      <div className="flex overflow-x-auto">
+      <div className="flex overflow-x-auto items-center">
         {(props.languages.edges
           ? props.languages.edges
           : props.languages.nodes
         ).map((tool, key) => {
           return (
             <div
-              className="mr-1 bg-[#11191f] py-1 px-2 rounded-md h-fit shadow-lg text-[10px] text-slate-50"
+              className="mr-1 bg-[#11191f] text-semibold py-[3px] px-2 rounded-lg h-fit shadow-lg text-[9px] text-slate-50 items-center"
               key={key}
             >
               {tool.name ? tool.name : tool.node.name}

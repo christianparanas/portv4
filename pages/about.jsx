@@ -29,7 +29,7 @@ export default function About() {
                 className="shadow-lg object-cover rounded-md"
               />
             </div>
-            <span className="md:text-lg mt-6 text-slate-900 dark:text-slate-50">
+            <span className="md:text-md mt-6 text-slate-900 dark:text-slate-50">
               <p className="mb-6">
                 Hello! I am Christian Paranas from Tacloban city,
                 Philippines. I am currently a college student, taking a
@@ -44,29 +44,6 @@ export default function About() {
             </span>
           </div>
 
-          <div className="relative mt-8 custom-shadow dark:border-2 dark:shadow-none rounded-[8px] p-3 border-[3px] border-[#fff] dark:border-[#18232c]">
-            <span class="flex h-3 w-3 absolute right-[-5px] top-[-5px]">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
-            </span>
-            <div className="text-slate-800 dark:text-slate-50 font-semibold">
-              I am actively seeking a client. If you have a project in mind,
-              or you think there is something that I can help you with my IT
-              skills, don't hesitate to contact me. I will gladly help you with
-              it.
-            </div>
-            <div className="mt-6">
-              <h2 className="font-semibold text-sm">Contact Me:</h2>
-              <div className="flex mt-2">
-                <div className="dark:bg-[#18232c] border-[3px] border-[#fff] dark:border-[#18232c] p-2 w-fit h-fit rounded-full cursor-pointer custom-shadow dark:shadow-none">
-                  <Linkedin />
-                </div>
-                <div className="dark:bg-[#18232c]  border-[3px] border-[#fff] dark:border-[#18232c] p-2 w-fit h-fit rounded-full cursor-pointer mx-2 custom-shadow dark:shadow-none">
-                  <Git />
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </main>
     </Page>

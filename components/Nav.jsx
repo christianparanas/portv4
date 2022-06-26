@@ -124,10 +124,10 @@ export default function Nav() {
         <div className="p-4 grid gap-2">
           <Link href="/">
             <div
-              className={`rounded-lg text-[20px] w-fit transition-all cursor-pointer ${
+              className={`rounded-xl text-[20px] w-fit transition-all cursor-pointer ${
                 asPath == "/"
-                  ? "px-4 py-2 bg-gray-800/50 shadow-sm"
-                  : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
+                  ? "px-4 py-1 bg-gray-800/50 shadow-sm"
+                  : "px-2 py-1 hover:bg-gray-800/40 hover:px-4"
               }`}
             >
               Home
@@ -135,10 +135,10 @@ export default function Nav() {
           </Link>
           <Link href="/about">
             <div
-              className={`rounded-lg text-[20px] w-fit transition-all cursor-pointer ${
+              className={`rounded-xl text-[20px] w-fit transition-all cursor-pointer ${
                 asPath == "/about"
-                  ? "px-4 py-2 bg-gray-800/50 shadow-sm"
-                  : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
+                  ? "px-4 py-1 bg-gray-800/50 shadow-sm"
+                  : "px-2 py-1 hover:bg-gray-800/40 hover:px-4"
               }`}
             >
               About
@@ -146,10 +146,10 @@ export default function Nav() {
           </Link>
           <Link href="/gist">
             <div
-              className={`rounded-lg text-[20px] w-fit transition-all cursor-pointer ${
+              className={`rounded-xl text-[20px] w-fit transition-all cursor-pointer ${
                 asPath == "/gist"
-                  ? "px-4 py-2 bg-gray-800/50 shadow-sm"
-                  : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
+                  ? "px-4 py-1 bg-gray-800/50 shadow-sm"
+                  : "px-2 py-1 hover:bg-gray-800/40 hover:px-4"
               }`}
             >
               Gist
@@ -157,10 +157,10 @@ export default function Nav() {
           </Link>
           <Link href="/blog">
             <div
-              className={`rounded-lg text-[20px] w-fit transition-all cursor-pointer ${
+              className={`rounded-xl text-[20px] w-fit transition-all cursor-pointer ${
                 asPath == "/blog"
-                  ? "px-4 py-2 bg-gray-800/50 shadow-sm"
-                  : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
+                  ? "px-4 py-1 bg-gray-800/50 shadow-sm"
+                  : "px-2 py-1 hover:bg-gray-800/40 hover:px-4"
               }`}
             >
               Blog
@@ -170,8 +170,8 @@ export default function Nav() {
             <div
               className={`rounded-xl text-[20px] w-fit transition-all cursor-pointer ${
                 asPath == "/projects"
-                  ? "px-4 py-2 bg-gray-800/50 shadow-sm"
-                  : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
+                  ? "px-4 py-1 bg-gray-800/50 shadow-sm"
+                  : "px-2 py-1 hover:bg-gray-800/40 hover:px-4"
               }`}
             >
               Projects
@@ -181,8 +181,8 @@ export default function Nav() {
             <div
               className={`rounded-xl text-[20px] w-fit transition-all cursor-pointer ${
                 asPath == "/guestbook"
-                  ? "px-4 py-2 bg-gray-800/50 shadow-sm"
-                  : "px-2 py-2 hover:bg-gray-800/40 hover:px-4"
+                  ? "px-4 py-1 bg-gray-800/50 shadow-sm"
+                  : "px-2 py-1 hover:bg-gray-800/40 hover:px-4"
               }`}
             >
               Guestbook

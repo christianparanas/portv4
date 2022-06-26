@@ -7,7 +7,7 @@
 
 @layer base {
   body {
-    @apply bg-[#fafafa] dark:bg-[#11191f];
+    @apply bg-gray-50 dark:bg-[#11191f];
     padding: 0;
     margin: 0;
     -webkit-font-smoothing: antialiased;

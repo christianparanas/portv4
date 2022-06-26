@@ -5,7 +5,7 @@ import Services from "components/Services";
 export default function Home() {
   return (
     <Page>
-      <div className="hidden md:block fixed -z-50 -right-[100px] opacity-5">
+      <div className="hidden md:block fixed -z-50 -right-[100px] opacity-10 dark:opacity-5">
         <img src="/images/javascript.svg" alt="" className="w-[500px]" />
       </div>
       <Hero

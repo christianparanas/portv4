@@ -11,6 +11,8 @@ export default function Nav() {
   const { asPath } = useRouter();
   const [isOpen, setOpen] = useState(false);
 
+  console.log("mmm")
+
   const closeNav = () => {
     setTimeout(() => {
       setOpen(false);

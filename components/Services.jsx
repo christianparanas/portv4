@@ -60,7 +60,7 @@ const Services = () => (
                 className={`bg-white dark:bg-[#18232c] p-3 rounded-[8px] custom-shadow dark:shadow-none border-[3px] border-solid border-[#fafafa] dark:border-[#18232c]  cursor-pointer transition-all ${
                   key == 0 || key == 4
                     ? "hover:bg-slate-100 dark:bg-purple-800 dark:hover:bg-purple-700"
-                    : "hover:bg-slate-100 dark:hover:bg-slate-800"
+                    : "hover:bg-slate-100 dark:hover:bg-slate-800 "
                 }`}
                 key={key}
               >

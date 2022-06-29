@@ -53,25 +53,10 @@ export function GistCard({ gist, avatarUrl, username }) {
             </div>
           </div>
 
-          <span className="text-[9px] text-slate-500 dark:text-slate-300 font-semibold">
+          <span className="text-[7px] text-slate-500 dark:text-slate-300">
             Created {moment(gist.createdAt).fromNow()}
           </span>
-          <div className="font-semibold">{gist.description}</div>
-        </div>
-
-        <div className="flex text-sm h-fit mt-4 md:mt-0">
-          <div className="flex items-center cursor-pointer hover:bg-slate-800 hover:text-slate-100 transition-all py-1 px-3 rounded-md hover:shadow-md text-[12px]">
-            <i class="fal fa-code-branch mr-2"></i>
-            <span className="font-semibold">0 forks</span>
-          </div>
-          <div className="flex items-center cursor-pointer hover:bg-slate-800 transition-all py-1 px-3 rounded-md hover:text-slate-100 hover:shadow-md text-[12px]">
-            <i class="fal fa-comment-alt mr-2"></i>
-            <span className="font-semibold">0 comments</span>
-          </div>
-          <div className="flex items-center cursor-pointer hover:bg-slate-800 hover:text-slate-100 transition-all py-1 px-3 rounded-md hover:shadow-md text-[12px]">
-            <i class="fal fa-star mr-2"></i>
-            <span className="font-semibold">0 stars</span>
-          </div>
+          <div className="font-medium">{gist.description}</div>
         </div>
       </header>
       <div className="text-sm">

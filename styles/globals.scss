@@ -7,7 +7,7 @@
 
 @layer base {
   body {
-    @apply bg-[#fafafa] dark:bg-[#11191f];
+    @apply bg-slate-50 dark:bg-[#11191f];
     padding: 0;
     margin: 0;
     -webkit-font-smoothing: antialiased;
@@ -16,7 +16,7 @@
   }
 
   .custom-shadow {
-    box-shadow: 0 3px 3px 0 rgba(43,80,237, .2);
+    box-shadow: 0 2px 2px 0 rgba(43,80,237, .2);
   }
 
   * {

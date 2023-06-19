@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 
 import Page from "components/Page";
-import me from "https://avatars.githubusercontent.com/u/59472122?u=80920e8c7f13d0415c3a68ff7f36527bdd3d3003&v=4";
 
 export default function About() {
   return (
@@ -20,7 +19,7 @@ export default function About() {
           <div className="grid md:grid-cols-[300px_1fr] gap-[30px]">
             <div className="w-[300px] mx-auto">
               <Image
-                src={me}
+                src="https://avatars.githubusercontent.com/u/59472122?u=80920e8c7f13d0415c3a68ff7f36527bdd3d3003&v=4"
                 alt="Picture of me (Christian Paranas)"
                 placeholder="blur"
                 width={300}

@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 
 import Page from "components/Page";
-import me from "public/me.png";
+import me from "https://avatars.githubusercontent.com/u/59472122?u=80920e8c7f13d0415c3a68ff7f36527bdd3d3003&v=4";
 
 export default function About() {
   return (
@@ -24,7 +24,7 @@ export default function About() {
                 alt="Picture of me (Christian Paranas)"
                 placeholder="blur"
                 width={300}
-                height={340}
+                height={300}
                 className="shadow-lg object-cover rounded-md"
               />
             </div>

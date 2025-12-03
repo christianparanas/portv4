@@ -1,15 +1,17 @@
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { authOptions } from "lib/auth";
-import prisma from "lib/prisma";
+import { getPrisma } from "lib/prisma";
 
 export async function GET() {
-  // If Prisma isn't configured (e.g. no DATABASE_URL), don't throw during build
-  if (!prisma) {
-    return NextResponse.json([]);
-  }
-
   try {
+    const prisma = getPrisma();
+
+    // If Prisma isn't configured (e.g. no DATABASE_URL), don't throw during build
+    if (!prisma) {
+      return NextResponse.json([]);
+    }
+
     const entries = await prisma.guests.findMany({
       orderBy: { updatedAt: "desc" },
     });
@@ -33,15 +35,16 @@ export async function GET() {
 export async function POST(req) {
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
-
-  if (!prisma) {
-    return NextResponse.json(
-      { error: "Database not configured" },
-      { status: 500 }
-    );
-  }
-
   try {
+    const prisma = getPrisma();
+
+    if (!prisma) {
+      return NextResponse.json(
+        { error: "Database not configured" },
+        { status: 500 }
+      );
+    }
+
     const { email, name, image } = session.user;
     const body = await req.json();
 

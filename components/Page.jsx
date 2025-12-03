@@ -1,3 +1,4 @@
+"use client";
 import FadeIn from "react-fade-in";
 
 import Footer from "components/Footer";

@@ -33,6 +33,24 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Christian Paranas | Web Developer",
+    url: "https://christianparanas.vercel.app/",
+    author: {
+      "@type": "Person",
+      name: "Christian Paranas",
+      jobTitle: "Software Developer",
+      url: "https://christianparanas.vercel.app/",
+      sameAs: [
+        "https://github.com/christianparanas",
+        "https://www.linkedin.com/in/christianparanas",
+        "https://twitter.com/chrisparams",
+      ],
+    },
+  };
+
   return (
     <html lang="en">
       <head>
@@ -42,6 +60,10 @@ export default function RootLayout({ children }) {
           type="text/css"
         />
         <link rel="canonical" href="https://christianparanas.vercel.app/" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body>
         <Providers>{children}</Providers>

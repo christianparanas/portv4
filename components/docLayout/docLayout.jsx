@@ -1,4 +1,4 @@
-import FadeIn from "react-fade-in";
+import FadeIn from "components/FadeIn";
 
 import styles from './docLayout.module.scss'
 import Footer from "components/Footer";

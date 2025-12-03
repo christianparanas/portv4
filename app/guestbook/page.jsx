@@ -1,6 +1,6 @@
 "use client";
 import useSWR from "swr";
-import FadeIn from "react-fade-in";
+import FadeIn from "components/FadeIn";
 import * as moment from "moment";
 import React, { useEffect, useRef, useState } from "react";
 import { signIn, useSession, signOut } from "next-auth/react";

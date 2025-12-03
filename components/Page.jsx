@@ -1,5 +1,5 @@
 "use client";
-import FadeIn from "react-fade-in";
+import FadeIn from "components/FadeIn";
 
 import Footer from "components/Footer";
 import Nav from "components/Nav";

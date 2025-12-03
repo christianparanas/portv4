@@ -3,7 +3,7 @@ import Page from "components/Page";
 import Image from "next/image";
 import Link from "next/link";
 import { Git, Linkedin } from "components/icons";
-import FadeIn from "react-fade-in";
+import FadeIn from "components/FadeIn";
 
 export default function About() {
   return (

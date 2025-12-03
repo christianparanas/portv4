@@ -4,7 +4,7 @@ import Services from "components/Services";
 import Image from "next/image";
 import Link from "next/link";
 import { Git } from "components/icons";
-import FadeIn from "react-fade-in";
+import FadeIn from "components/FadeIn";
 
 const skills = [
   "JavaScript",

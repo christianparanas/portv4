@@ -1,5 +1,5 @@
 "use client";
-import FadeIn from "react-fade-in";
+import FadeIn from "components/FadeIn";
 import Project from "components/Project";
 
 export default function ProjectsGrid({ repos, pinnedRepos }) {
